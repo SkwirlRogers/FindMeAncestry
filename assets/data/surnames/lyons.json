@@ -1,0 +1,40 @@
+{
+  "surname": "Lyons",
+  "slug": "lyons",
+  "soundex": "L520",
+  "variants": [
+    "lyonse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Granville County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1931,
+    "latest_birth": 1931,
+    "sample_records": [
+      {
+        "name": "Ruth Lyons",
+        "birth": 1931,
+        "county": "Granville County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/lyons",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Lyons",
+    "geneanet": "https://en.geneanet.org/surnames/lyons",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Lyons",
+    "houseofnames": "https://www.houseofnames.com/lyons-family-crest",
+    "one_name_org": "https://one-name.org/surnames_l/"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "surname": "Dockery",
+  "slug": "dockery",
+  "soundex": "D260",
+  "variants": [
+    "dockerey"
+  ],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1832,
+    "latest_birth": 1885,
+    "sample_records": [
+      {
+        "name": "George Dockery",
+        "birth": 1832,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Eula Dockery",
+        "birth": 1883,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mina Dockery",
+        "birth": 1885,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/dockery",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Dockery",
+    "geneanet": "https://en.geneanet.org/surnames/dockery",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Dockery",
+    "houseofnames": "https://www.houseofnames.com/dockery-family-crest",
+    "one_name_org": "https://one-name.org/surnames_d/"
+  }
+}

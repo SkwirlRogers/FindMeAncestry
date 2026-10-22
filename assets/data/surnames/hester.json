@@ -1,0 +1,82 @@
+{
+  "surname": "Hester",
+  "slug": "hester",
+  "soundex": "H236",
+  "variants": [],
+  "nc_data": {
+    "total_records": 10,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 5
+      },
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 4
+      },
+      {
+        "decade": 1930,
+        "count": 4
+      }
+    ],
+    "earliest_birth": 1876,
+    "latest_birth": 1939,
+    "sample_records": [
+      {
+        "name": "Lessie Robena Graves Hester",
+        "birth": 1876,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Lee Walter Hester",
+        "birth": 1888,
+        "county": "Person County"
+      },
+      {
+        "name": "Morris Lee Hester",
+        "birth": 1934,
+        "county": "Person County"
+      },
+      {
+        "name": "Mary O Hester",
+        "birth": 1928,
+        "county": "Person County"
+      },
+      {
+        "name": "John Edward Hester",
+        "birth": 1920,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hester",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hester",
+    "geneanet": "https://en.geneanet.org/surnames/hester",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hester",
+    "houseofnames": "https://www.houseofnames.com/hester-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "surname": "Hatchett",
+  "slug": "hatchett",
+  "soundex": "H323",
+  "variants": [],
+  "nc_data": {
+    "total_records": 19,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 12
+      },
+      {
+        "county": "Person County",
+        "count": 7
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 6
+      },
+      {
+        "decade": 1930,
+        "count": 6
+      },
+      {
+        "decade": 1960,
+        "count": 1
+      },
+      {
+        "decade": 1970,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1906,
+    "latest_birth": 1978,
+    "sample_records": [
+      {
+        "name": "Sam Loy Hatchett",
+        "birth": 1906,
+        "county": "Person County"
+      },
+      {
+        "name": "Eddie C Hatchett",
+        "birth": 1922,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lawrence Hatchett",
+        "birth": 1906,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Bessie Hatchett",
+        "birth": 1910,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Malcolm Hatchett",
+        "birth": 1923,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hatchett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hatchett",
+    "geneanet": "https://en.geneanet.org/surnames/hatchett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hatchett",
+    "houseofnames": "https://www.houseofnames.com/hatchett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

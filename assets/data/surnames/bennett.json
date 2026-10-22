@@ -1,0 +1,78 @@
+{
+  "surname": "Bennett",
+  "slug": "bennett",
+  "soundex": "B530",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Anson County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      },
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1884,
+    "latest_birth": 1954,
+    "sample_records": [
+      {
+        "name": "Dalles W Bennett",
+        "birth": 1941,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Roxanna Roxy Roxie Bennett",
+        "birth": 1884,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Henry Bennett",
+        "birth": 1919,
+        "county": "Unknown County"
+      },
+      {
+        "name": "James Webster Bennett Sr",
+        "birth": 1927,
+        "county": "Anson County"
+      },
+      {
+        "name": "Cynthia Fay Bennett",
+        "birth": 1954,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/bennett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Bennett",
+    "geneanet": "https://en.geneanet.org/surnames/bennett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Bennett",
+    "houseofnames": "https://www.houseofnames.com/bennett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

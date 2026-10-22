@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AssetieAI — Unclaimed Asset Recovery Agent | CeeYoAssets</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .cy-hero{background:linear-gradient(160deg,#0e4d6e 0%,#1a759f 55%,#34a0c6 100%);padding:40px 32px 20px;color:#fff;position:relative;overflow:hidden}
+    .cy-hero h1{font-size:clamp(24px,4vw,40px);font-weight:900;line-height:1.1;margin-bottom:8px;position:relative;z-index:1}
+    .cy-hero p{font-size:clamp(13px,1.8vw,16px);color:rgba(255,255,255,0.85);max-width:600px;margin:0 auto;position:relative;z-index:1}
+    .chat-container{max-width:800px;margin:0 auto;padding:24px}
+    .chat-box{background:var(--clr-surface);border:2px solid #1a759f;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;height:calc(100vh - 320px);min-height:400px}
+    .chat-messages{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
+    .msg{max-width:80%;padding:12px 16px;border-radius:12px;font-size:0.9rem;line-height:1.5}
+    .msg.user{background:var(--clr-primary);color:var(--clr-text-inverse);align-self:flex-end;border-bottom-right-radius:4px}
+    .msg.agent{background:var(--clr-surface-alt);color:var(--clr-text);align-self:flex-start;border-bottom-left-radius:4px;border-left:3px solid #1a759f}
+    .msg.agent strong{color:#1a759f}
+    .chat-input-area{display:flex;gap:8px;padding:16px;border-top:1px solid var(--clr-border);background:var(--clr-surface-alt)}
+    .chat-input-area textarea{flex:1;padding:12px;border:1px solid var(--clr-border);border-radius:10px;background:var(--clr-surface);color:var(--clr-text);font-size:0.9rem;resize:none;font-family:inherit;min-height:44px;max-height:120px}
+    .chat-input-area textarea:focus{outline:none;border-color:#1a759f}
+    .chat-input-area button{padding:12px 24px;background:#1a759f;color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;font-size:0.9rem;transition:all 0.15s;white-space:nowrap}
+    .chat-input-area button:hover{opacity:0.9}
+    .chat-input-area button:disabled{opacity:0.4;cursor:not-allowed}
+    .quick-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 12px}
+    .quick-btn{padding:6px 14px;background:var(--clr-surface-alt);border:1px solid var(--clr-border);border-radius:20px;font-size:0.75rem;color:var(--clr-text-muted);cursor:pointer;transition:all 0.15s}
+    .quick-btn:hover{border-color:#1a759f;color:#1a759f}
+    .source-links{margin-top:12px;padding:12px;background:var(--clr-surface-alt);border-radius:10px;border:1px solid var(--clr-border)}
+    .source-links h4{font-size:0.8rem;font-weight:700;margin-bottom:8px;color:#1a759f}
+    .source-links a{display:inline-block;padding:4px 10px;margin:2px;font-size:0.7rem;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:6px;color:var(--clr-text);text-decoration:none;transition:all 0.15s}
+    .source-links a:hover{border-color:#1a759f;color:#1a759f}
+    .typing-indicator{display:none;align-self:flex-start;padding:12px 16px;background:var(--clr-surface-alt);border-radius:12px;border-left:3px solid #1a759f;font-size:0.85rem;color:var(--clr-text-muted)}
+    .typing-indicator.active{display:block}
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction:row;align-items:center;gap:14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width:50px;height:50px;border-radius:50%;border:2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers &amp; Barrett Creative Media</span>
+      </div>
+    </a>
+    <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link active" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <section class="cy-hero">
+    <div style="max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:40px;padding:6px 18px;font-size:13px;font-weight:600;color:#fff;margin-bottom:12px;">🏠 AssetieAI — Chief Property Officer</div>
+      <h1>Hello — I'm AssetieAI</h1>
+      <p>Your dedicated unclaimed asset recovery agent. I know every official portal, every federal database, and every state program. Let me help you find what's yours.</p>
+    </div>
+  </section>
+
+  <div class="chat-container">
+    <div class="source-links">
+      <h4>Official Recovery Portals I Use</h4>
+      <a href="https://unclaimed.org" target="_blank">Unclaimed.org (All 50 States)</a>
+      <a href="https://missingmoney.com" target="_blank">MissingMoney.com (NAUPA)</a>
+      <a href="https://www.usa.gov/unclaimed-money" target="_blank">USA.gov (Federal Routing)</a>
+      <a href="https://www.fdic.gov/resources/resolutions/bank-failures" target="_blank">FDIC BankFind</a>
+      <a href="https://www.pbgc.gov" target="_blank">PBGC Pensions</a>
+      <a href="https://www.dol.gov/agencies/whd" target="_blank">DOL Unpaid Wages</a>
+      <a href="https://www.sec.gov/htm" target="_blank">SEC Fair Funds</a>
+      <a href="https://www.pacer.gov" target="_blank">PACER Bankruptcy</a>
+      <a href="https://www.va.gov" target="_blank">VA Life Insurance</a>
+      <a href="https://www.hud.gov" target="_blank">HUD FHA Refunds</a>
+      <a href="https://www.ncua.gov" target="_blank">NCUA Credit Unions</a>
+      <a href="https://www.irs.gov" target="_blank">IRS Tax Refunds</a>
+    </div>
+
+    <div class="chat-box" style="margin-top:16px;">
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg agent"><strong>AssetieAI:</strong> Hello! I'm AssetieAI, your Chief Property Officer. I specialize in unclaimed asset recovery across all 50 U.S. states, DC, Puerto Rico, USVI, Guam, Canada, and Kenya.<br><br>I know every official portal — Unclaimed.org, MissingMoney, FDIC BankFind, PBGC, DOL wages, SEC Fair Funds, VA life insurance, HUD FHA refunds, NCUA credit unions, IRS tax refunds, and U.S. Courts bankruptcy funds.<br><br>I have live access to government databases: SEC EDGAR filings, OFAC sanctions screening, USPS address validation, and SSN verification. I can search by name, city, town, parish, borough, county, and state.<br><br>I know dormancy periods, claim requirements, and jurisdictional rules for every state. What can I help you find today?</div>
+      </div>
+      <div class="typing-indicator" id="typingIndicator">AssetieAI is thinking...</div>
+      <div class="quick-actions">
+        <button class="quick-btn" onclick="sendQuick('How do I search for unclaimed money in my state?')">🔍 Search my state</button>
+        <button class="quick-btn" onclick="sendQuick('What federal databases should I check?')">🏛️ Federal databases</button>
+        <button class="quick-btn" onclick="sendQuick('I inherited an estate — how do I find unclaimed assets?')">📋 Estate research</button>
+        <button class="quick-btn" onclick="sendQuick('What documents do I need to file a claim?')">📄 Claim documents</button>
+        <button class="quick-btn" onclick="sendQuick('Help me search MissingMoney and Unclaimed.org')">🌐 Multi-state search</button>
+        <button class="quick-btn" onclick="sendQuick('What are the dormancy periods by state?')">⏱️ Dormancy periods</button>
+        <button class="quick-btn" onclick="sendQuick('How do I search by city, town, parish, or borough?')">🏙️ City/parish search</button>
+        <button class="quick-btn" onclick="sendQuick('What types of unclaimed property exist?')">💰 Property types</button>
+        <button class="quick-btn" onclick="sendQuick('Help me search FDIC for failed bank deposits')">🏦 FDIC bank search</button>
+        <button class="quick-btn" onclick="sendQuick('I need to search PBGC for unclaimed pensions')">📊 PBGC pensions</button>
+        <button class="quick-btn" onclick="sendQuick('How do I search for unclaimed wages from a former employer?')">💼 Unpaid wages</button>
+        <button class="quick-btn" onclick="sendQuick('Search SEC Fair Fund distributions')">📈 SEC distributions</button>
+        <button class="quick-btn" onclick="sendQuick('Screen a name against the OFAC sanctions list: BANCO NACIONAL DE CUBA', 'ofac')">🛡️ OFAC screening</button>
+        <button class="quick-btn" onclick="sendQuick('Validate an SSN for claim filing: 387-65-4321', 'ssn')">🔢 SSN validator</button>
+        <button class="quick-btn" onclick="sendQuick('Validate an address for a claim filing: 1600 Pennsylvania Ave, Washington, DC 20500', 'usps')">📮 Address validation</button>
+      </div>
+      <div class="chat-input-area">
+        <textarea id="chatInput" placeholder="Ask AssetieAI about unclaimed assets, estate recovery, or claim processes..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"></textarea>
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const typingIndicator = document.getElementById('typingIndicator');
+    let chatHistory = [];
+
+    function sendQuick(text, tool) {
+      chatInput.value = text;
+      sendMessage(tool);
+    }
+
+    async function sendMessage(tool) {
+      const msg = chatInput.value.trim();
+      if (!msg) return;
+
+      chatMessages.innerHTML += `<div class="msg user">${escapeHtml(msg)}</div>`;
+      chatInput.value = '';
+      sendBtn.disabled = true;
+      typingIndicator.classList.add('active');
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      chatHistory.push({ role: 'user', content: msg });
+
+      try {
+        const resp = await fetch('/api/assetie/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: msg, history: chatHistory.slice(-10), tool: tool || null })
+        });
+        const data = await resp.json();
+        typingIndicator.classList.remove('active');
+
+        const reply = data.response || 'AssetieAI is temporarily unavailable. Please try again.';
+        chatMessages.innerHTML += `<div class="msg agent"><strong>AssetieAI:</strong> ${formatReply(reply)}</div>`;
+        chatHistory.push({ role: 'assistant', content: reply });
+      } catch (err) {
+        typingIndicator.classList.remove('active');
+        chatMessages.innerHTML += `<div class="msg agent"><strong>AssetieAI:</strong> Hello! I'm experiencing a connection issue. Please try again in a moment.</div>`;
+      }
+
+      sendBtn.disabled = false;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function formatReply(text) {
+      return text
+        .replace(/\n/g, '<br>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>');
+    }
+
+    chatInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+  </script>
+</body>
+</html>

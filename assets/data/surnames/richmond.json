@@ -1,0 +1,94 @@
+{
+  "surname": "Richmond",
+  "slug": "richmond",
+  "soundex": "R255",
+  "variants": [],
+  "nc_data": {
+    "total_records": 13,
+    "top_counties": [
+      {
+        "county": "Orange County",
+        "count": 5
+      },
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Alamance County",
+        "count": 2
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 2
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 7
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1895,
+    "latest_birth": 1946,
+    "sample_records": [
+      {
+        "name": "Lora Norman Richmond",
+        "birth": 1923,
+        "county": "Caswell County"
+      },
+      {
+        "name": "James Rogers Richmond",
+        "birth": 1932,
+        "county": "Orange County"
+      },
+      {
+        "name": "Gertrude  Richmond Williams",
+        "birth": 1909,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lucian Richmond",
+        "birth": 1897,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Edd Richmond",
+        "birth": 1917,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/richmond",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Richmond",
+    "geneanet": "https://en.geneanet.org/surnames/richmond",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Richmond",
+    "houseofnames": "https://www.houseofnames.com/richmond-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

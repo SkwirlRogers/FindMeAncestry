@@ -1,0 +1,38 @@
+{
+  "surname": "Flintall",
+  "slug": "flintall",
+  "soundex": "F453",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1876,
+    "latest_birth": 1876,
+    "sample_records": [
+      {
+        "name": "Mary Emma Flintall",
+        "birth": 1876,
+        "county": "Caswell County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/flintall",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Flintall",
+    "geneanet": "https://en.geneanet.org/surnames/flintall",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Flintall",
+    "houseofnames": "https://www.houseofnames.com/flintall-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

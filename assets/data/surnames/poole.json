@@ -1,0 +1,33 @@
+{
+  "surname": "Poole",
+  "slug": "poole",
+  "soundex": "P400",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [],
+    "earliest_birth": null,
+    "latest_birth": null,
+    "sample_records": [
+      {
+        "name": "Pool",
+        "birth": null,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/poole",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Poole",
+    "geneanet": "https://en.geneanet.org/surnames/poole",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Poole",
+    "houseofnames": "https://www.houseofnames.com/poole-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "surname": "Mason",
+  "slug": "mason",
+  "soundex": "M250",
+  "variants": [
+    "ma"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1900,
+    "latest_birth": 1900,
+    "sample_records": [
+      {
+        "name": "Carrie Mason",
+        "birth": 1900,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/mason",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Mason",
+    "geneanet": "https://en.geneanet.org/surnames/mason",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Mason",
+    "houseofnames": "https://www.houseofnames.com/mason-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

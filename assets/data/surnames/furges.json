@@ -1,0 +1,68 @@
+{
+  "surname": "Furges",
+  "slug": "furges",
+  "soundex": "F622",
+  "variants": [
+    "furgese"
+  ],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1923,
+    "latest_birth": 1940,
+    "sample_records": [
+      {
+        "name": "Mamie Love Furges-Thomas",
+        "birth": 1933,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Robert Lee Furges",
+        "birth": 1923,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Josephine Furges",
+        "birth": 1938,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Meritt Furges",
+        "birth": 1940,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Willie Janes Furges",
+        "birth": 1937,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/furges",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Furges",
+    "geneanet": "https://en.geneanet.org/surnames/furges",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Furges",
+    "houseofnames": "https://www.houseofnames.com/furges-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

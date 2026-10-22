@@ -1,0 +1,53 @@
+{
+  "surname": "Curry",
+  "slug": "curry",
+  "soundex": "C600",
+  "variants": [
+    "currey"
+  ],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1890,
+    "latest_birth": 1928,
+    "sample_records": [
+      {
+        "name": "Caladine Curry",
+        "birth": 1928,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Forthrn Curry",
+        "birth": 1890,
+        "county": "Alamance County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/curry",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Curry",
+    "geneanet": "https://en.geneanet.org/surnames/curry",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Curry",
+    "houseofnames": "https://www.houseofnames.com/curry-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

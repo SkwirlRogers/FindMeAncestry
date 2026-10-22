@@ -1,0 +1,108 @@
+{
+  "surname": "Stanback",
+  "slug": "stanback",
+  "soundex": "S351",
+  "variants": [
+    "stanbac"
+  ],
+  "nc_data": {
+    "total_records": 45,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 28
+      },
+      {
+        "county": "Richmond County",
+        "count": 16
+      },
+      {
+        "county": "Anson County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1780,
+        "count": 1
+      },
+      {
+        "decade": 1810,
+        "count": 2
+      },
+      {
+        "decade": 1820,
+        "count": 2
+      },
+      {
+        "decade": 1830,
+        "count": 3
+      },
+      {
+        "decade": 1840,
+        "count": 4
+      },
+      {
+        "decade": 1850,
+        "count": 9
+      },
+      {
+        "decade": 1860,
+        "count": 10
+      },
+      {
+        "decade": 1870,
+        "count": 5
+      },
+      {
+        "decade": 1880,
+        "count": 3
+      },
+      {
+        "decade": 1890,
+        "count": 4
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1781,
+    "latest_birth": 1910,
+    "sample_records": [
+      {
+        "name": "Robert Stanback",
+        "birth": 1854,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Virginia Stanback",
+        "birth": 1884,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Roy Stanback",
+        "birth": 1910,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Lucy Stanback",
+        "birth": 1859,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Phillis Stanback",
+        "birth": 1814,
+        "county": "Richmond County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/stanback",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Stanback",
+    "geneanet": "https://en.geneanet.org/surnames/stanback",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Stanback",
+    "houseofnames": "https://www.houseofnames.com/stanback-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

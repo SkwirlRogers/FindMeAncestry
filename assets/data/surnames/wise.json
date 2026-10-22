@@ -1,0 +1,38 @@
+{
+  "surname": "Wise",
+  "slug": "wise",
+  "soundex": "W200",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1958,
+    "latest_birth": 1958,
+    "sample_records": [
+      {
+        "name": "Wayne Morris Wise",
+        "birth": 1958,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/wise",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Wise",
+    "geneanet": "https://en.geneanet.org/surnames/wise",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Wise",
+    "houseofnames": "https://www.houseofnames.com/wise-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

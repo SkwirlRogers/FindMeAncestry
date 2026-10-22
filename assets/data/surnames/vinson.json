@@ -1,0 +1,67 @@
+{
+  "surname": "Vinson",
+  "slug": "vinson",
+  "soundex": "V525",
+  "variants": [
+    "vin"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 3
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1854,
+    "latest_birth": 1934,
+    "sample_records": [
+      {
+        "name": "William George Vinson Sr.",
+        "birth": 1908,
+        "county": "Person County"
+      },
+      {
+        "name": "Vinson",
+        "birth": 1854,
+        "county": "Person County"
+      },
+      {
+        "name": "Wilmbly Edward Vinson",
+        "birth": 1930,
+        "county": "Person County"
+      },
+      {
+        "name": "Nora Elsie Vinson",
+        "birth": 1934,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/vinson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Vinson",
+    "geneanet": "https://en.geneanet.org/surnames/vinson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Vinson",
+    "houseofnames": "https://www.houseofnames.com/vinson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_v/"
+  }
+}

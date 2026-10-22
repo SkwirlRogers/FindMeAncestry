@@ -1,0 +1,108 @@
+{
+  "surname": "Johnson",
+  "slug": "johnson",
+  "soundex": "J525",
+  "variants": [
+    "john"
+  ],
+  "nc_data": {
+    "total_records": 33,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 19
+      },
+      {
+        "county": "Person County",
+        "count": 14
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 5
+      },
+      {
+        "decade": 1880,
+        "count": 3
+      },
+      {
+        "decade": 1890,
+        "count": 5
+      },
+      {
+        "decade": 1900,
+        "count": 3
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 5
+      },
+      {
+        "decade": 1930,
+        "count": 5
+      },
+      {
+        "decade": 1940,
+        "count": 2
+      },
+      {
+        "decade": 1960,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1820,
+    "latest_birth": 1963,
+    "sample_records": [
+      {
+        "name": "Henretta Johnson",
+        "birth": 1879,
+        "county": "Person County"
+      },
+      {
+        "name": "Henderson Hence Johnson",
+        "birth": 1871,
+        "county": "Person County"
+      },
+      {
+        "name": "Amy Johnson-Hester",
+        "birth": 1898,
+        "county": "Person County"
+      },
+      {
+        "name": "Charlie Booker Johnson",
+        "birth": 1900,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lena Johnson",
+        "birth": 1899,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/johnson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Johnson",
+    "geneanet": "https://en.geneanet.org/surnames/johnson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Johnson",
+    "houseofnames": "https://www.houseofnames.com/johnson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_j/"
+  }
+}

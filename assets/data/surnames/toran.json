@@ -1,0 +1,52 @@
+{
+  "surname": "Toran",
+  "slug": "toran",
+  "soundex": "T650",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1901,
+    "latest_birth": 1906,
+    "sample_records": [
+      {
+        "name": "Julia Toran",
+        "birth": null,
+        "county": "Person County"
+      },
+      {
+        "name": "Xonia Toran *Rogers",
+        "birth": 1901,
+        "county": "Person County"
+      },
+      {
+        "name": "Jenny Toran",
+        "birth": 1906,
+        "county": "Caswell County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/toran",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Toran",
+    "geneanet": "https://en.geneanet.org/surnames/toran",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Toran",
+    "houseofnames": "https://www.houseofnames.com/toran-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

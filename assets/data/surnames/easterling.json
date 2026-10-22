@@ -1,0 +1,74 @@
+{
+  "surname": "Easterling",
+  "slug": "easterling",
+  "soundex": "E236",
+  "variants": [],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 7
+      },
+      {
+        "county": "Scotland County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1868,
+    "latest_birth": 1897,
+    "sample_records": [
+      {
+        "name": "Peter James Easterling",
+        "birth": 1876,
+        "county": "Scotland County"
+      },
+      {
+        "name": "Mariah Easterling",
+        "birth": 1873,
+        "county": "Unknown County"
+      },
+      {
+        "name": "William H Easterling",
+        "birth": 1890,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary M Easterling",
+        "birth": 1894,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Glinie Easterling",
+        "birth": 1897,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/easterling",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Easterling",
+    "geneanet": "https://en.geneanet.org/surnames/easterling",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Easterling",
+    "houseofnames": "https://www.houseofnames.com/easterling-family-crest",
+    "one_name_org": "https://one-name.org/surnames_e/"
+  }
+}

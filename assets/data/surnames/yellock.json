@@ -1,0 +1,88 @@
+{
+  "surname": "Yellock",
+  "slug": "yellock",
+  "soundex": "Y420",
+  "variants": [
+    "yelloc"
+  ],
+  "nc_data": {
+    "total_records": 10,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 7
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1800,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 3
+      },
+      {
+        "decade": 1860,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1800,
+    "latest_birth": 1918,
+    "sample_records": [
+      {
+        "name": "John Henry Yellock",
+        "birth": 1911,
+        "county": "Person County"
+      },
+      {
+        "name": "Willie Arthur Yellock",
+        "birth": 1915,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Lula Mae Yellock Walters",
+        "birth": 1918,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Adline Yellock",
+        "birth": 1848,
+        "county": "Unknown County"
+      },
+      {
+        "name": "William Yellock",
+        "birth": 1854,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/yellock",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Yellock",
+    "geneanet": "https://en.geneanet.org/surnames/yellock",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Yellock",
+    "houseofnames": "https://www.houseofnames.com/yellock-family-crest",
+    "one_name_org": "https://one-name.org/surnames_y/"
+  }
+}

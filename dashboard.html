@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Dashboard & Workspace | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .dashboard-hero {
+      background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+      padding: 40px 0 32px;
+    }
+    .dashboard-hero h1 { font-size: 2rem; color: var(--clr-primary); }
+    .dashboard-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber" class="active">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="dashboard-hero">
+      <h1>🖥️ Core Dashboard & Workspace</h1>
+      <p>Action-oriented split-screen workspace. Left panel for pedigree tree charts. Right panel for your always-available ScoutAI Copilot.</p>
+    </div>
+  </div>
+
+  <!-- Access Gate: Subscribers Only -->
+  <div class="access-gate" id="accessGate" style="display: none;">
+    <div class="gate-content">
+      <h2>🔒 Subscriber Access Only</h2>
+      <p>The Core Dashboard & Workspace — with pedigree tree views, fan charts, timeline analysis, and the always-on ScoutAI Copilot — is available with any paid monthly subscription (Discovery $9.99/mo, Forensic Explorer $19.99/mo, All-Access Advocate $29.99/mo, or All-Access Investigator $49.99/mo).</p>
+      <a href="index.html#pricing" class="btn btn-accent" style="margin-right: 12px;">View Subscription Plans</a>
+      <a href="map-view.html" class="btn btn-outline" style="border-color: #fff; color: #fff; margin-top: 12px;">Try the Free Migration Map</a>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 64px;" id="dashboardWorkspace">
+    <div class="dashboard-container">
+      <!-- LEFT PANEL: Pedigree Tree Charts -->
+      <div class="dashboard-tree-panel">
+        <div class="tree-view-tabs">
+          <div class="tree-view-tab active" onclick="switchTreeView('pedigreeView')">Pedigree View</div>
+          <div class="tree-view-tab" onclick="switchTreeView('fanChartView')">Fan Chart</div>
+          <div class="tree-view-tab" onclick="switchTreeView('timelineView')">Timeline View</div>
+        </div>
+        <div id="pedigreeView" class="tree-content">
+          <div style="text-align: center; padding: 40px; color: var(--clr-text-muted);">
+            <p style="font-size: 1.1rem; margin-bottom: 16px;">Select an ancestor node to begin</p>
+            <p style="font-size: 0.9rem;">Your family tree will appear here once you sync data from the Extension Sync Center or import a GEDCOM file.</p>
+            <a href="sync-center.html" class="btn btn-outline" style="margin-top: 20px;">Go to Sync Center →</a>
+          </div>
+        </div>
+        <div id="fanChartView" class="tree-content" style="display: none;">
+          <div style="text-align: center; padding: 40px; color: var(--clr-text-muted);">
+            <p style="font-size: 1.1rem; margin-bottom: 16px;">Fan chart visualization</p>
+            <p style="font-size: 0.9rem;">Requires subscribed access. Connect your tree first.</p>
+          </div>
+        </div>
+        <div id="timelineView" class="tree-content" style="display: none;">
+          <div style="text-align: center; padding: 40px; color: var(--clr-text-muted);">
+            <p style="font-size: 1.1rem; margin-bottom: 16px;">Timeline view</p>
+            <p style="font-size: 0.9rem;">Requires subscribed access. Connect your tree first.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL: ScoutAI Copilot -->
+      <div class="dashboard-scout-panel">
+        <div class="scout-header">
+          🕵️‍♂️ ScoutAI Copilot — Private Family Detective
+        </div>
+        <div class="scout-chat-area" id="dashboardChatBox">
+          <div class="message scout">
+            Howdy! I'm Scout Patterson, your Private Family Detective. I'm here to analyze any tree node you select. Just pick a person from your pedigree chart and I'll dive right in.
+          </div>
+        </div>
+        <div class="scout-input-bar">
+          <input type="text" id="dashboardInput" placeholder="Ask Scout about your selected ancestor...">
+          <button class="btn btn-accent" onclick="sendDashboardQuery()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Professional Family Reunification Services. 20 Years of Mending Families.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Workspaces</h4>
+        <ul>
+          <li><a href="dashboard.html">Core Dashboard</a></li>
+          <li><a href="dna-hub.html">DNA & Match Hub</a></li>
+          <li><a href="media-lab.html">Smart Vault</a></li>
+          <li><a href="map-view.html">Migration Map</a></li>
+          <li><a href="sync-center.html">Sync Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#pricing">Subscription Plans</a></li>
+          <li><a href="scout_chat.html">ScoutAI Chat</a></li>
+          <li><a href="index.html#categories">Record Types</a></li>
+          <li><a href="https://findyourbabyfamily.com" target="_blank">FindYourBabyFamily</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+    </div>
+  </footer>
+
+  <script>
+    const isSubscribed = localStorage.getItem('findme_subscribed') === 'true';
+    const workspace = document.getElementById('dashboardWorkspace');
+
+    if (!isSubscribed && workspace) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background:linear-gradient(90deg,#c9a84c,#8a6d2b);color:#fff;padding:12px 20px;text-align:center;font-size:0.9rem;border-radius:8px;margin-bottom:16px;';
+      banner.innerHTML = '🔓 <strong>Upgrade for full access.</strong> Some features require a subscription. <a href="index.html#pricing" style="color:#fff;text-decoration:underline;margin-left:8px;">View Plans →</a>';
+      workspace.prepend(banner);
+    }
+
+    function switchTreeView(viewId) {
+      document.querySelectorAll('.tree-view-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tree-content').forEach(c => c.style.display = 'none');
+      event.target.classList.add('active');
+      document.getElementById(viewId).style.display = 'block';
+    }
+
+    async function sendDashboardQuery() {
+      const input = document.getElementById('dashboardInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const chatBox = document.getElementById('dashboardChatBox');
+      const userDiv = document.createElement('div');
+      userDiv.className = 'message user';
+      userDiv.textContent = text;
+      chatBox.appendChild(userDiv);
+      input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'message scout';
+      typingDiv.textContent = 'Scout is analyzing...';
+      chatBox.appendChild(typingDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      try {
+        const response = await fetch('/api/scout/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, isSubscribed: localStorage.getItem('findme_subscribed') === 'true' })
+        });
+        const data = await response.json();
+        chatBox.removeChild(typingDiv);
+        const scoutDiv = document.createElement('div');
+        scoutDiv.className = 'message scout';
+        scoutDiv.innerHTML = data.reply || "Scout is unavailable.";
+        chatBox.appendChild(scoutDiv);
+      } catch (err) {
+        chatBox.removeChild(typingDiv);
+        const errDiv = document.createElement('div');
+        errDiv.className = 'message scout';
+        errDiv.textContent = 'Network error. Please try again.';
+        chatBox.appendChild(errDiv);
+      }
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>

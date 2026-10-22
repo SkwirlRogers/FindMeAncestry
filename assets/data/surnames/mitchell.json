@@ -1,0 +1,102 @@
+{
+  "surname": "Mitchell",
+  "slug": "mitchell",
+  "soundex": "M324",
+  "variants": [],
+  "nc_data": {
+    "total_records": 40,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 25
+      },
+      {
+        "county": "Person County",
+        "count": 14
+      },
+      {
+        "county": "Granville County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1760,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 4
+      },
+      {
+        "decade": 1890,
+        "count": 4
+      },
+      {
+        "decade": 1900,
+        "count": 6
+      },
+      {
+        "decade": 1910,
+        "count": 6
+      },
+      {
+        "decade": 1920,
+        "count": 4
+      },
+      {
+        "decade": 1930,
+        "count": 7
+      },
+      {
+        "decade": 1940,
+        "count": 4
+      }
+    ],
+    "earliest_birth": 1761,
+    "latest_birth": 1944,
+    "sample_records": [
+      {
+        "name": "James Mitchell",
+        "birth": 1867,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Charlie Ephriam Mitchell",
+        "birth": 1888,
+        "county": "Person County"
+      },
+      {
+        "name": "Queenie Mitchell",
+        "birth": 1899,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Fannie May Fannie Mitchell",
+        "birth": 1898,
+        "county": "Person County"
+      },
+      {
+        "name": "Aldean Mitchell",
+        "birth": 1896,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/mitchell",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Mitchell",
+    "geneanet": "https://en.geneanet.org/surnames/mitchell",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Mitchell",
+    "houseofnames": "https://www.houseofnames.com/mitchell-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

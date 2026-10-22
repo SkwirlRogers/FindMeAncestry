@@ -1,0 +1,74 @@
+{
+  "surname": "Warren",
+  "slug": "warren",
+  "soundex": "W650",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1900,
+    "latest_birth": 1930,
+    "sample_records": [
+      {
+        "name": "Annie Bell Warren",
+        "birth": 1906,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Robert James Warren",
+        "birth": 1900,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Maggie L Warren",
+        "birth": 1923,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Virginia Carrie Warren-Nixon-Clyburn",
+        "birth": 1926,
+        "county": "Orange County"
+      },
+      {
+        "name": "Maude Lee Clay Warren",
+        "birth": 1930,
+        "county": "Alamance County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/warren",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Warren",
+    "geneanet": "https://en.geneanet.org/surnames/warren",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Warren",
+    "houseofnames": "https://www.houseofnames.com/warren-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

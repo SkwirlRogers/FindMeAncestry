@@ -1,0 +1,35 @@
+{
+  "surname": "Jones",
+  "slug": "jones",
+  "soundex": "J520",
+  "variants": [
+    "jonese"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Richmond County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [],
+    "earliest_birth": null,
+    "latest_birth": null,
+    "sample_records": [
+      {
+        "name": "Harriett Jones",
+        "birth": null,
+        "county": "Richmond County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/jones",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Jones",
+    "geneanet": "https://en.geneanet.org/surnames/jones",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Jones",
+    "houseofnames": "https://www.houseofnames.com/jones-family-crest",
+    "one_name_org": "https://one-name.org/surnames_j/"
+  }
+}

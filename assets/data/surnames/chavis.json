@@ -1,0 +1,88 @@
+{
+  "surname": "Chavis",
+  "slug": "chavis",
+  "soundex": "C120",
+  "variants": [
+    "chavise"
+  ],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Granville County",
+        "count": 3
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1886,
+    "latest_birth": 1930,
+    "sample_records": [
+      {
+        "name": "Annie Pat Chavis",
+        "birth": 1889,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Samuel Thomas \"Sam, Doc\" Chavis",
+        "birth": 1899,
+        "county": "Granville County"
+      },
+      {
+        "name": "Irene Chavis-Evans",
+        "birth": 1919,
+        "county": "Granville County"
+      },
+      {
+        "name": "Allene Chavis",
+        "birth": 1921,
+        "county": "Person County"
+      },
+      {
+        "name": "George Thomas \u201cPlink\u201d Chavis",
+        "birth": 1923,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/chavis",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Chavis",
+    "geneanet": "https://en.geneanet.org/surnames/chavis",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Chavis",
+    "houseofnames": "https://www.houseofnames.com/chavis-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

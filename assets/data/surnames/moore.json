@@ -1,0 +1,90 @@
+{
+  "surname": "Moore",
+  "slug": "moore",
+  "soundex": "M600",
+  "variants": [],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Wayne County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1760,
+        "count": 1
+      },
+      {
+        "decade": 1790,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 2
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1769,
+    "latest_birth": 1949,
+    "sample_records": [
+      {
+        "name": "Wallace Bynum Moore",
+        "birth": 1898,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Jennifer Ann Garrett Moore",
+        "birth": 1949,
+        "county": "Wayne County"
+      },
+      {
+        "name": "Maude Moore",
+        "birth": 1891,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Elizabeth  Moore-McGehee",
+        "birth": 1769,
+        "county": "Person County"
+      },
+      {
+        "name": "Candis Moore",
+        "birth": 1832,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/moore",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Moore",
+    "geneanet": "https://en.geneanet.org/surnames/moore",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Moore",
+    "houseofnames": "https://www.houseofnames.com/moore-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

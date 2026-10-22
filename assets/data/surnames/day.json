@@ -1,0 +1,92 @@
+{
+  "surname": "Day",
+  "slug": "day",
+  "soundex": "D000",
+  "variants": [
+    "daey"
+  ],
+  "nc_data": {
+    "total_records": 20,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 16
+      },
+      {
+        "county": "Alamance County",
+        "count": 3
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 5
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 6
+      },
+      {
+        "decade": 1950,
+        "count": 2
+      },
+      {
+        "decade": 1960,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1907,
+    "latest_birth": 1962,
+    "sample_records": [
+      {
+        "name": "Ernest Day",
+        "birth": null,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Stanley Otis Day",
+        "birth": 1939,
+        "county": "Alamance County"
+      },
+      {
+        "name": "George Allen Daye",
+        "birth": 1918,
+        "county": "Unknown County"
+      },
+      {
+        "name": "James Wallace Daye",
+        "birth": 1962,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Milton Daye",
+        "birth": 1946,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/day",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Day",
+    "geneanet": "https://en.geneanet.org/surnames/day",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Day",
+    "houseofnames": "https://www.houseofnames.com/day-family-crest",
+    "one_name_org": "https://one-name.org/surnames_d/"
+  }
+}

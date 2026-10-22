@@ -1,0 +1,64 @@
+{
+  "surname": "Person",
+  "slug": "person",
+  "soundex": "P625",
+  "variants": [
+    "per"
+  ],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1840,
+    "latest_birth": 1866,
+    "sample_records": [
+      {
+        "name": "Judy Judia Person",
+        "birth": 1840,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Winny Person",
+        "birth": 1861,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Gillis Person\\Barrett",
+        "birth": 1863,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Adam Thomas Person\\Barrett",
+        "birth": 1866,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Fanny J Person",
+        "birth": 1866,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/person",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Person",
+    "geneanet": "https://en.geneanet.org/surnames/person",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Person",
+    "houseofnames": "https://www.houseofnames.com/person-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

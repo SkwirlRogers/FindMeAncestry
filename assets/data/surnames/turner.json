@@ -1,0 +1,38 @@
+{
+  "surname": "Turner",
+  "slug": "turner",
+  "soundex": "T656",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1849,
+    "latest_birth": 1849,
+    "sample_records": [
+      {
+        "name": "Harriet E Turner",
+        "birth": 1849,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/turner",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Turner",
+    "geneanet": "https://en.geneanet.org/surnames/turner",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Turner",
+    "houseofnames": "https://www.houseofnames.com/turner-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

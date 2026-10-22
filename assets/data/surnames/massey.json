@@ -1,0 +1,41 @@
+{
+  "surname": "Massey",
+  "slug": "massey",
+  "soundex": "M200",
+  "variants": [
+    "massy",
+    "masseey"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Rockingham County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1892,
+    "latest_birth": 1892,
+    "sample_records": [
+      {
+        "name": "Edward Alexander Massey",
+        "birth": 1892,
+        "county": "Rockingham County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/massey",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Massey",
+    "geneanet": "https://en.geneanet.org/surnames/massey",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Massey",
+    "houseofnames": "https://www.houseofnames.com/massey-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

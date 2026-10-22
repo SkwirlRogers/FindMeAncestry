@@ -1,0 +1,86 @@
+{
+  "surname": "Corbett",
+  "slug": "corbett",
+  "soundex": "C613",
+  "variants": [],
+  "nc_data": {
+    "total_records": 17,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 12
+      },
+      {
+        "county": "Orange County",
+        "count": 4
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 6
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 6
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1880,
+    "latest_birth": 1941,
+    "sample_records": [
+      {
+        "name": "Robert Ernest \u201cBob\u201d Corbett",
+        "birth": 1880,
+        "county": "Orange County"
+      },
+      {
+        "name": "Claud William Corbett",
+        "birth": 1912,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mozelle Corbett-English",
+        "birth": 1912,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Robert Corbett",
+        "birth": 1931,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Louise Corbett",
+        "birth": 1927,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/corbett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Corbett",
+    "geneanet": "https://en.geneanet.org/surnames/corbett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Corbett",
+    "houseofnames": "https://www.houseofnames.com/corbett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

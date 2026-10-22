@@ -1,0 +1,70 @@
+{
+  "surname": "Satterfield",
+  "slug": "satterfield",
+  "soundex": "S361",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1835,
+    "latest_birth": 1935,
+    "sample_records": [
+      {
+        "name": "Octavia Satterfield",
+        "birth": 1904,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Richard Satterfield Sr",
+        "birth": 1935,
+        "county": "Person County"
+      },
+      {
+        "name": "John Earl Satterfield",
+        "birth": 1931,
+        "county": "Person County"
+      },
+      {
+        "name": "James Euless Satterfield",
+        "birth": 1934,
+        "county": "Person County"
+      },
+      {
+        "name": "Leather Leathia \"Lethy\" Janie Satterfield",
+        "birth": 1835,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/satterfield",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Satterfield",
+    "geneanet": "https://en.geneanet.org/surnames/satterfield",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Satterfield",
+    "houseofnames": "https://www.houseofnames.com/satterfield-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "surname": "Long",
+  "slug": "long",
+  "soundex": "L520",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Richmond County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1840,
+    "latest_birth": 1872,
+    "sample_records": [
+      {
+        "name": "Chestina Jessie Brooks Long",
+        "birth": 1871,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Elizabeth Eliza Long",
+        "birth": 1840,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Mollie Long",
+        "birth": 1872,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/long",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Long",
+    "geneanet": "https://en.geneanet.org/surnames/long",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Long",
+    "houseofnames": "https://www.houseofnames.com/long-family-crest",
+    "one_name_org": "https://one-name.org/surnames_l/"
+  }
+}

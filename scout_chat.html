@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scout Patterson (ScoutAI) — Private Family Detective | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .chat-container {
+      max-width: 1100px;
+      margin: 32px auto;
+      background: var(--clr-surface);
+      border: 2px solid var(--clr-accent);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      height: 75vh;
+    }
+
+    .chat-main {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .chat-sidebar {
+      flex: 1;
+      background: var(--clr-bg);
+      border-left: 1px solid var(--clr-border);
+      overflow-y: auto;
+      padding: 20px;
+      max-width: 320px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+
+    .sidebar-section h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--clr-primary);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--clr-border);
+    }
+
+    .service-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--clr-accent);
+      background: rgba(139, 92, 246, 0.05);
+    }
+
+    .service-card .service-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: 6px;
+    }
+
+    .service-card .service-desc {
+      font-size: 0.8rem;
+      color: var(--clr-text-muted);
+      line-height: 1.4;
+    }
+
+    .service-card .service-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--clr-accent);
+      margin-top: 6px;
+    }
+
+    .service-card.subscribed .service-title {
+      color: var(--clr-accent);
+    }
+
+    .chat-header {
+      background: var(--clr-primary);
+      color: var(--clr-text-inverse);
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chat-header-info h2 {
+      font-size: 1.3rem;
+      color: var(--clr-accent);
+      margin-bottom: 2px;
+    }
+
+    .chat-header-info p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .demo-badge {
+      background: var(--clr-accent);
+      color: var(--clr-primary);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* Subscription Sub-Navbar */
+    .subscription-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px 16px;
+      background: var(--clr-bg);
+      border-bottom: 2px solid var(--clr-accent);
+    }
+
+    .subnav-item {
+      flex: 1;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      text-align: center;
+      transition: all 0.2s ease;
+      border: 1px solid var(--clr-border);
+      background: var(--clr-surface);
+    }
+
+    .subnav-item:hover {
+      border-color: var(--clr-accent);
+      background: rgba(139, 92, 246, 0.05);
+    }
+
+    .subnav-item .subnav-tier {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+    }
+
+    .subnav-item .subnav-price {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--clr-text-muted);
+      margin-top: 2px;
+    }
+
+    .subnav-featured {
+      background: var(--clr-primary);
+      border-color: var(--clr-primary);
+    }
+
+    .subnav-featured .subnav-tier {
+      color: var(--clr-text-inverse);
+    }
+
+    .subnav-featured .subnav-price {
+      color: #cbd5e1;
+    }
+
+    .subnav-upgrade {
+      padding: 10px 20px;
+      background: var(--clr-accent);
+      color: var(--clr-primary);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .subnav-upgrade:hover {
+      background: #ffd700;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Sidebar Accordion */
+    .sidebar-accordion .accordion-icon {
+      margin-left: 8px;
+    }
+
+    /* "More" button for collapsed sections */
+    .more-btn {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: var(--clr-primary);
+      color: var(--clr-text-inverse);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: var(--clr-bg);
+    }
+
+    .message {
+      max-width: 80%;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: var(--clr-primary);
+      color: var(--clr-text-inverse);
+      border-bottom-right-radius: 2px;
+    }
+
+    .message.scout {
+      align-self: flex-start;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-left: 4px solid var(--clr-accent);
+      color: var(--clr-text);
+      border-bottom-left-radius: 2px;
+    }
+
+    .message.redirect {
+      align-self: center;
+      background: var(--clr-accent-light);
+      border: 2px solid var(--clr-accent);
+      color: var(--clr-primary);
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .chat-input-bar {
+      padding: 16px 24px;
+      background: var(--clr-surface);
+      border-top: 1px solid var(--clr-border);
+      display: flex;
+      gap: 12px;
+    }
+
+    .chat-input-bar input {
+      flex: 1;
+      padding: 12px 18px;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .chat-input-bar input:focus {
+      border-color: var(--clr-accent);
+    }
+
+    /* Mobile sidebar toggle */
+    .sidebar-toggle {
+      display: none;
+      position: fixed;
+      top: 80px;
+      right: 16px;
+      z-index: 1000;
+      background: var(--clr-primary);
+      color: var(--clr-text-inverse);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 992px) {
+      .chat-sidebar {
+        position: fixed;
+        top: 0;
+        right: -340px;
+        height: 100vh;
+        z-index: 999;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+      }
+
+      .chat-sidebar.active {
+        right: 0;
+      }
+
+      .sidebar-toggle {
+        display: flex;
+      }
+
+      .chat-main {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">
+          FindMeAncestry™ <span class="badge">ScoutAI</span>
+        </div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html" class="active">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar Toggle Button (Mobile) -->
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle ScoutAI Services">
+    🕵️‍♂️
+  </button>
+
+  <!-- Chat Container -->
+  <div class="container">
+    <div class="chat-container">
+      <div class="chat-main">
+        <div class="chat-header">
+          <div class="chat-header-info">
+            <h2>🕵️‍♂️ Scout Patterson (ScoutAI)</h2>
+            <p>Private Family Detective • Forensic Genealogy & DNA Triangulation</p>
+          </div>
+          <span class="demo-badge" id="modeBadge">Demo Mode</span>
+        </div>
+
+        <!-- ScoutAI Subscription Sub-Navbar -->
+        <div class="subscription-nav" id="subscriptionNav">
+          <a href="#" onclick="sendServiceQuery('What are your subscription tiers? Show me all three plans and what each includes.')" class="subnav-item subnav-featured">
+            <span class="subnav-tier">Discovery</span>
+            <span class="subnav-price">$9.99/mo</span>
+          </a>
+          <a href="#" onclick="sendServiceQuery('What are your subscription tiers? Show me all three plans and what each includes.')" class="subnav-item">
+            <span class="subnav-tier">Forensic Explorer</span>
+            <span class="subnav-price">$19.99/mo</span>
+          </a>
+          <a href="#" onclick="sendServiceQuery('What are your subscription tiers? Show me all plans and what each includes.')" class="subnav-item subnav-featured">
+            <span class="subnav-tier">All-Access Advocate</span>
+            <span class="subnav-price">$29.99/mo</span>
+          </a>
+          <a href="#" onclick="sendServiceQuery('Tell me about the All-Access Investigator tier - the YOLO Deep Dive. What does exhaustive research look like?')" class="subnav-item">
+            <span class="subnav-tier">All-Access Investigator</span>
+            <span class="subnav-price">$49.99/mo</span>
+          </a>
+          <a href="index.html#pricing" class="subnav-upgrade" id="subnavUpgradeBtn">
+            Upgrade
+          </a>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+          <div class="message scout">
+            Hello! I'm <strong>Scout Patterson</strong>, your Private Family Detective. I specialize in deep-dive forensic genealogy, DNA match triangulation, family advocacy, and chronological/habitation theoretics.<br><br>
+            How can I help you trace your roots today?
+          </div>
+        </div>
+
+        <form class="chat-input-bar" onsubmit="return handleSendMessage(event)">
+          <input type="text" id="userInput" placeholder="Ask Scout to research a relative, analyze DNA, or trace records..." required>
+          <button type="submit" class="btn btn-primary">Send Query</button>
+        </form>
+      </div>
+
+      <!-- Sidebar: ScoutAI Services -->
+      <div class="chat-sidebar" id="serviceSidebar">
+        <div class="sidebar-section">
+          <h4>Family Search Plans</h4>
+          <div class="service-card" onclick="sendServiceQuery('I need help finding a single parent. Run a Single Parent Search - $240, with DNA match analysis, family tree construction, and a confidential initial consultation. First order 35% off.')">
+            <div class="service-title">Single Parent Search</div>
+            <div class="service-desc">Confidential initial consultation, single biological parent search, DNA match analysis, family tree construction, and evidence review.</div>
+            <div class="service-price">$240</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('I want to find both biological parents. Run a Two Parent/Couple Search - $480, with complete DNA triangulation, both parental line analysis, and forensic ancestry report.')">
+            <div class="service-title">Two Parent/Couple Search</div>
+            <div class="service-desc">Full forensic investigation for both biological parents, complete DNA match triangulation, cM mapping, chromosome browser analysis, and forensic ancestry deep-dive report.</div>
+            <div class="service-price">$480</div>
+          </div>
+          <div class="service-card subscribed" onclick="sendServiceQuery('I need a Small Family Search for up to 4 members - $840, covering all family members with full forensic investigation, DNA triangulation, and timeline reconstruction.')">
+            <div class="service-title">Small Family Search</div>
+            <div class="service-desc">Complete investigation for up to 4 family members. Includes full interactive ScoutAI access, DNA match triangulation for all members, family tree construction, geographic timeline modeling, and priority case handling.</div>
+            <div class="service-price">$840</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="accordion-header" onclick="toggleSidebarAccordion('researchServicesList', this)">
+            <h4 style="margin: 0; font-size: 1rem; color: var(--clr-primary);">Research Services (Starting at $15)</h4>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content sidebar-accordion closed" id="researchServicesList">
+            <div class="service-card" onclick="sendServiceQuery('Run a quick record search - I need census records, vital records, and public records. What does it cost?')">
+              <div class="service-title">Quick Record Search</div>
+              <div class="service-desc">Census records, vital records (birth/death/marriage), immigration databases, military archives, court records, and newspaper searches.</div>
+              <div class="service-price">$15</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Birth Record Search for $15. Can you find birth records for [name] born in [year]?')">
+              <div class="service-title">Birth Record Search</div>
+              <div class="service-desc">Search birth certificates, baptismal records, and vital statistics databases across state and county archives.</div>
+              <div class="service-price">$15</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Death Record Search for $15. Can you find death records for [name]?')">
+              <div class="service-title">Death Record Search</div>
+              <div class="service-desc">Search death certificates, obituaries, and vital statistics databases across state and county archives.</div>
+              <div class="service-price">$15</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need an Address History Report. How much is it?')">
+              <div class="service-title">Address History Report</div>
+              <div class="service-desc">Full address history with prior residents and property ownership records.</div>
+              <div class="service-price">$25</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need an Address History Report w/ Last Known for $35. Can you find their last known address?')">
+              <div class="service-title">Address History (w/ Last Known)</div>
+              <div class="service-desc">Full address history plus confirmed last known address and current residents.</div>
+              <div class="service-price">$35</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Marriage Record Search for $20. Can you find marriage records for [names]?')">
+              <div class="service-title">Marriage Record/Certificate Search</div>
+              <div class="service-desc">Search marriage certificates, wedding announcements, and vital statistics marriage databases.</div>
+              <div class="service-price">$20</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Name/Alias Search for $20. Can you find all aliases and name variations?')">
+              <div class="service-title">Name/Alias Search</div>
+              <div class="service-desc">Search all known aliases, maiden names, nicknames, and name variations across databases.</div>
+              <div class="service-price">$20</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Social Media Check for $20. Can you find social media accounts?')">
+              <div class="service-title">Social Media Check</div>
+              <div class="service-desc">Search for social media accounts across platforms, profile analysis, and activity summary.</div>
+              <div class="service-price">$20</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need a Public Records Report for $30. Can you find all public records?')">
+              <div class="service-title">Public Records Report</div>
+              <div class="service-desc">Comprehensive public records search including court records, property ownership, and vital records.</div>
+              <div class="service-price">$30</div>
+            </div>
+            <div class="service-card" onclick="sendServiceQuery('I need an Obituary Lookup for $30. Can you find obituaries?')">
+              <div class="service-title">Obituary Lookup</div>
+              <div class="service-desc">Search obituaries from newspapers and death notices across national databases.</div>
+              <div class="service-price">$30</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Free Resources</h4>
+          <div class="service-card" onclick="sendServiceQuery('Can you give me the DNA Triangulation Log Sheet and the Shared cM Reference Guide? I want to start tracking my matches.')">
+            <div class="service-title">DNA Triangulation Log Sheet</div>
+            <div class="service-desc">Multi-generation tracking tables, auto-calculating segment triangulation matrices, and chromosomal location logging.</div>
+            <div class="service-price">Free Download</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('What is the Shared cM Reference Guide? Show me the probability chart for relationship predictions.')">
+            <div class="service-title">Shared cM Reference Guide</div>
+            <div class="service-desc">Complete probability chart for interpreting shared centimorgan ranges and predicting family relationships.</div>
+            <div class="service-price">Free Download</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Products & Books</h4>
+          <div class="service-card" onclick="sendServiceQuery('Tell me about the Advanced Triangulation Workbook.')">
+            <div class="service-title">Advanced Triangulation Workbook</div>
+            <div class="service-desc">Multi-sheet workbook for deep-dive segment analysis, advanced triangulation techniques, and chromosome mapping exercises.</div>
+            <div class="service-price">$49.99</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('What is in Unraveling Your Roots by Skwirl Rogers?')">
+            <div class="service-title">Unraveling Your Roots</div>
+            <div class="service-desc">Book covering 85+ essential genealogy terms, DNA triangulation, chromosome mapping, and legacy lineage tracing.</div>
+            <div class="service-price">$9.99</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Tools & Help</h4>
+          <div class="service-card" onclick="window.open('index.html#search', '_blank')">
+            <div class="service-title">Historical Geography Helper</div>
+            <div class="service-desc">Find former counties, cities, towns, parishes, and jurisdiction boundary changes for any location across time.</div>
+            <div class="service-price">Free Tool</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('What are your family search plans and payment options?')">
+            <div class="service-title">Family Search Plans</div>
+            <div class="service-desc">Single Parent ($240), Two Parent ($480), Small Family ($840). Payment plans available. 35% first-order discount.</div>
+            <div class="service-price">View Plans</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Government Databases</h4>
+          <div class="service-card" onclick="sendServiceQuery('Search federal court records for [name] — bankruptcy, civil, criminal cases', 'courtlistener')">
+            <div class="service-title">Federal Court Records</div>
+            <div class="service-desc">Search CourtListener/RECAP for federal bankruptcy, civil, and criminal cases by party name.</div>
+            <div class="service-price">Live Search</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('Search SEC EDGAR for investor distributions and company filings related to [name or company]', 'sec')">
+            <div class="service-title">SEC EDGAR Filings</div>
+            <div class="service-desc">Search SEC filings for investor distributions, Fair Fund information, and company records.</div>
+            <div class="service-price">Live Search</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('Look up geographic place names for [location] using USGS data', 'gnis')">
+            <div class="service-title">USGS Geographic Names</div>
+            <div class="service-desc">Research geographic features — populated places, streams, summits — for location-based genealogy.</div>
+            <div class="service-price">Live Search</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('Validate a Social Security Number: [SSN]', 'ssn')">
+            <div class="service-title">SSN Validator</div>
+            <div class="service-desc">Validate SSN format, area number, group number, and check state association.</div>
+            <div class="service-price">Live Scan</div>
+          </div>
+          <div class="service-card" onclick="sendServiceQuery('Validate an address: [address, city, state, zip]', 'usps')">
+            <div class="service-title">USPS Address Validation</div>
+            <div class="service-desc">Verify and standardize addresses using USPS — delivery point validation, ZIP+4.</div>
+            <div class="service-price">Live Validate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const isSubscribed = localStorage.getItem('findme_subscribed') === 'true';
+    const modeBadge = document.getElementById('modeBadge');
+    const navSubBtn = document.getElementById('navSubBtn');
+
+    if (isSubscribed) {
+      modeBadge.textContent = "Full Subscriber Access";
+      modeBadge.style.background = "#10b981";
+      modeBadge.style.color = "#ffffff";
+      if (navSubBtn) navSubBtn.style.display = "none";
+    }
+
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const serviceSidebar = document.getElementById('serviceSidebar');
+    if (sidebarToggle && serviceSidebar) {
+      sidebarToggle.addEventListener('click', function() {
+        serviceSidebar.classList.toggle('active');
+      });
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992 && serviceSidebar.classList.contains('active')) {
+          if (!serviceSidebar.contains(e.target) && e.target !== sidebarToggle) {
+            serviceSidebar.classList.remove('active');
+          }
+        }
+      });
+    }
+
+    // Sidebar accordion toggle for collapsed sections
+    function toggleSidebarAccordion(contentId, headerEl) {
+      const content = document.getElementById(contentId);
+      if (!content) return;
+      const isExpanded = content.classList.contains('open');
+      content.classList.toggle('open');
+      const icon = headerEl.querySelector('.accordion-icon');
+      if (icon) icon.classList.toggle('open');
+
+      // Update "More" button visibility
+      const moreBtn = headerEl.querySelector('.more-btn');
+      if (moreBtn) {
+        if (isExpanded) {
+          moreBtn.textContent = 'Show More';
+        } else {
+          moreBtn.textContent = 'Show Less';
+        }
+      }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q');
+    if (initialQuery) {
+      document.getElementById('userInput').value = initialQuery;
+    }
+
+    async function sendServiceQuery(queryText, tool) {
+      const input = document.getElementById('userInput');
+      input.value = queryText;
+      await handleSendMessage({ preventDefault: () => {} }, tool);
+    }
+
+    async function handleSendMessage(e, tool) {
+      e.preventDefault();
+      const input = document.getElementById('userInput');
+      const text = input.value.trim();
+      if (!text) return false;
+
+      const chatBox = document.getElementById('chatBox');
+
+      const userDiv = document.createElement('div');
+      userDiv.className = 'message user';
+      userDiv.textContent = text;
+      chatBox.appendChild(userDiv);
+      input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      // CeeYoAssets Unclaimed Asset Redirection Check
+      const lower = text.toLowerCase();
+      if (lower.includes('unclaimed asset') || lower.includes('unclaimed property') || lower.includes('estate recovery') || lower.includes('unclaimed money')) {
+        setTimeout(() => {
+          const redirectDiv = document.createElement('div');
+          redirectDiv.className = 'message redirect';
+          redirectDiv.innerHTML = `<strong>🏛️ Redirect Notice:</strong> Unclaimed assets and property searches are managed exclusively through our dedicated portal.<br><br><a href="ceeyoassets.html" class="btn btn-accent" style="padding: 6px 16px; font-size: 0.85rem; margin-top: 8px;">Visit CeeYoAssets Portal →</a>`;
+          chatBox.appendChild(redirectDiv);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 500);
+        return false;
+      }
+
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'message scout';
+      typingDiv.textContent = 'Scout is analyzing records & historical databases...';
+      chatBox.appendChild(typingDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      try {
+        const response = await fetch('/api/scout/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            isSubscribed: isSubscribed,
+            tool: tool || null
+          })
+        });
+
+        const data = await response.json();
+        chatBox.removeChild(typingDiv);
+
+        const scoutDiv = document.createElement('div');
+        scoutDiv.className = 'message scout';
+        scoutDiv.innerHTML = data.reply || "Scout Patterson encountered an issue reaching the archival bridge.";
+        chatBox.appendChild(scoutDiv);
+
+        if (!isSubscribed && data.demoLimited) {
+          const demoNotice = document.createElement('div');
+          demoNotice.className = 'message redirect';
+          demoNotice.innerHTML = `🔒 <em>You are currently using the <strong>FindMeAncestry Demo Version</strong>. Subscribe to unlock unlimited deep-dive searches with Scout.</em><br><a href="index.html#pricing" class="btn btn-accent" style="padding: 6px 16px; font-size: 0.85rem; margin-top: 8px;">Upgrade Now</a>`;
+          chatBox.appendChild(demoNotice);
+        }
+
+      } catch (err) {
+        chatBox.removeChild(typingDiv);
+        const errDiv = document.createElement('div');
+        errDiv.className = 'message scout';
+        errDiv.textContent = 'Scout Patterson: "Network connection lost. Please ensure the backend server is running."';
+        chatBox.appendChild(errDiv);
+      }
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "surname": "Omy",
+  "slug": "omy",
+  "soundex": "O500",
+  "variants": [
+    "omey"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1780,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1788,
+    "latest_birth": 1788,
+    "sample_records": [
+      {
+        "name": "Nancy Omy-Barrett",
+        "birth": 1788,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/omy",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Omy",
+    "geneanet": "https://en.geneanet.org/surnames/omy",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Omy",
+    "houseofnames": "https://www.houseofnames.com/omy-family-crest",
+    "one_name_org": "https://one-name.org/surnames_o/"
+  }
+}

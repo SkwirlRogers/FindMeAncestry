@@ -1,0 +1,54 @@
+{
+  "surname": "Adams",
+  "slug": "adams",
+  "soundex": "A352",
+  "variants": [
+    "adamse"
+  ],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1883,
+    "latest_birth": 1909,
+    "sample_records": [
+      {
+        "name": "Lessie Adams",
+        "birth": 1885,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Joseph Adams",
+        "birth": 1883,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Dorothy Rothy Adams",
+        "birth": 1909,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/adams",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Adams",
+    "geneanet": "https://en.geneanet.org/surnames/adams",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Adams",
+    "houseofnames": "https://www.houseofnames.com/adams-family-crest",
+    "one_name_org": "https://one-name.org/surnames_a/"
+  }
+}

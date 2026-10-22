@@ -1,0 +1,82 @@
+{
+  "surname": "Hatcher",
+  "slug": "hatcher",
+  "soundex": "H326",
+  "variants": [],
+  "nc_data": {
+    "total_records": 15,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 8
+      },
+      {
+        "county": "Person County",
+        "count": 6
+      },
+      {
+        "county": "Duplin County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 4
+      },
+      {
+        "decade": 1900,
+        "count": 4
+      },
+      {
+        "decade": 1910,
+        "count": 5
+      }
+    ],
+    "earliest_birth": 1867,
+    "latest_birth": 1919,
+    "sample_records": [
+      {
+        "name": "Marion Hatcher",
+        "birth": 1908,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Sallie Myrtle Hatcher-Fuller",
+        "birth": 1910,
+        "county": "Person County"
+      },
+      {
+        "name": "Nannie J Hatcher-Steppe",
+        "birth": 1912,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mamie L Hatcher",
+        "birth": 1914,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lillie Hatcher",
+        "birth": 1917,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hatcher",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hatcher",
+    "geneanet": "https://en.geneanet.org/surnames/hatcher",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hatcher",
+    "houseofnames": "https://www.houseofnames.com/hatcher-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

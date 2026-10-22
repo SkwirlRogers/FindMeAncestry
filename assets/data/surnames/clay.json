@@ -1,0 +1,92 @@
+{
+  "surname": "Clay",
+  "slug": "clay",
+  "soundex": "C400",
+  "variants": [
+    "claey"
+  ],
+  "nc_data": {
+    "total_records": 15,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 11
+      },
+      {
+        "county": "Alamance County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 5
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1875,
+    "latest_birth": 1937,
+    "sample_records": [
+      {
+        "name": "Francis Clay-Lawson",
+        "birth": 1875,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Thomas Clay",
+        "birth": 1877,
+        "county": "Unknown County"
+      },
+      {
+        "name": "George Washington Clay",
+        "birth": 1881,
+        "county": "Person County"
+      },
+      {
+        "name": "Novella Maggie Clay",
+        "birth": 1914,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Clay",
+        "birth": 1916,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/clay",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Clay",
+    "geneanet": "https://en.geneanet.org/surnames/clay",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Clay",
+    "houseofnames": "https://www.houseofnames.com/clay-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

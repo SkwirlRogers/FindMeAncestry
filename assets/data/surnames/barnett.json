@@ -1,0 +1,82 @@
+{
+  "surname": "Barnett",
+  "slug": "barnett",
+  "soundex": "B653",
+  "variants": [],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 7
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1856,
+    "latest_birth": 1923,
+    "sample_records": [
+      {
+        "name": "William Thomas Barnett",
+        "birth": 1879,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Nora Barnett",
+        "birth": 1887,
+        "county": "Person County"
+      },
+      {
+        "name": "Mary Fannie \"May, Mary Francis\" Barnett",
+        "birth": 1856,
+        "county": "Person County"
+      },
+      {
+        "name": "James Barnett",
+        "birth": 1871,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Estelle Barnett",
+        "birth": 1899,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/barnett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Barnett",
+    "geneanet": "https://en.geneanet.org/surnames/barnett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Barnett",
+    "houseofnames": "https://www.houseofnames.com/barnett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

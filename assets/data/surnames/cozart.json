@@ -1,0 +1,82 @@
+{
+  "surname": "Cozart",
+  "slug": "cozart",
+  "soundex": "C263",
+  "variants": [],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Granville County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1760,
+        "count": 3
+      },
+      {
+        "decade": 1770,
+        "count": 1
+      },
+      {
+        "decade": 1780,
+        "count": 1
+      },
+      {
+        "decade": 1800,
+        "count": 2
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1761,
+    "latest_birth": 1833,
+    "sample_records": [
+      {
+        "name": "Benjamin Hubbard Ben Cozart",
+        "birth": 1805,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Sallie Ann Cozart Hester",
+        "birth": 1833,
+        "county": "Person County"
+      },
+      {
+        "name": "Allen Cozart",
+        "birth": 1805,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Benjamin Cozart",
+        "birth": 1765,
+        "county": "Granville County"
+      },
+      {
+        "name": "Williams Cozart",
+        "birth": 1761,
+        "county": "Granville County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/cozart",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Cozart",
+    "geneanet": "https://en.geneanet.org/surnames/cozart",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Cozart",
+    "houseofnames": "https://www.houseofnames.com/cozart-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

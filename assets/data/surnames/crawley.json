@@ -1,0 +1,54 @@
+{
+  "surname": "Crawley",
+  "slug": "crawley",
+  "soundex": "C640",
+  "variants": [
+    "crawleey",
+    "crawly"
+  ],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1876,
+    "latest_birth": 1945,
+    "sample_records": [
+      {
+        "name": "Pauline \"Ba'eSis\" Crawley",
+        "birth": 1945,
+        "county": "Person County"
+      },
+      {
+        "name": "Fannie Crawley-Paylor-Glass",
+        "birth": 1876,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/crawley",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Crawley",
+    "geneanet": "https://en.geneanet.org/surnames/crawley",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Crawley",
+    "houseofnames": "https://www.houseofnames.com/crawley-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

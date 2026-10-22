@@ -1,0 +1,41 @@
+{
+  "surname": "Kirsey",
+  "slug": "kirsey",
+  "soundex": "K620",
+  "variants": [
+    "kirseey",
+    "kirsy"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Anson County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1894,
+    "latest_birth": 1894,
+    "sample_records": [
+      {
+        "name": "Darcy Kirsey",
+        "birth": 1894,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/kirsey",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Kirsey",
+    "geneanet": "https://en.geneanet.org/surnames/kirsey",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Kirsey",
+    "houseofnames": "https://www.houseofnames.com/kirsey-family-crest",
+    "one_name_org": "https://one-name.org/surnames_k/"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "surname": "Swann",
+  "slug": "swann",
+  "soundex": "S500",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Caswell County",
+        "count": 2
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1906,
+    "latest_birth": 1938,
+    "sample_records": [
+      {
+        "name": "Bettie Lou Swann",
+        "birth": 1912,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Fletcher Weldon Swann",
+        "birth": 1906,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Bessie Lou Swann-Nabors",
+        "birth": 1938,
+        "county": "Caswell County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/swann",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Swann",
+    "geneanet": "https://en.geneanet.org/surnames/swann",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Swann",
+    "houseofnames": "https://www.houseofnames.com/swann-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

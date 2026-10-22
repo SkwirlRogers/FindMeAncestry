@@ -1,0 +1,73 @@
+{
+  "surname": "Fuller",
+  "slug": "fuller",
+  "soundex": "F460",
+  "variants": [],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1800,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1805,
+    "latest_birth": 1920,
+    "sample_records": [
+      {
+        "name": "Della Hanna Fuller",
+        "birth": 1879,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Martha Ann Fuller",
+        "birth": 1920,
+        "county": "Person County"
+      },
+      {
+        "name": "John Fuller",
+        "birth": 1805,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Harriet Fuller",
+        "birth": 1839,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/fuller",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Fuller",
+    "geneanet": "https://en.geneanet.org/surnames/fuller",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Fuller",
+    "houseofnames": "https://www.houseofnames.com/fuller-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "surname": "Hampton",
+  "slug": "hampton",
+  "soundex": "H513",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "New hanover County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1868,
+    "latest_birth": 1868,
+    "sample_records": [
+      {
+        "name": "John E Hampton",
+        "birth": 1868,
+        "county": "New hanover County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hampton",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hampton",
+    "geneanet": "https://en.geneanet.org/surnames/hampton",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hampton",
+    "houseofnames": "https://www.houseofnames.com/hampton-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

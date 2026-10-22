@@ -1,0 +1,65 @@
+{
+  "surname": "Pullam",
+  "slug": "pullam",
+  "soundex": "P450",
+  "variants": [],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1822,
+    "latest_birth": 1851,
+    "sample_records": [
+      {
+        "name": "Thomas Pullam",
+        "birth": 1844,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Champ Pullam",
+        "birth": 1844,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Wesley Pullam",
+        "birth": 1851,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Sallie Pullam",
+        "birth": 1822,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pullam",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pullam",
+    "geneanet": "https://en.geneanet.org/surnames/pullam",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pullam",
+    "houseofnames": "https://www.houseofnames.com/pullam-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

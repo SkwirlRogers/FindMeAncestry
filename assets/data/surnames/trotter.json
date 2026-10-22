@@ -1,0 +1,47 @@
+{
+  "surname": "Trotter",
+  "slug": "trotter",
+  "soundex": "T636",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1914,
+    "latest_birth": 1938,
+    "sample_records": [
+      {
+        "name": "Kelly Clifton Trotter",
+        "birth": 1914,
+        "county": "Person County"
+      },
+      {
+        "name": "Kelly Clifton Trotter Jr",
+        "birth": 1938,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/trotter",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Trotter",
+    "geneanet": "https://en.geneanet.org/surnames/trotter",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Trotter",
+    "houseofnames": "https://www.houseofnames.com/trotter-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

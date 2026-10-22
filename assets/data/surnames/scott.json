@@ -1,0 +1,74 @@
+{
+  "surname": "Scott",
+  "slug": "scott",
+  "soundex": "S300",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1886,
+    "latest_birth": 1936,
+    "sample_records": [
+      {
+        "name": "James \"Jim\" Scott (Ethiopian)",
+        "birth": 1896,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Flora Bell Scott-Day",
+        "birth": 1925,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Christine Scott",
+        "birth": 1933,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Bertie Scott",
+        "birth": 1886,
+        "county": "Person County"
+      },
+      {
+        "name": "Annie C Rogers Scott",
+        "birth": 1936,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/scott",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Scott",
+    "geneanet": "https://en.geneanet.org/surnames/scott",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Scott",
+    "houseofnames": "https://www.houseofnames.com/scott-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

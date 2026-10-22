@@ -1,0 +1,40 @@
+{
+  "surname": "Cheeks",
+  "slug": "cheeks",
+  "soundex": "C200",
+  "variants": [
+    "cheekse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1908,
+    "latest_birth": 1908,
+    "sample_records": [
+      {
+        "name": "Mary Ellen \"May Ellen\" Williams Johnson Cheeks",
+        "birth": 1908,
+        "county": "Caswell County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/cheeks",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Cheeks",
+    "geneanet": "https://en.geneanet.org/surnames/cheeks",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Cheeks",
+    "houseofnames": "https://www.houseofnames.com/cheeks-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

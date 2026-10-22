@@ -1,0 +1,72 @@
+{
+  "surname": "Woody",
+  "slug": "woody",
+  "soundex": "W300",
+  "variants": [
+    "woodey"
+  ],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1897,
+    "latest_birth": 1949,
+    "sample_records": [
+      {
+        "name": "Lovenia Woody",
+        "birth": 1897,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Ethel M Woody",
+        "birth": 1944,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mark R Woody",
+        "birth": 1948,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary M Woody",
+        "birth": 1949,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mark Woody",
+        "birth": 1928,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/woody",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Woody",
+    "geneanet": "https://en.geneanet.org/surnames/woody",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Woody",
+    "houseofnames": "https://www.houseofnames.com/woody-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "surname": "Wilkerson",
+  "slug": "wilkerson",
+  "soundex": "W426",
+  "variants": [
+    "wilker"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [],
+    "earliest_birth": null,
+    "latest_birth": null,
+    "sample_records": [
+      {
+        "name": "Henderson Wilkerson",
+        "birth": null,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/wilkerson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Wilkerson",
+    "geneanet": "https://en.geneanet.org/surnames/wilkerson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Wilkerson",
+    "houseofnames": "https://www.houseofnames.com/wilkerson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

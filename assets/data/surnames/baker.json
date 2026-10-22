@@ -1,0 +1,38 @@
+{
+  "surname": "Baker",
+  "slug": "baker",
+  "soundex": "B260",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1882,
+    "latest_birth": 1882,
+    "sample_records": [
+      {
+        "name": "Alice P \"CeeCee\" Baker",
+        "birth": 1882,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/baker",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Baker",
+    "geneanet": "https://en.geneanet.org/surnames/baker",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Baker",
+    "houseofnames": "https://www.houseofnames.com/baker-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

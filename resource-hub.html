@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkwirlWorld Resources &amp; Tools — Ancestry, Genealogy &amp; DNA | FindMeAncestry</title>
+  <meta name="description" content="SkwirlWorld ECC — Professional genealogy research, DNA analysis, unclaimed asset recovery, estate research, and family reunification services.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .hero-tools{background:linear-gradient(135deg,#3D8B37 0%,#059669 25%,#0D9488 50%,#2563EB 75%,#7C3AED 100%);padding:60px 32px;color:#fff;position:relative;overflow:hidden}
+    .hero-tools::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#F59E0B,#EF4444,#8B5CF6,#3B82F6,#10B981)}
+    .hero-tools .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:40px;padding:6px 18px;font-size:13px;font-weight:600;color:#fff;margin-bottom:20px}
+    .hero-tools h1{font-size:clamp(28px,5vw,56px);font-weight:900;line-height:1.1;margin-bottom:16px}
+    .hero-tools p{font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,0.85);max-width:700px;margin:0 auto}
+    .stat-row{display:flex;gap:16px;margin:24px 0;flex-wrap:wrap;justify-content:center}
+    .stat-box{flex:1;min-width:140px;max-width:200px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:16px;text-align:center}
+    .stat-box .num{font-size:28px;font-weight:900;color:var(--clr-accent)}
+    .stat-box .lbl{font-size:11px;color:var(--clr-text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+    .hh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:30px 0}
+    .hh-card{background:var(--clr-surface);border-radius:16px;border:1px solid var(--clr-border);padding:28px;transition:box-shadow 0.2s,transform 0.2s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+    .hh-card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.15);transform:translateY(-3px);text-decoration:none}
+    .hh-icon{font-size:40px;margin-bottom:14px}
+    .hh-card h3{font-size:18px;font-weight:800;margin-bottom:8px}
+    .hh-card p{font-size:13px;color:var(--clr-text-muted);margin-bottom:16px;line-height:1.6}
+    .hh-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    .tag-free{background:rgba(5,150,105,0.12);color:#059669}
+    .tag-paid{background:rgba(217,119,6,0.12);color:#D97706}
+    .tag-donate{background:rgba(225,29,72,0.12);color:#E11D48}
+    .hub-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:30px 0}
+    .hub-link{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:10px;font-size:14px;font-weight:600;color:var(--clr-text);text-decoration:none;transition:all 0.2s}
+    .hub-link:hover{border-color:var(--clr-accent);background:var(--clr-accent-light);text-decoration:none}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:20px 0}
+    .team-card{padding:16px;background:var(--clr-surface-alt);border-radius:12px;text-align:center;border:1px solid var(--clr-border)}
+    .team-card .emoji{font-size:28px;margin-bottom:6px}
+    .team-card h4{font-size:13px;font-weight:700}
+    .team-card p{font-size:11px;color:var(--clr-text-muted)}
+    .section-header{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+    .section-header h2{font-size:22px;font-weight:800}
+    .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin:30px 0}
+    .tool-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:28px;text-align:center;transition:all 0.2s}
+    .tool-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--clr-accent)}
+    .tool-icon{width:56px;height:56px;border-radius:12px;background:var(--clr-primary);color:var(--clr-text-inverse);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 14px}
+    .tool-card h3{font-size:1rem;margin-bottom:6px}
+    .tool-card p{font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:0}
+    .dna-calc-box{background:var(--clr-surface);border:2px solid var(--clr-border);border-radius:16px;padding:32px;max-width:600px;margin:0 auto}
+    .dna-result{margin-top:20px;padding:16px;border-radius:12px;background:var(--clr-surface-alt);border:1px solid var(--clr-border);font-size:0.9rem;line-height:1.8}
+    .form-input{width:100%;padding:12px 16px;border:1px solid var(--clr-border);border-radius:10px;background:var(--clr-surface);color:var(--clr-text);font-size:0.9rem;margin-bottom:12px}
+    .form-input:focus{outline:none;border-color:var(--clr-accent)}
+    .btn-accent{background:var(--clr-accent);color:var(--clr-primary);border:none;padding:10px 22px;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.15s}
+    .btn-accent:hover{opacity:0.9}
+    .btn-primary{background:var(--clr-primary);color:var(--clr-text-inverse);border:none;padding:10px 22px;border-radius:10px;font-weight:700;cursor:pointer;transition:all 0.15s}
+    .price-grid{display:flex;gap:12px;flex-wrap:wrap}
+    .price-card{flex:1;min-width:160px;padding:16px;background:var(--clr-surface-alt);border:1px solid var(--clr-border);border-radius:12px;text-align:center}
+    .price-card.featured{border:2px solid var(--clr-accent);background:var(--clr-accent-light)}
+    .price-card .price{font-size:1.8rem;font-weight:700;color:var(--clr-accent)}
+    .price-card .price span{font-size:0.8rem;font-weight:400;color:var(--clr-text-muted)}
+    .price-card .price-label{font-size:0.75rem;color:var(--clr-text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+    .price-card .price-desc{font-size:0.8rem;color:var(--clr-text-muted);margin-top:4px}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:20px 0}
+    .svc-item{padding:12px;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:12px;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center}
+    .svc-item strong{color:var(--clr-text)}
+    .svc-item .svc-price{font-weight:700;color:var(--clr-accent)}
+    @media(max-width:700px){.hh-grid,.tool-grid{grid-template-columns:1fr}.stat-row{flex-direction:column;align-items:center}.price-grid{flex-direction:column}}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction:row;align-items:center;gap:14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width:50px;height:50px;border-radius:50%;border:2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers &amp; Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free" class="active">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-tools">
+    <div style="max-width:1000px;margin:0 auto;text-align:center;">
+      <div class="hero-badge">🧬 SkwirlWorld ECC Platform</div>
+      <h1>SkwirlWorld Resource Hub</h1>
+      <p>Professional genealogy research, DNA analysis, unclaimed asset recovery, estate research, and family reunification — powered by SkwirlWorld ECC.</p>
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">500+</div><div class="lbl">Families Reunited</div></div>
+        <div class="stat-box"><div class="num">$2.1M</div><div class="lbl">Assets Recovered</div></div>
+        <div class="stat-box"><div class="num">20+</div><div class="lbl">Years Experience</div></div>
+        <div class="stat-box"><div class="num">50</div><div class="lbl">States Covered</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="max-width:1000px;margin:0 auto;padding:40px 24px;">
+
+    <!-- Five Hard Hitters -->
+    <div class="section-header" style="margin-top:20px;">
+      <h2>💰 Five Hard Hitters — Autonomous Revenue Engines</h2>
+    </div>
+
+    <div class="hh-grid">
+        <a href="#ceeyoassets" class="hh-card">
+          <div class="hh-icon">💰</div>
+          <h3>Unclaimed Asset Scanner</h3>
+          <p>Free multi-state unclaimed property search across all 50 states. Find dormant bank accounts, insurance payouts, tax refunds, and hidden estate assets.</p>
+          <span class="hh-tag tag-free">Free Search</span>
+        </a>
+      <a href="#heir-finder" class="hh-card">
+        <div class="hh-icon">🧬</div>
+        <h3>Heir Finder</h3>
+        <p>DNA-based heir identification for estates, trusts, and unclaimed property. Professional genealogy research with 98% success rate.</p>
+        <span class="hh-tag tag-paid">From $497</span>
+      </a>
+      <a href="#estate-research" class="hh-card">
+        <div class="hh-icon">⚖️</div>
+        <h3>Estate Research &amp; Probate Tools</h3>
+        <p>Professional estate research, probate document retrieval, asset identification, and heir location for attorneys, executors, and families.</p>
+        <span class="hh-tag tag-paid">From $15</span>
+      </a>
+      <a href="#dna-calculator" class="hh-card">
+        <div class="hh-icon">🧮</div>
+        <h3>DNA Relationship Calculator</h3>
+        <p>Free centimorgan (cM) relationship calculator. Determine probable biological relationships based on shared DNA amounts.</p>
+        <span class="hh-tag tag-free">Free Tool</span>
+      </a>
+      <a href="#donate" class="hh-card">
+        <div class="hh-icon">❤️</div>
+        <h3>Support &amp; Donate</h3>
+        <p>Donate directly to our mission. GoFundMe, Stripe direct donations, and Skwirl's Bakery cupcake fundraiser. Every dollar goes to families.</p>
+        <span class="hh-tag tag-donate">Donate Now</span>
+      </a>
+      <a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788?tag=arholdings22-20" target="_blank" rel="noopener noreferrer" class="hh-card">
+        <div class="hh-icon">📚</div>
+        <h3>Unraveling Roots — Book Hub</h3>
+        <p>"Unraveling Roots: Exploring Genealogy and DNA Match Triangulation" by Skwirl Rogers. Available on Amazon worldwide.</p>
+        <span class="hh-tag tag-paid">Buy on Amazon</span>
+      </a>
+    </div>
+
+    <!-- DNA Calculator Section -->
+    <div id="dna-calculator" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>🧮 DNA Relationship Calculator</h2>
+      </div>
+
+      <!-- FREE Version -->
+      <div style="background:var(--clr-surface);border:2px solid #059669;border-radius:16px;padding:24px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span class="hh-tag tag-free">FREE</span>
+          <h3 style="margin:0;font-size:18px;">Basic DNA Relationship Calculator</h3>
+        </div>
+        <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Enter shared centimorgans (cM) to determine probable biological relationships.</p>
+        <div class="dna-calc-box" style="border:none;padding:0;margin:0;">
+          <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:6px;">Shared Centimorgans (cM)</label>
+          <input type="number" id="cmInput" class="form-input" placeholder="e.g. 3400" oninput="calculateDNA()">
+          <div class="dna-result" id="dnaResult">Enter a cM value to see possible relationships.</div>
+        </div>
+      </div>
+
+      <!-- PAID Version -->
+      <div style="background:var(--clr-surface);border:2px solid var(--clr-accent);border-radius:16px;padding:24px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span class="hh-tag tag-paid">PRO / PAID</span>
+          <h3 style="margin:0;font-size:18px;">Advanced DNA Analysis Suite</h3>
+        </div>
+        <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Full chromosome mapping, triangulation, centimorgan analysis, and forensic genealogy tools.</p>
+        <div class="tool-grid" style="margin:0 0 20px 0;">
+          <div style="padding:16px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+            <strong>🔬 Chromosome Mapping</strong><br>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">Visualize shared DNA segments across all 22 chromosome pairs.</span>
+          </div>
+          <div style="padding:16px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+            <strong>🔺 Triangulation Engine</strong><br>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">Auto-triangulate matches to confirm common ancestors.</span>
+          </div>
+          <div style="padding:16px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+            <strong>📊 cM Analysis Report</strong><br>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">Detailed relationship probability with confidence intervals.</span>
+          </div>
+          <div style="padding:16px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+            <strong>🕵️ Forensic Match Review</strong><br>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">AI-assisted match analysis for brick walls and unknown parentage.</span>
+          </div>
+        </div>
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="price-label">Discovery</div>
+            <div class="price">$9.99<span>/mo</span></div>
+            <div class="price-desc">basic DNA tools</div>
+            <button class="btn-accent" style="width:100%;margin-top:10px;">Subscribe</button>
+          </div>
+          <div class="price-card">
+            <div class="price-label">Forensic Explorer</div>
+            <div class="price">$19.99<span>/mo</span></div>
+            <div class="price-desc">advanced DNA analysis</div>
+            <button class="btn-primary" style="width:100%;margin-top:10px;">Subscribe</button>
+          </div>
+          <div class="price-card featured">
+            <div class="price-label">All-Access Advocate</div>
+            <div class="price">$29.99<span>/mo</span></div>
+            <div class="price-desc">unlimited DNA + surname suite</div>
+            <button class="btn-primary" style="width:100%;margin-top:10px;">Subscribe</button>
+          </div>
+          <div class="price-card">
+            <div class="price-label">All-Access Investigator</div>
+            <div class="price">$49.99<span>/mo</span></div>
+            <div class="price-desc">exhaustive DNA + forensic tools</div>
+            <button class="btn-primary" style="width:100%;margin-top:10px;">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heir Finder Section -->
+    <div id="heir-finder" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>🧬 Heir Finder</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">DNA-based heir identification for estates, trusts, and unclaimed property. Professional genealogy research with 98% success rate.</p>
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="price-label">Basic Heir Search</div>
+            <div class="price">$497</div>
+            <div class="price-desc">single estate case</div>
+            <button class="btn-accent" style="width:100%;margin-top:10px;">Get Started</button>
+          </div>
+          <div class="price-card featured">
+            <div class="price-label">Full Heir Research</div>
+            <div class="price">$997</div>
+            <div class="price-desc">complex multi-state cases</div>
+            <button class="btn-primary" style="width:100%;margin-top:10px;">Get Started</button>
+          </div>
+          <div class="price-card">
+            <div class="price-label">Success Fee</div>
+            <div class="price">20%</div>
+            <div class="price-desc">of recovered assets</div>
+            <button class="btn-accent" style="width:100%;margin-top:10px;">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estate Research Section -->
+    <div id="estate-research" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>⚖️ Estate Research &amp; Probate Tools</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div>
+            <h3 style="margin-bottom:12px;">📄 Document Retrieval</h3>
+            <div class="svc-grid">
+              <div class="svc-item"><span>Birth Certificate Search</span><span class="svc-price">$15</span></div>
+              <div class="svc-item"><span>Death Certificate Search</span><span class="svc-price">$15</span></div>
+              <div class="svc-item"><span>Marriage Record</span><span class="svc-price">$20</span></div>
+              <div class="svc-item"><span>Divorce Record Search</span><span class="svc-price">$20</span></div>
+              <div class="svc-item"><span>Probate Court Records</span><span class="svc-price">$30</span></div>
+              <div class="svc-item"><span>Property Deed / Title</span><span class="svc-price">$35</span></div>
+              <div class="svc-item"><span>Obituary Lookup</span><span class="svc-price">$30</span></div>
+              <div class="svc-item"><span>Public Records Report</span><span class="svc-price">$30</span></div>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">🔧 Research Services</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Asset Search</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Multi-state search for dormant accounts, insurance payouts, tax refunds.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free Search</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Heir Research</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">DNA-based heir identification using census, vital records, and public databases.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">From $497</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>DNA Analysis</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Advanced DNA match analysis, triangulation, and relationship prediction.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">From $199</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Skip Tracing</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Locate missing heirs, beneficiaries, and individuals connected to estate cases.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">From $75</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CeeYoAssets -->
+    <div id="ceeyoassets" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>💼 CeeYoAssets</h2>
+      </div>
+      <div style="background:linear-gradient(135deg,#1E293B 0%,#0F172A 50%,#1E293B 100%);border:2px solid var(--clr-accent);border-radius:16px;padding:32px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(5,150,105,0.15) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:0;left:0;width:150px;height:150px;background:radial-gradient(circle,rgba(124,58,237,0.1) 0%,transparent 70%);pointer-events:none;"></div>
+        <p style="color:var(--clr-text-muted);margin-bottom:24px;font-size:1.05rem;">Find unclaimed assets and locate heirs. Manual search or AI-powered analysis — your choice.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <a href="ceeyoassets.html" style="text-decoration:none;color:inherit;">
+            <div style="padding:28px;background:var(--clr-surface);border-radius:16px;border:2px solid var(--clr-border);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#059669';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(5,150,105,0.2)'" onmouseout="this.style.borderColor='var(--clr-border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+              <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:radial-gradient(circle,rgba(5,150,105,0.2) 0%,transparent 70%);pointer-events:none;"></div>
+              <div style="width:60px;height:60px;background:linear-gradient(135deg,#059669,#10B981);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:16px;">💰</div>
+              <h3 style="margin-bottom:8px;font-size:1.2rem;">Unclaimed Asset Scanner</h3>
+              <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:16px;line-height:1.7;">Free multi-state unclaimed property search across all 50 states. Find dormant bank accounts, insurance payouts, tax refunds, and hidden estate assets.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+                <span style="padding:4px 10px;background:rgba(5,150,105,0.15);border-radius:20px;font-size:0.7rem;color:#10B981;font-weight:600;">ALL 50 STATES</span>
+                <span style="padding:4px 10px;background:rgba(5,150,105,0.15);border-radius:20px;font-size:0.7rem;color:#10B981;font-weight:600;">INSTANT RESULTS</span>
+                <span style="padding:4px 10px;background:rgba(5,150,105,0.15);border-radius:20px;font-size:0.7rem;color:#10B981;font-weight:600;">NO SIGNUP</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span class="hh-tag tag-free">FREE SEARCH</span>
+                <span style="font-size:0.8rem;color:#10B981;font-weight:600;">→ Start Now</span>
+              </div>
+            </div>
+          </a>
+          <a href="ceeyoassets.html" style="text-decoration:none;color:inherit;">
+            <div style="padding:28px;background:var(--clr-surface);border-radius:16px;border:2px solid var(--clr-accent);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='#7C3AED';this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(124,58,237,0.2)'" onmouseout="this.style.borderColor='var(--clr-accent)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+              <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:radial-gradient(circle,rgba(124,58,237,0.2) 0%,transparent 70%);pointer-events:none;"></div>
+              <div style="width:60px;height:60px;background:linear-gradient(135deg,#7C3AED,#8B5CF6);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:16px;">🧬</div>
+              <h3 style="margin-bottom:8px;font-size:1.2rem;">CeeYo AI Assets &amp; Heir Finder</h3>
+              <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:16px;line-height:1.7;">AI-powered heir identification and asset discovery. Upload DNA data and let our LLM analyze matches to locate estate beneficiaries.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+                <span style="padding:4px 10px;background:rgba(124,58,237,0.15);border-radius:20px;font-size:0.7rem;color:#8B5CF6;font-weight:600;">AI-POWERED</span>
+                <span style="padding:4px 10px;background:rgba(124,58,237,0.15);border-radius:20px;font-size:0.7rem;color:#8B5CF6;font-weight:600;">DNA ANALYSIS</span>
+                <span style="padding:4px 10px;background:rgba(124,58,237,0.15);border-radius:20px;font-size:0.7rem;color:#8B5CF6;font-weight:600;">HEIR LOCATOR</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span class="hh-tag tag-paid">AI-POWERED</span>
+                <span style="font-size:0.8rem;color:#8B5CF6;font-weight:600;">→ Try Now</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donate Section -->
+    <div id="donate" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>❤️ Support &amp; Donate</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;text-align:center;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">Donate directly to our mission. Every dollar goes to families.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn-accent" style="padding:14px 32px;font-size:1rem;">💳 Donate with Card</button>
+          <a href="https://www.gofundme.com/" target="_blank" rel="noopener noreferrer" class="hub-link">GoFundMe</a>
+          <a href="https://www.amazon.com/hz/wishlist/ls/" target="_blank" rel="noopener noreferrer" class="hub-link">Skwirl's Bakery</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Section -->
+    <div id="community" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>👥 Community</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+          <div>
+            <h3 style="margin-bottom:12px;">💬 Discussion Forums</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>DNA Help Desk</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Get help interpreting DNA matches, centimorgan values, and relationship predictions.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free Access</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Estate Research Forum</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Ask questions about probate, unclaimed property, and estate research strategies.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free Access</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Genealogy Collaborative</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Work with other researchers to break through brick walls.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free Access</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">🎓 Learning Resources</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>DNA Basics Course</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Free introductory course on DNA, centimorgans, and how matches work.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free Course</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Triangulation Masterclass</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Advanced 4-week course on DNA triangulation, chromosome mapping, and segment analysis.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$49.99 / $199 All-Access</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Estate Recovery Workshop</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Learn how to find, claim, and recover unclaimed assets for families.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$29.99 / $199 All-Access</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Forensic Genealogy Webinar</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Live monthly webinars with Q&A on forensic genealogy techniques.</span><br>
+                <span class="hh-tag tag-free" style="margin-top:6px;">Free / $14.99 All-Access</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">🛒 SkwirlFinds &amp; Online Store</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>📄 Brick Wall Cheat Sheet</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">50 strategies to break through.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$9.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>🌳 Pedigree Chart Template</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Fillable PDF 5-generation chart.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$4.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>📊 DNA Match Tracker</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Spreadsheet template for organizing matches.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$7.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>🗺️ Migration Map Pack</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Printable ethnic migration maps.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$14.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>📚 Research Guide Bundle</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">State-by-state research guides (all 50).</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$29.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Affiliates Section -->
+    <div id="affiliates" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>🤝 Affiliates</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">Partner with SkwirlWorld ECC and earn commission by referring clients to our tools and services.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;">
+          <div style="padding:20px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);text-align:center;">
+            <div style="font-size:2rem;margin-bottom:8px;">💰</div>
+            <h4 style="margin-bottom:4px;">15-25% Commission</h4>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">on all referred sales</span>
+          </div>
+          <div style="padding:20px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);text-align:center;">
+            <div style="font-size:2rem;margin-bottom:8px;">🔄</div>
+            <h4 style="margin-bottom:4px;">Recurring Revenue</h4>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">earn on subscription referrals</span>
+          </div>
+          <div style="padding:20px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);text-align:center;">
+            <div style="font-size:2rem;margin-bottom:8px;">📊</div>
+            <h4 style="margin-bottom:4px;">Real-Time Dashboard</h4>
+            <span style="font-size:0.8rem;color:var(--clr-text-muted);">track clicks, signups, earnings</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <h3 style="margin-bottom:12px;">How It Works</h3>
+            <ol style="font-size:0.85rem;color:var(--clr-text-muted);padding-left:20px;line-height:2;">
+              <li>Sign up for a free affiliate account</li>
+              <li>Get your unique referral link</li>
+              <li>Share the link on your website, blog, or social media</li>
+              <li>Earn commission on every sale you refer</li>
+            </ol>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">Commission Rates</h3>
+            <div class="svc-grid">
+              <div class="svc-item"><span>DNA Tools (pay-per-use)</span><span class="svc-price">25%</span></div>
+              <div class="svc-item"><span>Subscriptions</span><span class="svc-price">20%</span></div>
+              <div class="svc-item"><span>Estate Research</span><span class="svc-price">15%</span></div>
+              <div class="svc-item"><span>Heir Finder</span><span class="svc-price">10%</span></div>
+              <div class="svc-item"><span>Book Sales</span><span class="svc-price">8%</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:24px;">
+          <button class="btn-primary" style="padding:14px 40px;font-size:1rem;">🤝 Join Affiliate Program</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Archives Search -->
+    <div id="archives-search" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>🏛️ Vital Archives Search</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">Search vital records, census data, and unclaimed property databases across all 50 states.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:600px;">
+          <input type="text" class="form-input" placeholder="Surname">
+          <input type="text" class="form-input" placeholder="Location (State/County)">
+        </div>
+        <button class="btn-primary" style="padding:14px 32px;font-size:1rem;margin-top:12px;">🔍 Query Archives</button>
+      </div>
+    </div>
+
+    <!-- Intake Funnel -->
+    <div id="intake" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>📋 Elite Intake Funnel</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">Submit your DNA data from any major platform for professional analysis.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;">
+          <div>
+            <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:6px;">DNA Platform</label>
+            <select class="form-input">
+              <option>AncestryDNA</option>
+              <option>23andMe</option>
+              <option>MyHeritage</option>
+              <option>FamilyTreeDNA</option>
+              <option>GEDmatch</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:6px;">Case Type</label>
+            <select class="form-input">
+              <option>DNA Relationship Analysis</option>
+              <option>Unknown Parentage</option>
+              <option>Estate / Heir Identification</option>
+              <option>Adoption Reunion</option>
+              <option>Brick Wall Breakthrough</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:12px;">
+          <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:6px;">Describe Your Case</label>
+          <textarea class="form-input" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <button class="btn-accent" style="padding:14px 32px;font-size:1rem;margin-top:12px;">🚀 Submit Case</button>
+      </div>
+    </div>
+
+    <!-- Gear / Lab -->
+    <div id="gear" style="margin-top:60px;">
+      <div class="section-header">
+        <h2>🔧 The Archival Digits Lab</h2>
+      </div>
+      <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:16px;padding:32px;">
+        <p style="color:var(--clr-text-muted);margin-bottom:20px;">Professional scanning and recording gear for preserving family history.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <h3 style="margin-bottom:12px;">📸 Scanners</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Fujitsu ScanSnap iX1600</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">60ppm duplex scanning. Best for document batches.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$429.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Epson Perfection V600</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Photo & film scanning. 6400 dpi resolution.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$249.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Epson FastFoto FF-680W</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Photo scanning at 1 photo per second.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$549.99</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:12px;">🎙️ Recorders</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Zoom H5 Handy Recorder</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">4-track recording. Interchangeable mic system.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$279.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Zoom H4n Pro</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">4-channel recording. Mid-side mic technique.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$199.99</span>
+              </div>
+              <div style="padding:12px;background:var(--clr-surface-alt);border-radius:12px;border:1px solid var(--clr-border);">
+                <strong>Zoom PodTrak P4</strong><br>
+                <span style="font-size:0.8rem;color:var(--clr-text-muted);">Podcast recorder. 4 mic inputs. Voice effects.</span><br>
+                <span class="hh-tag tag-paid" style="margin-top:6px;">$149.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ecosystem Links -->
+    <div class="section-header" style="margin-top:60px;">
+      <h2>🌐 Explore the Ecosystem</h2>
+    </div>
+    <div class="hub-links">
+      <a href="#ceeyoassets" class="hub-link">💼 CeeYoAssets</a>
+      <a href="#heir-finder" class="hub-link">🧬 Heir Finder</a>
+      <a href="#estate-research" class="hub-link">⚖️ Estate Research</a>
+      <a href="#dna-calculator" class="hub-link">🧮 DNA Calculator</a>
+      <a href="#archives-search" class="hub-link">🏛️ Archives Search</a>
+      <a href="#intake" class="hub-link">📋 Intake Funnel</a>
+      <a href="#gear" class="hub-link">🔧 Gear Lab</a>
+      <a href="#community" class="hub-link">👥 Community &amp; Store</a>
+      <a href="#affiliates" class="hub-link">🤝 Affiliates</a>
+      <a href="#donate" class="hub-link">❤️ Donate</a>
+      <a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788?tag=arholdings22-20" target="_blank" rel="noopener noreferrer" class="hub-link">📚 Book Hub</a>
+      <a href="index.html" class="hub-link">🔍 FindMeAncestry</a>
+      <a href="/archives" class="hub-link">🏛️ National Archives</a>
+    </div>
+
+    <!-- Corporate Agents -->
+    <div class="section-header" style="margin-top:60px;">
+      <h2>🏛️ Corporate Agents</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><div class="emoji">👔</div><h4>Maurice "COO" Williams</h4><p>Chief Operations Officer</p></div>
+      <div class="team-card"><div class="emoji">🛡️</div><h4>Kai "SOC'IT" Wang</h4><p>Security Operations</p></div>
+      <div class="team-card"><div class="emoji">💎</div><h4>Lisa "Financy" Rose</h4><p>Chief Financial Officer</p></div>
+      <div class="team-card"><div class="emoji">📈</div><h4>Kevin "Trader" Winston</h4><p>CLTE Trading Engine</p></div>
+      <div class="team-card"><div class="emoji">🏠</div><h4>Kayla "Assetie" Jones</h4><p>Asset Recovery &amp; CPO</p></div>
+      <div class="team-card"><div class="emoji">🎯</div><h4>Cedric "CeeMo" Rogers</h4><p>Chief Marketing Officer</p></div>
+      <div class="team-card"><div class="emoji">🏛️</div><h4>Abraham Rogers</h4><p>National Archives Agent</p></div>
+      <div class="team-card"><div class="emoji">🔍</div><h4>Scout</h4><p>Global Ancestry Research</p></div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer style="background:#0B1120;color:var(--clr-text-muted);padding:40px 24px 24px;margin-top:40px;border-top:1px solid var(--clr-border);text-align:center;">
+    <p style="font-size:13px;">&copy; 2026 SkwirlWorld ECC / Abram Rogers Legacy Holdings LLC. All rights reserved.</p>
+    <p style="font-size:11px;margin-top:8px;">SkwirlWorld ECC Platform — Powered by FindYourBabyFamily.com / FamiliesR Us</p>
+  </footer>
+
+  <script>
+  // DNA Calculator
+  function calculateDNA() {
+    var cm = parseFloat(document.getElementById('cmInput').value);
+    var el = document.getElementById('dnaResult');
+    if (!cm || cm <= 0) { el.innerHTML = 'Enter a cM value to see possible relationships.'; return; }
+    var results = [];
+    if (cm >= 2900) results.push({rel:'Parent / Child',pct:'~100%'});
+    else if (cm >= 2200) results.push({rel:'Full Sibling',pct:'~90%'});
+    if (cm >= 1200 && cm <= 2300) { results.push({rel:'Half Sibling',pct:'~75%'}); results.push({rel:'Aunt / Uncle',pct:'~75%'}); results.push({rel:'Grandparent',pct:'~75%'}); }
+    if (cm >= 400 && cm <= 1400) results.push({rel:'First Cousin',pct:'~85%'});
+    if (cm >= 200 && cm <= 600) results.push({rel:'First Cousin Once Removed',pct:'~70%'});
+    if (cm >= 40 && cm <= 500) results.push({rel:'Second Cousin',pct:'~75%'});
+    if (cm >= 20 && cm <= 200) results.push({rel:'Second Cousin Once Removed',pct:'~60%'});
+    if (cm >= 1 && cm <= 100) results.push({rel:'Third Cousin',pct:'~50%'});
+    if (results.length === 0) results.push({rel:'Distant Match',pct:'Could be 3rd+ cousin'});
+    el.innerHTML = '<strong>Possible Relationships for '+cm+' cM:</strong><br>' + results.map(function(r) { return '• <strong>'+r.rel+'</strong> — '+r.pct; }).join('<br>');
+  }
+  </script>
+
+</body>
+</html>

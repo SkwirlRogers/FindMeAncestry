@@ -1,0 +1,38 @@
+{
+  "surname": "Yarborough",
+  "slug": "yarborough",
+  "soundex": "Y616",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Franklin County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1929,
+    "latest_birth": 1929,
+    "sample_records": [
+      {
+        "name": "Dorothy Yarborough",
+        "birth": 1929,
+        "county": "Franklin County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/yarborough",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Yarborough",
+    "geneanet": "https://en.geneanet.org/surnames/yarborough",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Yarborough",
+    "houseofnames": "https://www.houseofnames.com/yarborough-family-crest",
+    "one_name_org": "https://one-name.org/surnames_y/"
+  }
+}

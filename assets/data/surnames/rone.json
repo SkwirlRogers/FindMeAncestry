@@ -1,0 +1,78 @@
+{
+  "surname": "Rone",
+  "slug": "rone",
+  "soundex": "R500",
+  "variants": [],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Alamance County",
+        "count": 6
+      },
+      {
+        "county": "Caswell County",
+        "count": 2
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      },
+      {
+        "decade": 1950,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1881,
+    "latest_birth": 1953,
+    "sample_records": [
+      {
+        "name": "Lula Mae Rone",
+        "birth": 1889,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Sidney Howard Rone",
+        "birth": 1912,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Sidney Alvin Rone Sr.",
+        "birth": 1946,
+        "county": "Alamance County"
+      },
+      {
+        "name": "William Henry Rone",
+        "birth": 1947,
+        "county": "Alamance County"
+      },
+      {
+        "name": "James Harvey Rone",
+        "birth": 1948,
+        "county": "Alamance County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/rone",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Rone",
+    "geneanet": "https://en.geneanet.org/surnames/rone",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Rone",
+    "houseofnames": "https://www.houseofnames.com/rone-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

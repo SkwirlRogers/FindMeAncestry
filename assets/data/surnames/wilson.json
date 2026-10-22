@@ -1,0 +1,40 @@
+{
+  "surname": "Wilson",
+  "slug": "wilson",
+  "soundex": "W425",
+  "variants": [
+    "wil"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1928,
+    "latest_birth": 1928,
+    "sample_records": [
+      {
+        "name": "Mary Ann Furges\\Hamlett-Wilson",
+        "birth": 1928,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/wilson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Wilson",
+    "geneanet": "https://en.geneanet.org/surnames/wilson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Wilson",
+    "houseofnames": "https://www.houseofnames.com/wilson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

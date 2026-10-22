@@ -1,0 +1,70 @@
+{
+  "surname": "Spencer",
+  "slug": "spencer",
+  "soundex": "S152",
+  "variants": [],
+  "nc_data": {
+    "total_records": 6,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Anson County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1855,
+    "latest_birth": 1893,
+    "sample_records": [
+      {
+        "name": "Edmund Spencer",
+        "birth": 1855,
+        "county": "Anson County"
+      },
+      {
+        "name": "Edmon Spencer Jr",
+        "birth": 1892,
+        "county": "Anson County"
+      },
+      {
+        "name": "Frank Spencer",
+        "birth": 1881,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Martha Spencer",
+        "birth": 1883,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Henry Spencer",
+        "birth": 1893,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/spencer",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Spencer",
+    "geneanet": "https://en.geneanet.org/surnames/spencer",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Spencer",
+    "houseofnames": "https://www.houseofnames.com/spencer-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

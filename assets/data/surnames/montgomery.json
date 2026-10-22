@@ -1,0 +1,40 @@
+{
+  "surname": "Montgomery",
+  "slug": "montgomery",
+  "soundex": "M532",
+  "variants": [
+    "montgomerey"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Rowan County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1750,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1755,
+    "latest_birth": 1755,
+    "sample_records": [
+      {
+        "name": "Nancy Anne Montgomery",
+        "birth": 1755,
+        "county": "Rowan County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/montgomery",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Montgomery",
+    "geneanet": "https://en.geneanet.org/surnames/montgomery",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Montgomery",
+    "houseofnames": "https://www.houseofnames.com/montgomery-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "surname": "Farrish",
+  "slug": "farrish",
+  "soundex": "F620",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1867,
+    "latest_birth": 1925,
+    "sample_records": [
+      {
+        "name": "Lesterene \"Lester\" Farrish",
+        "birth": 1918,
+        "county": "Person County"
+      },
+      {
+        "name": "John Henry Farrish",
+        "birth": 1867,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Frances Elizabeth Farrish",
+        "birth": 1925,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/farrish",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Farrish",
+    "geneanet": "https://en.geneanet.org/surnames/farrish",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Farrish",
+    "houseofnames": "https://www.houseofnames.com/farrish-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

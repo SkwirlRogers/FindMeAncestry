@@ -1,0 +1,74 @@
+{
+  "surname": "Dixon",
+  "slug": "dixon",
+  "soundex": "D250",
+  "variants": [],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 6
+      },
+      {
+        "county": "Caswell County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 4
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1878,
+    "latest_birth": 1924,
+    "sample_records": [
+      {
+        "name": "Julia Louise Dixon",
+        "birth": 1915,
+        "county": "Person County"
+      },
+      {
+        "name": "Emily Cornelia Dixon",
+        "birth": 1916,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Jessie Louise Dixon",
+        "birth": 1924,
+        "county": "Person County"
+      },
+      {
+        "name": "Edward Dixon",
+        "birth": 1878,
+        "county": "Person County"
+      },
+      {
+        "name": "John Dixon",
+        "birth": 1907,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/dixon",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Dixon",
+    "geneanet": "https://en.geneanet.org/surnames/dixon",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Dixon",
+    "houseofnames": "https://www.houseofnames.com/dixon-family-crest",
+    "one_name_org": "https://one-name.org/surnames_d/"
+  }
+}

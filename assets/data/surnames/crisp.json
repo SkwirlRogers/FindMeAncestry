@@ -1,0 +1,51 @@
+{
+  "surname": "Crisp",
+  "slug": "crisp",
+  "soundex": "C621",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1960,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1910,
+    "latest_birth": 1961,
+    "sample_records": [
+      {
+        "name": "Lonnie Crisp",
+        "birth": 1910,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Darlene Crisp",
+        "birth": 1961,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/crisp",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Crisp",
+    "geneanet": "https://en.geneanet.org/surnames/crisp",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Crisp",
+    "houseofnames": "https://www.houseofnames.com/crisp-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

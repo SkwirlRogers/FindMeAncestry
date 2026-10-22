@@ -1,0 +1,38 @@
+{
+  "surname": "Harrington",
+  "slug": "harrington",
+  "soundex": "H652",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Richmond County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1959,
+    "latest_birth": 1959,
+    "sample_records": [
+      {
+        "name": "Betty Jean Harrington",
+        "birth": 1959,
+        "county": "Richmond County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/harrington",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Harrington",
+    "geneanet": "https://en.geneanet.org/surnames/harrington",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Harrington",
+    "houseofnames": "https://www.houseofnames.com/harrington-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

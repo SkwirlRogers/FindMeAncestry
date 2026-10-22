@@ -1,0 +1,49 @@
+{
+  "surname": "Peterson",
+  "slug": "peterson",
+  "soundex": "P362",
+  "variants": [
+    "peter"
+  ],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1886,
+    "latest_birth": 1928,
+    "sample_records": [
+      {
+        "name": "Dorthy M Peterson",
+        "birth": 1928,
+        "county": "Unknown County"
+      },
+      {
+        "name": "English Peterson",
+        "birth": 1886,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/peterson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Peterson",
+    "geneanet": "https://en.geneanet.org/surnames/peterson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Peterson",
+    "houseofnames": "https://www.houseofnames.com/peterson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

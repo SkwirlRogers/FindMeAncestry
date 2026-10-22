@@ -1,0 +1,50 @@
+{
+  "surname": "Peguis",
+  "slug": "peguis",
+  "soundex": "P220",
+  "variants": [
+    "peguise"
+  ],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1872,
+    "latest_birth": 1878,
+    "sample_records": [
+      {
+        "name": "Tood Peguis",
+        "birth": 1872,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Leneare Peguis",
+        "birth": 1876,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Babe Peguis",
+        "birth": 1878,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/peguis",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Peguis",
+    "geneanet": "https://en.geneanet.org/surnames/peguis",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Peguis",
+    "houseofnames": "https://www.houseofnames.com/peguis-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

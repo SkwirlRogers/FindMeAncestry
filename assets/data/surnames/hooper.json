@@ -1,0 +1,38 @@
+{
+  "surname": "Hooper",
+  "slug": "hooper",
+  "soundex": "H160",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Rockingham County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1900,
+    "latest_birth": 1900,
+    "sample_records": [
+      {
+        "name": "Rosetta I Hooper",
+        "birth": 1900,
+        "county": "Rockingham County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hooper",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hooper",
+    "geneanet": "https://en.geneanet.org/surnames/hooper",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hooper",
+    "houseofnames": "https://www.houseofnames.com/hooper-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

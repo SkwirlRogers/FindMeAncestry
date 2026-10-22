@@ -1,0 +1,92 @@
+{
+  "surname": "Thompson",
+  "slug": "thompson",
+  "soundex": "T512",
+  "variants": [
+    "thomp"
+  ],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      },
+      {
+        "county": "Caswell County",
+        "count": 2
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1830,
+    "latest_birth": 1948,
+    "sample_records": [
+      {
+        "name": "Ella Thompson",
+        "birth": 1861,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Cora Thompson",
+        "birth": 1910,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Jeanette Jennie \"Nettie\" Thompson",
+        "birth": 1870,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Waldo Thompson",
+        "birth": 1939,
+        "county": "Unknown County"
+      },
+      {
+        "name": "James Junior Thompson",
+        "birth": 1942,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/thompson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Thompson",
+    "geneanet": "https://en.geneanet.org/surnames/thompson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Thompson",
+    "houseofnames": "https://www.houseofnames.com/thompson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

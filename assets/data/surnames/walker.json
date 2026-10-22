@@ -1,0 +1,38 @@
+{
+  "surname": "Walker",
+  "slug": "walker",
+  "soundex": "W426",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1857,
+    "latest_birth": 1857,
+    "sample_records": [
+      {
+        "name": "Jordan Walker",
+        "birth": 1857,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/walker",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Walker",
+    "geneanet": "https://en.geneanet.org/surnames/walker",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Walker",
+    "houseofnames": "https://www.houseofnames.com/walker-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

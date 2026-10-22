@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FindMeAncestry Bridge — SkwirlWorld</title>
+<meta name="description" content="SkwirlWorld's premium headless Ancestry.com bridge — powered by SkwirlAI-Cedric.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg-page:#0F172A;--bg-panel:#1E293B;--bg-card:#1E293B;--bg-input:#334155;--accent-green:#3D8B37;--accent-emerald:#059669;--accent-teal:#0D9488;--accent-blue:#2563EB;--accent-bright-blue:#38BDF8;--accent-purple:#7C3AED;--accent-violet:#8B5CF6;--accent-amber:#D97706;--border-light:#334155;--text-primary:#F1F5F9;--text-secondary:#94A3B8;--text-muted:#64748B;--success-green:#4ADE80;--gradient-hero:linear-gradient(135deg,#3D8B37,#059669,#0D9488,#2563EB);--shadow-card:0 1px 3px rgba(0,0,0,0.3),0 6px 16px rgba(0,0,0,0.2);--radius:16px;--radius-sm:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-page);color:var(--text-primary);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+a{color:var(--accent-bright-blue);text-decoration:none}
+.hero-banner{background:linear-gradient(135deg,rgba(124,58,237,0.85),rgba(139,92,246,0.8),rgba(37,99,235,0.85)),url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=80') center/cover fixed;padding:60px 32px;position:relative;overflow:hidden}
+.hero-banner::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#7C3AED,#8B5CF6,#3B82F6)}
+.hero-inner{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:40px;padding:6px 18px;font-size:13px;font-weight:600;color:#fff;margin-bottom:20px}
+.hero-title{font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+.section-wrap{max-width:1000px;margin:0 auto;padding:40px 24px}
+.card{background:var(--bg-card);border-radius:var(--radius);box-shadow:var(--shadow-card);border:1px solid var(--border-light);padding:24px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s;color:#fff}
+.btn:hover{opacity:.9}
+input,select{width:100%;padding:10px 14px;background:var(--bg-input);border:1px solid var(--border-light);border-radius:var(--radius-sm);color:var(--text-primary);font-size:14px;font-family:inherit;outline:none;margin-bottom:10px}
+input:focus,select:focus{border-color:var(--accent-bright-blue)}
+.results-box{margin-top:16px;padding:16px;background:var(--bg-input);border-radius:var(--radius-sm);border:1px solid var(--border-light);min-height:60px}
+.grid-2{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+@media(max-width:700px){.grid-2{grid-template-columns:1fr}}
+.site-footer{background:#0B1120;color:var(--text-muted);padding:40px 24px 24px;margin-top:40px;border-top:1px solid var(--border-light);text-align:center;font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="hero-banner">
+<div class="hero-inner">
+<div class="hero-badge">&#128308; PREMIUM SERVICE</div>
+<h1 class="hero-title">FindMeAncestry Bridge</h1>
+<p class="hero-subtitle" style="font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,0.85);max-width:700px;">SkwirlWorld's premium headless Ancestry.com bridge — powered by SkwirlAI-Cedric. Search Ancestry's public trees, records, and family data without leaving the hub.</p>
+</div>
+</header>
+
+<div style="max-width:1000px;margin:0 auto;padding:20px 24px 0;">
+    <div style="display:inline-flex;align-items:center;gap:16px;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:14px 22px;box-shadow:var(--shadow-card);">
+        <div style="font-size:32px;">🛡️</div>
+        <div>
+            <div style="font-size:15px;font-weight:800;color:var(--text-primary);">Kai &quot;SOC'IT&quot; Wang</div>
+            <div style="font-size:12px;font-weight:600;color:var(--accent-purple);">CISO &mdash; Director of DevSecOps</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Enterprise Agent in Charge &bull; Hub Governance: Cedric &quot;CeeMo&quot; Rogers, CMO</div>
+        </div>
+    </div>
+</div>
+
+<div class="section-wrap">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+<span class="btn" style="background:var(--accent-purple);font-size:12px;padding:6px 14px;cursor:default;">&#128308; PREMIUM</span>
+<span style="font-size:14px;color:var(--text-muted);">Requires Ancestry.com subscription + SkwirlWorld access</span>
+</div>
+
+<div class="card" style="margin-bottom:20px;">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+<span class="findme-status-dot" id="findmeDot" style="width:10px;height:10px;border-radius:50%;background:var(--accent-amber);display:inline-block;"></span>
+<span id="findmeStatusText" style="font-size:14px;color:var(--text-secondary);">Checking bridge connection...</span>
+</div>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<h4 style="font-size:15px;font-weight:700;margin-bottom:12px;">&#128270; Search Ancestry Records</h4>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+<input type="text" id="findmeQuery" placeholder="Name, location, keywords..." style="flex:1;min-width:180px;">
+<button class="btn" style="background:var(--accent-purple);" onclick="runFindMeSearch()">&#128269; Search</button>
+</div>
+<select id="findmeCategory">
+<option value="records">All Records</option>
+<option value="trees">Public Family Trees</option>
+<option value="dna">DNA Matches</option>
+<option value="stories">Stories &amp; Photos</option>
+</select>
+<div class="results-box" id="findmeResults">Enter a search query above to search Ancestry.com through the SkwirlAI bridge.</div>
+</div>
+
+<div class="card">
+<h4 style="font-size:15px;font-weight:700;margin-bottom:12px;">&#128200; Sync Trees</h4>
+<p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">Pull your Ancestry public tree list into the hub resource context.</p>
+<button class="btn" style="background:var(--accent-teal);width:100%;margin-bottom:8px;" onclick="syncFindMeTrees()">&#128259; Sync My Trees</button>
+<div id="findmeTreeList" style="font-size:13px;color:var(--text-muted);margin-top:8px;">No trees synced yet.</div>
+<div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border-light);">
+<h4 style="font-size:14px;font-weight:700;margin-bottom:8px;">&#128273; Bridge Status</h4>
+<button class="btn" style="background:var(--bg-input);width:100%;font-size:12px;" onclick="checkFindMeStatus()">&#128260; Check Connection</button>
+</div>
+</div>
+</div>
+
+<div style="margin-top:40px;text-align:center;">
+<a href="http://localhost:3000" class="btn" style="background:var(--accent-green);">&#128218; Back to Resource Hub</a>
+<a href="http://localhost:8005" class="btn" style="background:var(--accent-teal);">&#127758; National Archives</a>
+<a href="http://localhost:8006" class="btn" style="background:var(--accent-amber);">&#128214; Book Hub</a>
+</div>
+</div>
+
+<footer class="site-footer">
+<p>&copy; 2026 SkwirlWorld ECC / Abram Rogers Legacy Holdings LLC. FindMeAncestry is a premium service powered by SkwirlAI-Cedric.</p>
+</footer>
+
+<script>
+async function checkFindMeStatus() {
+    var dot = document.getElementById('findmeDot');
+    var txt = document.getElementById('findmeStatusText');
+    dot.style.background = 'var(--accent-amber)';
+    txt.textContent = 'Checking bridge connection...';
+    try {
+        var res = await fetch('/api/findme/status');
+        var d = await res.json();
+        if (d.status === 'online' || d.status === 'connected') {
+            dot.style.background = 'var(--success-green)';
+            txt.textContent = 'Bridge online — connected to Ancestry via SkwirlAI-Cedric';
+        } else {
+            dot.style.background = '#EF4444';
+            txt.textContent = 'Bridge offline — ' + (d.message || 'Cannot reach Ancestry bridge');
+        }
+    } catch(e) {
+        dot.style.background = 'var(--accent-amber)';
+        txt.textContent = 'Could not check status. Bridge may be starting up.';
+    }
+}
+
+async function runFindMeSearch() {
+    var q = document.getElementById('findmeQuery').value;
+    var cat = document.getElementById('findmeCategory').value;
+    var out = document.getElementById('findmeResults');
+    if (!q) { out.innerHTML = 'Please enter a search query.'; return; }
+    out.innerHTML = '&#8987; Searching Ancestry via SkwirlAI bridge...';
+    try {
+        var res = await fetch('/api/findme/search', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({query: q, category: cat})
+        });
+        var d = await res.json();
+        if (d.results && d.results.length > 0) {
+            out.innerHTML = '<strong style="color:var(--success-green);">Found ' + d.results.length + ' results</strong><br><br>' +
+                d.results.map(function(r) {
+                    return '<div style="padding:8px;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-sm);margin-bottom:8px;">' +
+                        '<strong>' + (r.title||'Record') + '</strong>' +
+                        (r.description ? '<p style="font-size:12px;color:var(--text-muted);">' + r.description + '</p>' : '') +
+                        (r.url ? '<a href="' + r.url + '" target="_blank" style="font-size:12px;">View on Ancestry &rarr;</a>' : '') +
+                    '</div>';
+                }).join('');
+        } else {
+            out.innerHTML = 'No results found. Try different search terms or check the bridge connection.';
+        }
+    } catch(e) {
+        out.innerHTML = 'Bridge search unavailable. Try again later.';
+    }
+}
+
+async function syncFindMeTrees() {
+    var out = document.getElementById('findmeTreeList');
+    out.innerHTML = 'Syncing trees...';
+    try {
+        var res = await fetch('/api/findme/trees');
+        var d = await res.json();
+        if (d.trees && d.trees.length > 0) {
+            out.innerHTML = d.trees.map(function(t) { return '<div>&#127794; ' + t.name + ' (' + t.members + ' members)</div>'; }).join('');
+        } else {
+            out.innerHTML = 'No trees found. Ensure you are logged into Ancestry via the bridge.';
+        }
+    } catch(e) {
+        out.innerHTML = 'Could not sync trees. Bridge may be offline.';
+    }
+}
+
+checkFindMeStatus();
+</script>
+</body>
+</html>

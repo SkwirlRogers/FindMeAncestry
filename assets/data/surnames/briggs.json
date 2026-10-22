@@ -1,0 +1,76 @@
+{
+  "surname": "Briggs",
+  "slug": "briggs",
+  "soundex": "B620",
+  "variants": [
+    "briggse"
+  ],
+  "nc_data": {
+    "total_records": 6,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 4
+      }
+    ],
+    "earliest_birth": 1902,
+    "latest_birth": 1939,
+    "sample_records": [
+      {
+        "name": "Fannie Mae Briggs",
+        "birth": 1933,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Bobby James Briggs",
+        "birth": 1935,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Sallie Annie Briggs",
+        "birth": 1939,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Haywood Briggs",
+        "birth": 1902,
+        "county": "Person County"
+      },
+      {
+        "name": "Richard Briggs",
+        "birth": 1930,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/briggs",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Briggs",
+    "geneanet": "https://en.geneanet.org/surnames/briggs",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Briggs",
+    "houseofnames": "https://www.houseofnames.com/briggs-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

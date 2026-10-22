@@ -1,0 +1,40 @@
+{
+  "surname": "Boykins",
+  "slug": "boykins",
+  "soundex": "B252",
+  "variants": [
+    "boykinse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1909,
+    "latest_birth": 1909,
+    "sample_records": [
+      {
+        "name": "Carrie Mae Boykins",
+        "birth": 1909,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/boykins",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Boykins",
+    "geneanet": "https://en.geneanet.org/surnames/boykins",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Boykins",
+    "houseofnames": "https://www.houseofnames.com/boykins-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

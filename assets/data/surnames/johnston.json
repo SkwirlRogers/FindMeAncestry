@@ -1,0 +1,66 @@
+{
+  "surname": "Johnston",
+  "slug": "johnston",
+  "soundex": "J523",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1859,
+    "latest_birth": 1897,
+    "sample_records": [
+      {
+        "name": "Josy Johnston",
+        "birth": 1880,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Fletcher Johnston",
+        "birth": 1887,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Bertha Johnston",
+        "birth": 1896,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Annie Johnston",
+        "birth": 1897,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lawyer Johnston",
+        "birth": 1859,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/johnston",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Johnston",
+    "geneanet": "https://en.geneanet.org/surnames/johnston",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Johnston",
+    "houseofnames": "https://www.houseofnames.com/johnston-family-crest",
+    "one_name_org": "https://one-name.org/surnames_j/"
+  }
+}

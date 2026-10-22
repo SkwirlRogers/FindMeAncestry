@@ -1,0 +1,113 @@
+{
+  "surname": "Wiley",
+  "slug": "wiley",
+  "soundex": "W400",
+  "variants": [
+    "wileey",
+    "wily"
+  ],
+  "nc_data": {
+    "total_records": 72,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 30
+      },
+      {
+        "county": "Person County",
+        "count": 23
+      },
+      {
+        "county": "Caswell County",
+        "count": 17
+      },
+      {
+        "county": "Catawba County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 4
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 5
+      },
+      {
+        "decade": 1900,
+        "count": 5
+      },
+      {
+        "decade": 1910,
+        "count": 9
+      },
+      {
+        "decade": 1920,
+        "count": 15
+      },
+      {
+        "decade": 1930,
+        "count": 19
+      },
+      {
+        "decade": 1940,
+        "count": 8
+      },
+      {
+        "decade": 1950,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1840,
+    "latest_birth": 1958,
+    "sample_records": [
+      {
+        "name": "Jamie L Wiley",
+        "birth": 1923,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Ramon Wiley",
+        "birth": 1921,
+        "county": "Person County"
+      },
+      {
+        "name": "Aaron Wiley",
+        "birth": 1919,
+        "county": "Person County"
+      },
+      {
+        "name": "Galloway Wiley",
+        "birth": 1917,
+        "county": "Person County"
+      },
+      {
+        "name": "Lee Wiley",
+        "birth": 1884,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/wiley",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Wiley",
+    "geneanet": "https://en.geneanet.org/surnames/wiley",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Wiley",
+    "houseofnames": "https://www.houseofnames.com/wiley-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

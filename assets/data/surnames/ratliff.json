@@ -1,0 +1,41 @@
+{
+  "surname": "Ratliff",
+  "slug": "ratliff",
+  "soundex": "R341",
+  "variants": [
+    "ratlif",
+    "ratlife"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Anson County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1935,
+    "latest_birth": 1935,
+    "sample_records": [
+      {
+        "name": "Rosa Ingram-Wall Ratliff",
+        "birth": 1935,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/ratliff",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Ratliff",
+    "geneanet": "https://en.geneanet.org/surnames/ratliff",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Ratliff",
+    "houseofnames": "https://www.houseofnames.com/ratliff-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

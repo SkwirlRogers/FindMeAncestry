@@ -1,0 +1,94 @@
+{
+  "surname": "Brown",
+  "slug": "brown",
+  "soundex": "B650",
+  "variants": [],
+  "nc_data": {
+    "total_records": 16,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 12
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Moore County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1810,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 3
+      },
+      {
+        "decade": 1860,
+        "count": 3
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1815,
+    "latest_birth": 1937,
+    "sample_records": [
+      {
+        "name": "Henrietta Brown",
+        "birth": 1921,
+        "county": "Person County"
+      },
+      {
+        "name": "Aggie Brown",
+        "birth": 1921,
+        "county": "Person County"
+      },
+      {
+        "name": "Isabell Brown Barrett???",
+        "birth": 1835,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Handy Brown",
+        "birth": 1815,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Eliza Frances Brown -Leach-McIver",
+        "birth": 1861,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/brown",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Brown",
+    "geneanet": "https://en.geneanet.org/surnames/brown",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Brown",
+    "houseofnames": "https://www.houseofnames.com/brown-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

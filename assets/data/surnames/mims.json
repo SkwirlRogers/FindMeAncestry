@@ -1,0 +1,40 @@
+{
+  "surname": "Mims",
+  "slug": "mims",
+  "soundex": "M520",
+  "variants": [
+    "mimse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1896,
+    "latest_birth": 1896,
+    "sample_records": [
+      {
+        "name": "Minnie Mae Mims",
+        "birth": 1896,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/mims",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Mims",
+    "geneanet": "https://en.geneanet.org/surnames/mims",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Mims",
+    "houseofnames": "https://www.houseofnames.com/mims-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

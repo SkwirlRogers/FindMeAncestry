@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Vault & Media Lab | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .media-hero {
+      background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+      padding: 40px 0 32px;
+    }
+    .media-hero h1 { font-size: 2rem; color: var(--clr-primary); }
+    .media-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use" class="active">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="media-hero">
+      <h1>📜 Smart Vault & Media Lab</h1>
+      <p>Upload faded family photos, old letters, and handwritten certificates. Use AI-powered enhancement tools to restore, colorize, and extract text from historical documents.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 64px;">
+
+    <!-- Per-Use Service Pricing -->
+    <div class="per-use-pricing" id="mediaPayGate">
+      <div class="price-amount">$15</div>
+      <div class="price-label">per image processed. Includes AI Repair Blur (GFP-GAN), Auto-Colorize (DeOldify), and Text Extraction (HTR).</div>
+      <button class="btn btn-accent" style="white-space: nowrap;" onclick="unlockMediaLab()">Pay $15 & Unlock Enhancement</button>
+    </div>
+
+    <!-- Per-Use Unlocked Confirmation -->
+    <div class="per-use-pricing" id="mediaUnlocked" style="display: none; border-color: #10b981;">
+      <div class="price-amount" style="color: #10b981;">✓</div>
+      <div class="price-label"><strong>Media Enhancement Unlocked</strong> — your one-time $15 session is active. Upload an image and use the ✨ Repair / 🎨 Color / 📝 Text buttons.</div>
+    </div>
+
+    <!-- Upload Grid -->
+    <div class="media-upload-grid" id="mediaUploadGrid">
+      <div style="border: 2px dashed var(--clr-border); border-radius: var(--radius-md); padding: 48px 24px; text-align: center; background: var(--clr-surface-alt); transition: all 0.3s ease; cursor: pointer;" onclick="document.getElementById('mediaFileInput').click()" onmouseover="this.style.borderColor='var(--clr-accent)'; this.style.background='rgba(212, 175, 55, 0.05)'" onmouseout="this.style.borderColor='var(--clr-border)'; this.style.background='var(--clr-surface-alt)'">
+        <div style="font-size: 3rem; margin-bottom: 16px;">📷</div>
+        <div style="font-weight: 600; margin-bottom: 8px;">Drop files here or click to upload</div>
+        <div style="font-size: 0.85rem; color: var(--clr-text-muted);">Supports JPG, PNG, TIFF, BMP, PDF (scanned)</div>
+        <input type="file" id="mediaFileInput" accept="image/*,.pdf" style="display: none;">
+      </div>
+
+      <!-- Sample Media Cards (for demo) -->
+      <div class="media-card">
+        <img src="https://via.placeholder.com/300x180/e8dcc9/8c4b1f?text=Old+Family+Photo+1892" alt="Family photo 1892">
+        <div class="media-actions">
+          <button onclick="enhanceImage('repair', this)">✨ Repair</button>
+          <button onclick="enhanceImage('colorize', this)">🎨 Color</button>
+          <button onclick="enhanceImage('extract', this)">📝 Text</button>
+        </div>
+      </div>
+
+      <div class="media-card">
+        <img src="https://via.placeholder.com/300x180/e8dcc9/8c4b1f?text=Handwritten+Letter+1903" alt="Handwritten letter 1903">
+        <div class="media-actions">
+          <button onclick="enhanceImage('repair', this)">✨ Repair</button>
+          <button onclick="enhanceImage('colorize', this)">🎨 Color</button>
+          <button onclick="enhanceImage('extract', this)">📝 Text</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhancement Results Area -->
+    <div id="mediaResults" style="margin-top: 32px; display: none;">
+      <h3>Enhanced Results</h3>
+      <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 24px; text-align: center; color: var(--clr-text-muted);">
+        <p>Upload an image and click any enhancement button to see results here.</p>
+      </div>
+    </div>
+
+    <!-- Archival Digits Lab Reference -->
+    <div style="margin-top: 48px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 24px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="font-size: 2rem;">🔧</div>
+        <div style="flex: 1;">
+          <h3 style="margin: 0 0 4px 0;">The Archival Digits Lab</h3>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--clr-text-muted);">Professional scanning and recording gear for preserving family history. Fujitsu & Epson scanners, Zoom recorders, and more.</p>
+        </div>
+        <a href="resource-hub.html#gear" style="text-decoration: none;">
+          <button class="btn btn-accent" style="white-space: nowrap;">View Gear →</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Professional Family Reunification Services. 20 Years of Mending Families.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Workspaces</h4>
+        <ul>
+          <li><a href="dashboard.html">Core Dashboard</a></li>
+          <li><a href="dna-hub.html">DNA & Match Hub</a></li>
+          <li><a href="media-lab.html">Smart Vault</a></li>
+          <li><a href="map-view.html">Migration Map</a></li>
+          <li><a href="sync-center.html">Sync Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#pricing">Subscription Plans</a></li>
+          <li><a href="scout_chat.html">ScoutAI Chat</a></li>
+          <li><a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788" target="_blank">Unraveling Your Roots</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+    </div>
+  </footer>
+
+  <script>
+    function unlockMediaLab() {
+      const confirmed = confirm('[TEST SIMULATION] Pay $15 one-time to unlock media enhancement (Repair Blur, Auto-Colorize, Text Extraction) for this session?');
+      if (confirmed) {
+        localStorage.setItem('findme_media_paid', 'true');
+        applyMediaUnlock();
+        alert('Payment confirmed! Media Lab unlocked. Upload an image to begin.');
+      }
+    }
+
+    function applyMediaUnlock() {
+      document.getElementById('mediaPayGate').style.display = 'none';
+      document.getElementById('mediaUnlocked').style.display = 'flex';
+      document.getElementById('mediaResults').style.display = 'block';
+    }
+
+    if (localStorage.getItem('findme_media_paid') === 'true') {
+      applyMediaUnlock();
+    }
+
+    function enhanceImage(type, btn) {
+      if (localStorage.getItem('findme_media_paid') !== 'true') {
+        alert('Media enhancement is a one-time $15 per image service. Pay to unlock, then click an enhancement button.');
+        return;
+      }
+      const card = btn.closest('.media-card');
+      const img = card.querySelector('img');
+      const fileName = img.alt;
+      const actions = {
+        repair: 'Repair Blur (GFP-GAN)',
+        colorize: 'Auto-Colorize (DeOldify)',
+        extract: 'Extract Text (HTR)'
+      };
+      btn.textContent = '⏳ Processing...';
+      btn.disabled = true;
+      setTimeout(function() {
+        btn.textContent = actions[type].split(' (')[0] === 'Repair Blur' ? '✨ Repair' : actions[type].split(' (')[0] === 'Auto-Colorize' ? '🎨 Color' : '📝 Text';
+        btn.disabled = false;
+        const results = document.getElementById('mediaResults');
+        results.style.display = 'block';
+        results.innerHTML = `<h3>Enhanced Results</h3>
+          <div style="background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 24px;">
+            <p><strong>"${fileName}"</strong> → ${actions[type]}</p>
+            <p style="color: var(--clr-accent-hover); font-weight: 700; margin-top: 8px;">✅ Complete — enhanced image queued for delivery to your email.</p>
+            <p style="color: var(--clr-text-muted); font-size: 0.85rem; margin-top: 4px;">${type === 'extract' ? 'Transcription text extracted and queued for review.' : 'Enhanced image prepared with AI pipeline.'}</p>
+          </div>`;
+      }, 1200);
+    }
+
+    document.getElementById('mediaFileInput').addEventListener('change', function(e) {
+      if (e.target.files.length > 0) {
+        const file = e.target.files[0];
+        if (localStorage.getItem('findme_media_paid') !== 'true') {
+          alert(`"${file.name}" received. Media enhancement is a one-time $15 per image service — pay to unlock processing.`);
+          return;
+        }
+        alert(`"${file.name}" added to the enhancement queue. Click ✨ Repair, 🎨 Color, or 📝 Text to process.`);
+      }
+    });
+  </script>
+</body>
+</html>

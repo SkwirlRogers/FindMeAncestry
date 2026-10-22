@@ -1,0 +1,60 @@
+{
+  "surname": "Cameron",
+  "slug": "cameron",
+  "soundex": "C565",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Moore County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1858,
+    "latest_birth": 1879,
+    "sample_records": [
+      {
+        "name": "Fannie Cameron-",
+        "birth": 1860,
+        "county": "Moore County"
+      },
+      {
+        "name": "Hector Cameron",
+        "birth": 1858,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lidia A. Cameron",
+        "birth": 1879,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/cameron",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Cameron",
+    "geneanet": "https://en.geneanet.org/surnames/cameron",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Cameron",
+    "houseofnames": "https://www.houseofnames.com/cameron-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

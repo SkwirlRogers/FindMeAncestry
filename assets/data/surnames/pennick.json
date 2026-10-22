@@ -1,0 +1,49 @@
+{
+  "surname": "Pennick",
+  "slug": "pennick",
+  "soundex": "P520",
+  "variants": [
+    "pennic"
+  ],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1855,
+    "latest_birth": 1892,
+    "sample_records": [
+      {
+        "name": "Henry Pennix\\Pennick",
+        "birth": 1855,
+        "county": "Person County"
+      },
+      {
+        "name": "Mumford Pennick\\Penick",
+        "birth": 1892,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pennick",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pennick",
+    "geneanet": "https://en.geneanet.org/surnames/pennick",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pennick",
+    "houseofnames": "https://www.houseofnames.com/pennick-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

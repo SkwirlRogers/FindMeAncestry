@@ -1,0 +1,75 @@
+{
+  "surname": "Willis",
+  "slug": "willis",
+  "soundex": "W420",
+  "variants": [
+    "willise"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1820,
+    "latest_birth": 1949,
+    "sample_records": [
+      {
+        "name": "John Willis",
+        "birth": 1820,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Malissa Annie Willis",
+        "birth": 1890,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Mathew Willis",
+        "birth": 1912,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Cleotis Willis",
+        "birth": 1949,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/willis",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Willis",
+    "geneanet": "https://en.geneanet.org/surnames/willis",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Willis",
+    "houseofnames": "https://www.houseofnames.com/willis-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

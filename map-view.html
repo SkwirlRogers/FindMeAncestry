@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geospatial Migration Map | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    .map-hero {
+      background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+      padding: 40px 0 32px;
+    }
+    .map-hero h1 { font-size: 2rem; color: var(--clr-primary); }
+    .map-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+
+    /* MapLibre/Leaflet overrides for theme */
+    .leaflet-container {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--clr-border);
+    }
+    .leaflet-control-zoom a {
+      background: var(--clr-surface) !important;
+      color: var(--clr-primary) !important;
+      border: 1px solid var(--clr-border) !important;
+    }
+    .leaflet-bar {
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free" class="active">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="map-hero">
+      <h1>🗺️ Geospatial Migration Map</h1>
+      <p>Interactive historical geography. Scroll the timeline to watch migration paths form and borders shift. Powered by Leaflet + OpenStreetMap with historical boundary overlays.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 64px;">
+    <div class="map-container" id="migrationMap">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%; color: var(--clr-text-muted);">
+        <p>Loading interactive map...</p>
+      </div>
+    </div>
+
+    <div class="map-timeline-scrubber">
+      <span class="year-display" id="yearDisplay">1850</span>
+      <input type="range" id="timelineSlider" min="1850" max="1950" value="1850" style="flex: 1; max-width: 400px;">
+      <div style="display: flex; gap: 8px; font-size: 0.85rem;">
+        <button onclick="scrubToYear(1850)" class="btn btn-outline" style="padding: 4px 12px;">1850</button>
+        <button onclick="scrubToYear(1880)" class="btn btn-outline" style="padding: 4px 12px;">1880</button>
+        <button onclick="scrubToYear(1900)" class="btn btn-outline" style="padding: 4px 12px;">1900</button>
+        <button onclick="scrubToYear(1920)" class="btn btn-outline" style="padding: 4px 12px;">1920</button>
+        <button onclick="scrubToYear(1950)" class="btn btn-outline" style="padding: 4px 12px;">1950</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Professional Family Reunification Services. 20 Years of Mending Families.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Workspaces</h4>
+        <ul>
+          <li><a href="dashboard.html">Core Dashboard</a></li>
+          <li><a href="dna-hub.html">DNA & Match Hub</a></li>
+          <li><a href="media-lab.html">Smart Vault</a></li>
+          <li><a href="map-view.html">Migration Map</a></li>
+          <li><a href="sync-center.html">Sync Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Free Tools</h4>
+        <ul>
+          <li><a href="map-view.html">Geospatial Migration Map</a></li>
+          <li><a href="sync-center.html">Extension Sync Center</a></li>
+          <li><a href="index.html#gplogy">Glossary of Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+    </div>
+  </footer>
+
+  <script>
+    function initMap() {
+      const mapContainer = document.getElementById('migrationMap');
+      mapContainer.innerHTML = '';
+
+      const map = L.map('migrationMap').setView([39.8283, -98.5795], 4);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 15
+      }).addTo(map);
+
+      // Sample migration path data (hardcoded for demo)
+      const migrationPaths = {
+        1850: {
+          name: "Ireland to Boston to Texas (1850-1880)",
+          coords: [[53.1424, -7.685], [42.3601, -71.0589], [31.9469, -99.9018]],
+          description: "Starting point - Irish immigration to New England"
+        },
+        1880: {
+          name: "Family settles in Central Texas (1880-1900)",
+          coords: [[42.3601, -71.0589], [31.9469, -99.9018]],
+          description: "Westward expansion during Texas railroad boom"
+        },
+        1900: {
+          name: "Migration to California Gold Rush (1900-1920)",
+          coords: [[31.9469, -99.9018], [36.7783, -119.4179]],
+          description: "Following agricultural jobs and railroad expansion"
+        },
+        1920: {
+          name: "Move to Detroit for Auto Industry (1920-1950)",
+          coords: [[36.7783, -119.4179], [42.3314, -83.0458]],
+          description: "Great Migration - industrial work in Motor City"
+        },
+        1950: {
+          name: "Settlement pattern complete (1950s)",
+          coords: [[42.3314, -83.0458]],
+          description: "Family established in Detroit suburbs"
+        }
+      };
+
+      let currentYear = 1850;
+      let currentPath = null;
+
+      function updateMap(year) {
+        currentYear = year;
+        document.getElementById('yearDisplay').textContent = year;
+
+        if (currentPath) {
+          map.removeLayer(currentPath);
+        }
+
+        const data = migrationPaths[year];
+        if (data && data.coords.length > 1) {
+          currentPath = L.polyline(data.coords, {
+            color: '#d4af37',
+            weight: 4,
+            opacity: 0.8,
+            smoothFactor: 1
+          }).addTo(map);
+
+          L.circleMarker(data.coords[0], {
+            color: '#d4af37',
+            fillColor: '#d4af37',
+            fillOpacity: 1,
+            radius: 8
+          }).addTo(map).bindPopup('<b>Origin</b><br>' + data.coords[0]);
+
+          L.circleMarker(data.coords[data.coords.length - 1], {
+            color: '#ff6b6b',
+            fillColor: '#ff6b6b',
+            fillOpacity: 1,
+            radius: 8
+          }).addTo(map).bindPopup('<b>Destination</b><br>' + data.coords[data.coords.length - 1]);
+
+          map.fitBounds(currentPath.getBounds(), { padding: [50, 50] });
+        }
+      }
+
+      // Timeline slider interaction
+      document.getElementById('timelineSlider').addEventListener('input', function(e) {
+        const year = parseInt(e.target.value);
+        updateMap(year);
+      });
+
+      // Initial load
+      updateMap(1850);
+    }
+
+    function scrubToYear(year) {
+      document.getElementById('timelineSlider').value = year;
+      document.getElementById('yearDisplay').textContent = year;
+    }
+
+    // Initialize map when page loads
+    window.addEventListener('load', initMap);
+  </script>
+</body>
+</html>

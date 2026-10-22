@@ -1,0 +1,71 @@
+{
+  "surname": "Robinson",
+  "slug": "robinson",
+  "soundex": "R152",
+  "variants": [
+    "robin"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Richmond County",
+        "count": 1
+      },
+      {
+        "county": "Anson County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1857,
+    "latest_birth": 1889,
+    "sample_records": [
+      {
+        "name": "Martha Robinson",
+        "birth": 1857,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Rachel Robinson",
+        "birth": 1873,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Nash Robinson",
+        "birth": 1870,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Anna Jane Leak-Robinson",
+        "birth": 1889,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/robinson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Robinson",
+    "geneanet": "https://en.geneanet.org/surnames/robinson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Robinson",
+    "houseofnames": "https://www.houseofnames.com/robinson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

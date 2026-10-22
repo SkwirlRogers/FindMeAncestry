@@ -1,0 +1,54 @@
+{
+  "surname": "Ray",
+  "slug": "ray",
+  "soundex": "R000",
+  "variants": [
+    "raey"
+  ],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1887,
+    "latest_birth": 1918,
+    "sample_records": [
+      {
+        "name": "Bettie J Ray",
+        "birth": 1887,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Bessie Ray",
+        "birth": 1910,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Catherine Furges Raynter",
+        "birth": 1918,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/ray",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Ray",
+    "geneanet": "https://en.geneanet.org/surnames/ray",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Ray",
+    "houseofnames": "https://www.houseofnames.com/ray-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

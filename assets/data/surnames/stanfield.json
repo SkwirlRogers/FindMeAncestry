@@ -1,0 +1,60 @@
+{
+  "surname": "Stanfield",
+  "slug": "stanfield",
+  "soundex": "S351",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1790,
+        "count": 1
+      },
+      {
+        "decade": 1800,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1797,
+    "latest_birth": 1847,
+    "sample_records": [
+      {
+        "name": "Amanda Stanfield Pool",
+        "birth": 1847,
+        "county": "Person County"
+      },
+      {
+        "name": "Mary H Stanfield",
+        "birth": 1797,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mildred \u201cMilly\u201d Stanfield",
+        "birth": 1800,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/stanfield",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Stanfield",
+    "geneanet": "https://en.geneanet.org/surnames/stanfield",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Stanfield",
+    "houseofnames": "https://www.houseofnames.com/stanfield-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

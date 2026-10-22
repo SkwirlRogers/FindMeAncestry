@@ -1,0 +1,47 @@
+{
+  "surname": "Burnett",
+  "slug": "burnett",
+  "soundex": "B653",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1920,
+    "latest_birth": 1928,
+    "sample_records": [
+      {
+        "name": "Lottie Burnett",
+        "birth": 1928,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Cora Bell Burnett",
+        "birth": 1920,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/burnett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Burnett",
+    "geneanet": "https://en.geneanet.org/surnames/burnett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Burnett",
+    "houseofnames": "https://www.houseofnames.com/burnett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

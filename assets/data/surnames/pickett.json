@@ -1,0 +1,51 @@
+{
+  "surname": "Pickett",
+  "slug": "pickett",
+  "soundex": "P230",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Anson County",
+        "count": 1
+      },
+      {
+        "county": "Richmond County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1848,
+    "latest_birth": 1884,
+    "sample_records": [
+      {
+        "name": "Vinnie \"Vinie\" Picket Pickett",
+        "birth": 1848,
+        "county": "Anson County"
+      },
+      {
+        "name": "Frances (Fannie) Stanback Pickett Medley",
+        "birth": 1884,
+        "county": "Richmond County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pickett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pickett",
+    "geneanet": "https://en.geneanet.org/surnames/pickett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pickett",
+    "houseofnames": "https://www.houseofnames.com/pickett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

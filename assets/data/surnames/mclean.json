@@ -1,0 +1,24 @@
+{
+  "surname": "McLean",
+  "slug": "mclean",
+  "soundex": "M245",
+  "variants": [
+    "maclean"
+  ],
+  "nc_data": {
+    "total_records": 0,
+    "top_counties": [],
+    "birth_decades": [],
+    "earliest_birth": null,
+    "latest_birth": null,
+    "sample_records": []
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/mclean",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=McLean",
+    "geneanet": "https://en.geneanet.org/surnames/mclean",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=McLean",
+    "houseofnames": "https://www.houseofnames.com/mclean-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

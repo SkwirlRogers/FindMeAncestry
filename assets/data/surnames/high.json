@@ -1,0 +1,38 @@
+{
+  "surname": "High",
+  "slug": "high",
+  "soundex": "H200",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1872,
+    "latest_birth": 1872,
+    "sample_records": [
+      {
+        "name": "Nannie High",
+        "birth": 1872,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/high",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=High",
+    "geneanet": "https://en.geneanet.org/surnames/high",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=High",
+    "houseofnames": "https://www.houseofnames.com/high-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

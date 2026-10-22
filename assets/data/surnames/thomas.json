@@ -1,0 +1,84 @@
+{
+  "surname": "Thomas",
+  "slug": "thomas",
+  "soundex": "T520",
+  "variants": [
+    "thomase"
+  ],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Rockingham County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1844,
+    "latest_birth": 1921,
+    "sample_records": [
+      {
+        "name": "Lucille Goods Webb Thomas",
+        "birth": 1921,
+        "county": "Person County"
+      },
+      {
+        "name": "Effie Thomas",
+        "birth": 1884,
+        "county": "Rockingham County"
+      },
+      {
+        "name": "Lillie Thomas",
+        "birth": 1895,
+        "county": "Person County"
+      },
+      {
+        "name": "Jacob Young Thomas",
+        "birth": 1844,
+        "county": "Unknown County"
+      },
+      {
+        "name": "William H Thomas",
+        "birth": 1870,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/thomas",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Thomas",
+    "geneanet": "https://en.geneanet.org/surnames/thomas",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Thomas",
+    "houseofnames": "https://www.houseofnames.com/thomas-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

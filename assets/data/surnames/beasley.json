@@ -1,0 +1,41 @@
+{
+  "surname": "Beasley",
+  "slug": "beasley",
+  "soundex": "B240",
+  "variants": [
+    "beasleey",
+    "beasly"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1924,
+    "latest_birth": 1924,
+    "sample_records": [
+      {
+        "name": "Connie Virginia Beasley",
+        "birth": 1924,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/beasley",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Beasley",
+    "geneanet": "https://en.geneanet.org/surnames/beasley",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Beasley",
+    "houseofnames": "https://www.houseofnames.com/beasley-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

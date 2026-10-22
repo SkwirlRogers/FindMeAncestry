@@ -1,0 +1,76 @@
+{
+  "surname": "Brooks",
+  "slug": "brooks",
+  "soundex": "B620",
+  "variants": [
+    "brookse"
+  ],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1829,
+    "latest_birth": 1925,
+    "sample_records": [
+      {
+        "name": "Nannie Beatrice Brooks",
+        "birth": 1925,
+        "county": "Person County"
+      },
+      {
+        "name": "William Alexander Brooks Corp.",
+        "birth": 1920,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Brooks",
+        "birth": 1908,
+        "county": "Person County"
+      },
+      {
+        "name": "Irena Allsbrook Allsbrooks",
+        "birth": 1872,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Malinda Brooks",
+        "birth": 1829,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/brooks",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Brooks",
+    "geneanet": "https://en.geneanet.org/surnames/brooks",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Brooks",
+    "houseofnames": "https://www.houseofnames.com/brooks-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

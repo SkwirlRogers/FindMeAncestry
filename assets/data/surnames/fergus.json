@@ -1,0 +1,72 @@
+{
+  "surname": "Fergus",
+  "slug": "fergus",
+  "soundex": "F622",
+  "variants": [
+    "ferguse"
+  ],
+  "nc_data": {
+    "total_records": 6,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 3
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1895,
+    "latest_birth": 1929,
+    "sample_records": [
+      {
+        "name": "Phillip Joseph Fergus",
+        "birth": 1895,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Pattie Ann Fergus",
+        "birth": 1919,
+        "county": "Person County"
+      },
+      {
+        "name": "Janie Fergus-Russell",
+        "birth": 1916,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Katie Catherine Fergus-Cunningham",
+        "birth": 1917,
+        "county": "Person County"
+      },
+      {
+        "name": "Phillip Fergus Sr.",
+        "birth": 1922,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/fergus",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Fergus",
+    "geneanet": "https://en.geneanet.org/surnames/fergus",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Fergus",
+    "houseofnames": "https://www.houseofnames.com/fergus-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

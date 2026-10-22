@@ -1,0 +1,51 @@
+{
+  "surname": "Tapp",
+  "slug": "tapp",
+  "soundex": "T100",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1884,
+    "latest_birth": 1918,
+    "sample_records": [
+      {
+        "name": "Rosa Tapp",
+        "birth": 1884,
+        "county": "Person County"
+      },
+      {
+        "name": "Odessa Tapp",
+        "birth": 1918,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/tapp",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Tapp",
+    "geneanet": "https://en.geneanet.org/surnames/tapp",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Tapp",
+    "houseofnames": "https://www.houseofnames.com/tapp-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

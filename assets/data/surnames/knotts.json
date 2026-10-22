@@ -1,0 +1,80 @@
+{
+  "surname": "Knotts",
+  "slug": "knotts",
+  "soundex": "K532",
+  "variants": [
+    "knottse"
+  ],
+  "nc_data": {
+    "total_records": 13,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 10
+      },
+      {
+        "county": "Anson County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 2
+      },
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 3
+      },
+      {
+        "decade": 1870,
+        "count": 4
+      },
+      {
+        "decade": 1880,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1840,
+    "latest_birth": 1888,
+    "sample_records": [
+      {
+        "name": "Ann Knotts",
+        "birth": 1852,
+        "county": "Anson County"
+      },
+      {
+        "name": "Samuel Knotts",
+        "birth": 1848,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Alfred Knotts",
+        "birth": 1879,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lucy Knotts",
+        "birth": 1881,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Abraham Knotts",
+        "birth": 1888,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/knotts",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Knotts",
+    "geneanet": "https://en.geneanet.org/surnames/knotts",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Knotts",
+    "houseofnames": "https://www.houseofnames.com/knotts-family-crest",
+    "one_name_org": "https://one-name.org/surnames_k/"
+  }
+}

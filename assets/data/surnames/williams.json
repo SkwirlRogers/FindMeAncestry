@@ -1,0 +1,104 @@
+{
+  "surname": "Williams",
+  "slug": "williams",
+  "soundex": "W452",
+  "variants": [
+    "williamse"
+  ],
+  "nc_data": {
+    "total_records": 16,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 8
+      },
+      {
+        "county": "Unknown County",
+        "count": 7
+      },
+      {
+        "county": "Wake County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1750,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 4
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      },
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1752,
+    "latest_birth": 1955,
+    "sample_records": [
+      {
+        "name": "Ida Rogers Williams",
+        "birth": 1865,
+        "county": "Person County"
+      },
+      {
+        "name": "Rhoda Thompson Williams Rogers",
+        "birth": 1865,
+        "county": "Person County"
+      },
+      {
+        "name": "Magnolia Williams",
+        "birth": 1919,
+        "county": "Person County"
+      },
+      {
+        "name": "Walter Williams",
+        "birth": 1921,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Doretha Williams",
+        "birth": 1922,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/williams",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Williams",
+    "geneanet": "https://en.geneanet.org/surnames/williams",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Williams",
+    "houseofnames": "https://www.houseofnames.com/williams-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

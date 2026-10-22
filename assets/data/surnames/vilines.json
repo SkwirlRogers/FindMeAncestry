@@ -1,0 +1,40 @@
+{
+  "surname": "Vilines",
+  "slug": "vilines",
+  "soundex": "V452",
+  "variants": [
+    "vilinese"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1895,
+    "latest_birth": 1895,
+    "sample_records": [
+      {
+        "name": "Thomas Charles \"Tom\" Vilines",
+        "birth": 1895,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/vilines",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Vilines",
+    "geneanet": "https://en.geneanet.org/surnames/vilines",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Vilines",
+    "houseofnames": "https://www.houseofnames.com/vilines-family-crest",
+    "one_name_org": "https://one-name.org/surnames_v/"
+  }
+}

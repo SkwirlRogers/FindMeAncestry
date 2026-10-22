@@ -1,0 +1,40 @@
+{
+  "surname": "Fredrick",
+  "slug": "fredrick",
+  "soundex": "F636",
+  "variants": [
+    "fredric"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1922,
+    "latest_birth": 1922,
+    "sample_records": [
+      {
+        "name": "Lizzie Mae Fredrick",
+        "birth": 1922,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/fredrick",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Fredrick",
+    "geneanet": "https://en.geneanet.org/surnames/fredrick",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Fredrick",
+    "houseofnames": "https://www.houseofnames.com/fredrick-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

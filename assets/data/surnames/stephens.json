@@ -1,0 +1,71 @@
+{
+  "surname": "Stephens",
+  "slug": "stephens",
+  "soundex": "S315",
+  "variants": [
+    "stephense"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 3
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1839,
+    "latest_birth": 1927,
+    "sample_records": [
+      {
+        "name": "Lillian Stephens",
+        "birth": 1895,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Frances Stephens",
+        "birth": 1839,
+        "county": "Person County"
+      },
+      {
+        "name": "Johanna Stephens",
+        "birth": 1927,
+        "county": "Person County"
+      },
+      {
+        "name": "Thomas \"Tommy\" Stephens",
+        "birth": 1919,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/stephens",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Stephens",
+    "geneanet": "https://en.geneanet.org/surnames/stephens",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Stephens",
+    "houseofnames": "https://www.houseofnames.com/stephens-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

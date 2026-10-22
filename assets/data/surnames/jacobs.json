@@ -1,0 +1,80 @@
+{
+  "surname": "Jacobs",
+  "slug": "jacobs",
+  "soundex": "J212",
+  "variants": [
+    "jacobse"
+  ],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1845,
+    "latest_birth": 1918,
+    "sample_records": [
+      {
+        "name": "Hattie Jacobs via Dossie Rogers Sr.",
+        "birth": 1883,
+        "county": "Person County"
+      },
+      {
+        "name": "Henderson Jacobs",
+        "birth": 1845,
+        "county": "Unknown County"
+      },
+      {
+        "name": "John Jacobs",
+        "birth": 1878,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Martha Jacobs-Rogers via Ira Thomas Rogers",
+        "birth": 1918,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Missie Jacobs-Rogers via Aldophin Rogers",
+        "birth": 1918,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/jacobs",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Jacobs",
+    "geneanet": "https://en.geneanet.org/surnames/jacobs",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Jacobs",
+    "houseofnames": "https://www.houseofnames.com/jacobs-family-crest",
+    "one_name_org": "https://one-name.org/surnames_j/"
+  }
+}

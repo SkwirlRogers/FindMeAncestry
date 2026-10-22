@@ -1,0 +1,54 @@
+{
+  "surname": "Key",
+  "slug": "key",
+  "soundex": "K000",
+  "variants": [
+    "ky",
+    "keey"
+  ],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Orange County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1897,
+    "latest_birth": 1951,
+    "sample_records": [
+      {
+        "name": "Kelley Key",
+        "birth": 1897,
+        "county": "Orange County"
+      },
+      {
+        "name": "Gale Laverne Key",
+        "birth": 1951,
+        "county": "Alamance County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/key",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Key",
+    "geneanet": "https://en.geneanet.org/surnames/key",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Key",
+    "houseofnames": "https://www.houseofnames.com/key-family-crest",
+    "one_name_org": "https://one-name.org/surnames_k/"
+  }
+}

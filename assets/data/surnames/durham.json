@@ -1,0 +1,38 @@
+{
+  "surname": "Durham",
+  "slug": "durham",
+  "soundex": "D650",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Moore County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1886,
+    "latest_birth": 1886,
+    "sample_records": [
+      {
+        "name": "Ella C Durham-Davis",
+        "birth": 1886,
+        "county": "Moore County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/durham",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Durham",
+    "geneanet": "https://en.geneanet.org/surnames/durham",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Durham",
+    "houseofnames": "https://www.houseofnames.com/durham-family-crest",
+    "one_name_org": "https://one-name.org/surnames_d/"
+  }
+}

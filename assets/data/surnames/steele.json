@@ -1,0 +1,78 @@
+{
+  "surname": "Steele",
+  "slug": "steele",
+  "soundex": "S340",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Richmond County",
+        "count": 2
+      },
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Union County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1810,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 2
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1815,
+    "latest_birth": 1896,
+    "sample_records": [
+      {
+        "name": "Theophilus Theo Phil Steele",
+        "birth": 1815,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Jane Steele Dockery",
+        "birth": 1848,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Cephus (Sifford) Steel",
+        "birth": 1896,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Washington Steele",
+        "birth": 1871,
+        "county": "Unknown County"
+      },
+      {
+        "name": "George Washington Steele Sr",
+        "birth": 1844,
+        "county": "Union County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/steele",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Steele",
+    "geneanet": "https://en.geneanet.org/surnames/steele",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Steele",
+    "houseofnames": "https://www.houseofnames.com/steele-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

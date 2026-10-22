@@ -1,0 +1,78 @@
+{
+  "surname": "Martin",
+  "slug": "martin",
+  "soundex": "M635",
+  "variants": [],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Moore County",
+        "count": 4
+      },
+      {
+        "county": "Forsyth County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1891,
+    "latest_birth": 1937,
+    "sample_records": [
+      {
+        "name": "Jarvis Governor \"Jack\" Martin",
+        "birth": 1891,
+        "county": "Forsyth County"
+      },
+      {
+        "name": "Robert M Martin",
+        "birth": 1919,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Addle Martin",
+        "birth": 1923,
+        "county": "Moore County"
+      },
+      {
+        "name": "Mattie Pearl Martin-Tunstall",
+        "birth": 1927,
+        "county": "Moore County"
+      },
+      {
+        "name": "Jessie L Martin",
+        "birth": 1922,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/martin",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Martin",
+    "geneanet": "https://en.geneanet.org/surnames/martin",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Martin",
+    "houseofnames": "https://www.houseofnames.com/martin-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

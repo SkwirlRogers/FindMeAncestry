@@ -1,0 +1,93 @@
+{
+  "surname": "Oakley",
+  "slug": "oakley",
+  "soundex": "O240",
+  "variants": [
+    "oakleey",
+    "oakly"
+  ],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1800,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 4
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1804,
+    "latest_birth": 1926,
+    "sample_records": [
+      {
+        "name": "Monroe Oakley",
+        "birth": 1869,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Nancy Oakley",
+        "birth": 1835,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Thomas Oakley",
+        "birth": 1861,
+        "county": "Person County"
+      },
+      {
+        "name": "Lucretia Oakley",
+        "birth": 1867,
+        "county": "Person County"
+      },
+      {
+        "name": "Dinah Oakley",
+        "birth": 1862,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/oakley",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Oakley",
+    "geneanet": "https://en.geneanet.org/surnames/oakley",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Oakley",
+    "houseofnames": "https://www.houseofnames.com/oakley-family-crest",
+    "one_name_org": "https://one-name.org/surnames_o/"
+  }
+}

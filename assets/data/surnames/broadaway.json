@@ -1,0 +1,71 @@
+{
+  "surname": "Broadaway",
+  "slug": "broadaway",
+  "soundex": "B630",
+  "variants": [
+    "broadawaey"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Anson County",
+        "count": 2
+      },
+      {
+        "county": "Union County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1851,
+    "latest_birth": 1899,
+    "sample_records": [
+      {
+        "name": "Alexander G. Alex Broadaway",
+        "birth": 1851,
+        "county": "Anson County"
+      },
+      {
+        "name": "Creasie Greasie Broadaway",
+        "birth": 1851,
+        "county": "Anson County"
+      },
+      {
+        "name": "Mary Covington Bennett Broadaway",
+        "birth": 1876,
+        "county": "Union County"
+      },
+      {
+        "name": "Elijah Broadaway",
+        "birth": 1899,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/broadaway",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Broadaway",
+    "geneanet": "https://en.geneanet.org/surnames/broadaway",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Broadaway",
+    "houseofnames": "https://www.houseofnames.com/broadaway-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "surname": "Springfield",
+  "slug": "springfield",
+  "soundex": "S165",
+  "variants": [],
+  "nc_data": {
+    "total_records": 6,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 3
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1863,
+    "latest_birth": 1919,
+    "sample_records": [
+      {
+        "name": "Fannie Rogers\\Wilkerson Springfield Johnson",
+        "birth": 1868,
+        "county": "Person County"
+      },
+      {
+        "name": "John Springfield",
+        "birth": 1863,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Charlie Springfield",
+        "birth": 1892,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Obie Springfield",
+        "birth": 1899,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Willie Springfield",
+        "birth": 1891,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/springfield",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Springfield",
+    "geneanet": "https://en.geneanet.org/surnames/springfield",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Springfield",
+    "houseofnames": "https://www.houseofnames.com/springfield-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

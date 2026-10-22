@@ -1,0 +1,38 @@
+{
+  "surname": "Glenn",
+  "slug": "glenn",
+  "soundex": "G450",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Rockingham County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1895,
+    "latest_birth": 1895,
+    "sample_records": [
+      {
+        "name": "John Glenn",
+        "birth": 1895,
+        "county": "Rockingham County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/glenn",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Glenn",
+    "geneanet": "https://en.geneanet.org/surnames/glenn",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Glenn",
+    "houseofnames": "https://www.houseofnames.com/glenn-family-crest",
+    "one_name_org": "https://one-name.org/surnames_g/"
+  }
+}

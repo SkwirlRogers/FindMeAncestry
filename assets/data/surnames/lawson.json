@@ -1,0 +1,84 @@
+{
+  "surname": "Lawson",
+  "slug": "lawson",
+  "soundex": "L250",
+  "variants": [
+    "law"
+  ],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 6
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 2
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1874,
+    "latest_birth": 1923,
+    "sample_records": [
+      {
+        "name": "Robt Lawson",
+        "birth": 1874,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Glennie Lawson-Garfield-Lawson",
+        "birth": 1898,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Frances Lawson-Wilson",
+        "birth": 1923,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Julia Maude Lawson",
+        "birth": 1916,
+        "county": "Person County"
+      },
+      {
+        "name": "Charlie Lawson",
+        "birth": 1887,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/lawson",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Lawson",
+    "geneanet": "https://en.geneanet.org/surnames/lawson",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Lawson",
+    "houseofnames": "https://www.houseofnames.com/lawson-family-crest",
+    "one_name_org": "https://one-name.org/surnames_l/"
+  }
+}

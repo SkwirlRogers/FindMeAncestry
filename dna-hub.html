@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNA & Match Hub | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .dna-hero {
+      background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+      padding: 40px 0 32px;
+    }
+    .dna-hero h1 { font-size: 2rem; color: var(--clr-primary); }
+    .dna-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use" class="active">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="dna-hero">
+      <h1>🧬 DNA & Match Hub — "The GEDmatch Killer"</h1>
+      <p>Drag-and-drop raw DNA files. Visual genetic clustering with Leeds Auto-Cluster Matrix. Interactive 22-chromosome browser.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 64px;">
+
+    <!-- Per-Use Service Pricing -->
+    <div class="per-use-pricing" id="dnaPayGate">
+      <div class="price-amount">$35</div>
+      <div class="price-label">One-time fee per DNA file processed (23andMe, AncestryDNA, MyHeritage). Includes Leeds clustering + chromosome browser analysis.</div>
+      <button class="btn btn-accent" style="white-space: nowrap;" onclick="unlockDNAHub()">Pay $35 & Unlock Processing</button>
+    </div>
+
+    <!-- Per-Use Unlocked Confirmation -->
+    <div class="per-use-pricing" id="dnaUnlocked" style="display: none; border-color: #10b981;">
+      <div class="price-amount" style="color: #10b981;">✓</div>
+      <div class="price-label"><strong>DNA Processing Unlocked</strong> — your one-time $35 session is active. Upload your raw DNA file below to run Leeds clustering + chromosome analysis.</div>
+    </div>
+
+    <!-- Free tools always visible -->
+
+    <!-- DNA Upload Zone -->
+    <div class="dna-upload-zone" id="dnaUploadZone">
+      <div class="upload-icon">🧬</div>
+      <div class="upload-text">Drop your raw DNA file here, or click to browse</div>
+      <div class="upload-hint">Supported formats: .txt (23andMe, AncestryDNA, MyHeritage, LivingDNA), .csv</div>
+      <div class="dna-provider-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/23andMe-Logo.svg" alt="23andMe">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Ancestry.com_2020_logo.svg" alt="AncestryDNA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/MyHeritage_Logo.svg" alt="MyHeritage">
+      </div>
+      <input type="file" id="dnaFileInput" accept=".txt,.csv" style="display: none;">
+    </div>
+
+    <!-- Leeds Auto-Cluster Matrix -->
+    <div style="margin-bottom: 32px;">
+      <h3 style="margin-bottom: 16px;">Leeds Auto-Cluster Matrix</h3>
+      <p style="color: var(--clr-text-muted); margin-bottom: 16px; font-size: 0.9rem;">Color-coded genetic branches grouped by shared segments. Click any cluster to analyze with ScoutAI.</p>
+      <div class="leeds-matrix" id="leedsMatrix">
+        <div class="matrix-header">Cluster</div>
+        <div class="matrix-header">Matches</div>
+        <div class="matrix-header">Est. cM</div>
+        <div class="matrix-header">Shared Segment</div>
+        <div class="matrix-header">Actions</div>
+        <div class="matrix-cell color-1">Paternal Grandmother</div>
+        <div class="matrix-cell color-1">12 matches</div>
+        <div class="matrix-cell color-1">2,850 cM</div>
+        <div class="matrix-cell color-1">Chr 4, 6, 9, 14</div>
+        <div class="matrix-cell color-1"><a href="scout_chat.html?q=Analyze+Leeds+cluster+Paternal+Grandmother+2850+cM+Chr+4+6+9+14" class="btn btn-accent" style="padding: 4px 10px; font-size: 0.75rem;">Ask Scout</a></div>
+        <div class="matrix-cell color-2">Paternal Grandfather</div>
+        <div class="matrix-cell color-2">8 matches</div>
+        <div class="matrix-cell color-2">1,210 cM</div>
+        <div class="matrix-cell color-2">Chr 1, 3, 7, 12</div>
+        <div class="matrix-cell color-2"><a href="scout_chat.html?q=Analyze+Leeds+cluster+Paternal+Grandfather+1210+cM+Chr+1+3+7+12" class="btn btn-accent" style="padding: 4px 10px; font-size: 0.75rem;">Ask Scout</a></div>
+        <div class="matrix-cell color-3">Maternal Grandmother</div>
+        <div class="matrix-cell color-3">15 matches</div>
+        <div class="matrix-cell color-3">3,120 cM</div>
+        <div class="matrix-cell color-3">Chr 2, 5, 10, 16</div>
+        <div class="matrix-cell color-3"><a href="scout_chat.html?q=Analyze+Leeds+cluster+Maternal+Grandmother+3120+cM+Chr+2+5+10+16" class="btn btn-accent" style="padding: 4px 10px; font-size: 0.75rem;">Ask Scout</a></div>
+        <div class="matrix-cell color-4">Maternal Grandfather</div>
+        <div class="matrix-cell color-4">5 matches</div>
+        <div class="matrix-cell color-4">890 cM</div>
+        <div class="matrix-cell color-4">Chr 11, 13, 18, 22</div>
+        <div class="matrix-cell color-4"><a href="scout_chat.html?q=Analyze+Leeds+cluster+Maternal+Grandfather+890+cM+Chr+11+13+18+22" class="btn btn-accent" style="padding: 4px 10px; font-size: 0.75rem;">Ask Scout</a></div>
+      </div>
+    </div>
+
+    <!-- Interactive Chromosome Browser -->
+    <div class="chromosome-browser">
+      <h3 style="margin-bottom: 16px;">Interactive Chromosome Browser (22 Autosomal + X)</h3>
+      <p style="color: var(--clr-text-muted); margin-bottom: 16px; font-size: 0.9rem;">Visualize shared segments across all chromosomes. Select matches from the Leeds matrix above to see overlap coordinates.</p>
+
+      <div class="chromosome-bar">
+        <span>1</span>
+        <div class="chromosome-segment" style="left: 10%; width: 20%; height: 24px; background: #ff6b6b; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>2</span>
+        <div class="chromosome-segment" style="left: 15%; width: 25%; height: 24px; background: #4ecdc4; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>3</span>
+        <div class="chromosome-segment" style="left: 5%; width: 15%; height: 24px; background: #ffe66d; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>4</span>
+        <div class="chromosome-segment" style="left: 20%; width: 30%; height: 24px; background: #a8e6cf; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>5</span>
+        <div class="chromosome-segment" style="left: 40%; width: 20%; height: 24px; background: #ff6b6b; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>6</span>
+        <div class="chromosome-segment" style="left: 25%; width: 18%; height: 24px; background: #4ecdc4; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>7</span>
+      </div>
+      <div class="chromosome-bar">
+        <span>8</span>
+        <div class="chromosome-segment" style="left: 12%; width: 22%; height: 24px; background: #ff6b6b; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>9</span>
+      </div>
+      <div class="chromosome-bar">
+        <span>10</span>
+        <div class="chromosome-segment" style="left: 35%; width: 15%; height: 24px; background: #a8e6cf; top: 8px;"></div>
+      </div>
+      <div class="chromosome-bar">
+        <span>X</span>
+        <div class="chromosome-segment" style="left: 50%; width: 25%; height: 24px; background: #4ecdc4; top: 8px;"></div>
+      </div>
+
+      <div style="margin-top: 20px; font-size: 0.8rem; color: var(--clr-text-muted);">
+        <span style="display: inline-block; width: 16px; height: 16px; background: #ff6b6b; border-radius: 3px; margin-right: 8px;"></span>Paternal Grandmother &nbsp;
+        <span style="display: inline-block; width: 16px; height: 16px; background: #4ecdc4; border-radius: 3px; margin: 0 8px;"></span>Paternal Grandfather &nbsp;
+        <span style="display: inline-block; width: 16px; height: 16px; background: #ffe66d; border-radius: 3px; margin: 0 8px;"></span>Maternal Grandmother &nbsp;
+        <span style="display: inline-block; width: 16px; height: 16px; background: #a8e6cf; border-radius: 3px; margin: 0 8px;"></span>Maternal Grandfather
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Professional Family Reunification Services. 20 Years of Mending Families.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Workspaces</h4>
+        <ul>
+          <li><a href="dashboard.html">Core Dashboard</a></li>
+          <li><a href="dna-hub.html">DNA & Match Hub</a></li>
+          <li><a href="media-lab.html">Smart Vault</a></li>
+          <li><a href="map-view.html">Migration Map</a></li>
+          <li><a href="sync-center.html">Sync Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#pricing">Subscription Plans</a></li>
+          <li><a href="scout_chat.html">ScoutAI Chat</a></li>
+          <li><a href="findme_bridge.html">Ancestry Bridge</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+    </div>
+  </footer>
+
+  <script>
+    const uploadZone = document.getElementById('dnaUploadZone');
+    const fileInput = document.getElementById('dnaFileInput');
+
+    uploadZone.addEventListener('click', () => fileInput.click());
+
+    uploadZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadZone.classList.add('drag-over');
+    });
+
+    uploadZone.addEventListener('dragleave', () => {
+      uploadZone.classList.remove('drag-over');
+    });
+
+    uploadZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadZone.classList.remove('drag-over');
+      const file = e.dataTransfer.files[0];
+      if (file) processDNABuy(file);
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) processDNABuy(file);
+    });
+
+    function unlockDNAHub() {
+      const confirmed = confirm('[TEST SIMULATION] Pay $35 one-time to unlock DNA file processing (Leeds Auto-Cluster Matrix + Chromosome Browser) for this session?');
+      if (confirmed) {
+        localStorage.setItem('findme_dna_paid', 'true');
+        applyDNAUnlock();
+        alert('Payment confirmed! DNA Hub unlocked. Drop your raw DNA file to begin.');
+      }
+    }
+
+    function applyDNAUnlock() {
+      document.getElementById('dnaPayGate').style.display = 'none';
+      document.getElementById('dnaUnlocked').style.display = 'flex';
+    }
+
+    if (localStorage.getItem('findme_dna_paid') === 'true') {
+      applyDNAUnlock();
+    }
+
+    function processDNABuy(file) {
+      if (localStorage.getItem('findme_dna_paid') !== 'true') {
+        alert('DNA processing is a one-time $35 service. Pay to unlock, then drop your file to begin.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const head = e.target.result.slice(0, 500);
+        alert(`File "${file.name}" received (${(file.size/1024).toFixed(1)} KB).\n\nProcessing pipeline started:\n1. Format detection: ${head.startsWith('#') ? '23andMe format detected' : 'Raw genotype format detected'}\n2. Leeds Auto-Cluster Matrix building...\n3. Chromosome segment mapping...\n\nFull clustering results are delivered to your email within 24 hours.`);
+        document.getElementById('leedsMatrix').scrollIntoView({ behavior: 'smooth' });
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>

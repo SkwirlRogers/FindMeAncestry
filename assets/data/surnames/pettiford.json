@@ -1,0 +1,142 @@
+{
+  "surname": "Pettiford",
+  "slug": "pettiford",
+  "soundex": "P316",
+  "variants": [],
+  "nc_data": {
+    "total_records": 54,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 31
+      },
+      {
+        "county": "Person County",
+        "count": 13
+      },
+      {
+        "county": "Granville County",
+        "count": 7
+      },
+      {
+        "county": "Nash County",
+        "count": 2
+      },
+      {
+        "county": "Catawba County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1760,
+        "count": 1
+      },
+      {
+        "decade": 1770,
+        "count": 1
+      },
+      {
+        "decade": 1780,
+        "count": 1
+      },
+      {
+        "decade": 1790,
+        "count": 1
+      },
+      {
+        "decade": 1800,
+        "count": 2
+      },
+      {
+        "decade": 1810,
+        "count": 3
+      },
+      {
+        "decade": 1830,
+        "count": 2
+      },
+      {
+        "decade": 1840,
+        "count": 4
+      },
+      {
+        "decade": 1850,
+        "count": 4
+      },
+      {
+        "decade": 1860,
+        "count": 8
+      },
+      {
+        "decade": 1870,
+        "count": 5
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 6
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1920,
+        "count": 4
+      },
+      {
+        "decade": 1930,
+        "count": 5
+      },
+      {
+        "decade": 1950,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1761,
+    "latest_birth": 1956,
+    "sample_records": [
+      {
+        "name": "Rosa Alice Pettiford-Rogers-Paylor",
+        "birth": 1888,
+        "county": "Person County"
+      },
+      {
+        "name": "Preston Lewis Pettiford",
+        "birth": 1955,
+        "county": "Catawba County"
+      },
+      {
+        "name": "Percy N Pettiford",
+        "birth": 1956,
+        "county": "Person County"
+      },
+      {
+        "name": "Lindsey \u201cSpring\u201d Pettiford",
+        "birth": 1903,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Jefferson Davis Jeff Pettiford",
+        "birth": 1861,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pettiford",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pettiford",
+    "geneanet": "https://en.geneanet.org/surnames/pettiford",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pettiford",
+    "houseofnames": "https://www.houseofnames.com/pettiford-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

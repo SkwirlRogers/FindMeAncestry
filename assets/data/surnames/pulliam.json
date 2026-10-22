@@ -1,0 +1,94 @@
+{
+  "surname": "Pulliam",
+  "slug": "pulliam",
+  "soundex": "P450",
+  "variants": [],
+  "nc_data": {
+    "total_records": 15,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 6
+      },
+      {
+        "county": "Caswell County",
+        "count": 5
+      },
+      {
+        "county": "Unknown County",
+        "count": 4
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1790,
+        "count": 1
+      },
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 4
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1796,
+    "latest_birth": 1932,
+    "sample_records": [
+      {
+        "name": "Mary Pulliam",
+        "birth": 1910,
+        "county": "Person County"
+      },
+      {
+        "name": "Nannie Mae Pulliam",
+        "birth": 1901,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Mary Frances \"May\" Pulliam-Fuller",
+        "birth": 1870,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Anna Annie Pulliam",
+        "birth": 1796,
+        "county": "Person County"
+      },
+      {
+        "name": "Sarah Pulliam",
+        "birth": 1796,
+        "county": "Caswell County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pulliam",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pulliam",
+    "geneanet": "https://en.geneanet.org/surnames/pulliam",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pulliam",
+    "houseofnames": "https://www.houseofnames.com/pulliam-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

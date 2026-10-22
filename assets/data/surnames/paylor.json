@@ -1,0 +1,142 @@
+{
+  "surname": "Paylor",
+  "slug": "paylor",
+  "soundex": "P460",
+  "variants": [],
+  "nc_data": {
+    "total_records": 201,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 110
+      },
+      {
+        "county": "Person County",
+        "count": 80
+      },
+      {
+        "county": "Caswell County",
+        "count": 8
+      },
+      {
+        "county": "Lenoir County",
+        "count": 1
+      },
+      {
+        "county": "Wayne County",
+        "count": 1
+      },
+      {
+        "county": "Guilford County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1790,
+        "count": 1
+      },
+      {
+        "decade": 1800,
+        "count": 4
+      },
+      {
+        "decade": 1810,
+        "count": 2
+      },
+      {
+        "decade": 1820,
+        "count": 4
+      },
+      {
+        "decade": 1830,
+        "count": 14
+      },
+      {
+        "decade": 1840,
+        "count": 7
+      },
+      {
+        "decade": 1850,
+        "count": 14
+      },
+      {
+        "decade": 1860,
+        "count": 20
+      },
+      {
+        "decade": 1870,
+        "count": 10
+      },
+      {
+        "decade": 1880,
+        "count": 8
+      },
+      {
+        "decade": 1890,
+        "count": 31
+      },
+      {
+        "decade": 1900,
+        "count": 19
+      },
+      {
+        "decade": 1910,
+        "count": 17
+      },
+      {
+        "decade": 1920,
+        "count": 19
+      },
+      {
+        "decade": 1930,
+        "count": 15
+      },
+      {
+        "decade": 1940,
+        "count": 10
+      },
+      {
+        "decade": 1950,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1798,
+    "latest_birth": 1959,
+    "sample_records": [
+      {
+        "name": "Emily Paylor",
+        "birth": 1849,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Pansy Paylor",
+        "birth": 1916,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Barton Paylor",
+        "birth": 1924,
+        "county": "Person County"
+      },
+      {
+        "name": "James Robert \u201cJim\u201d Paylor",
+        "birth": 1834,
+        "county": "Person County"
+      },
+      {
+        "name": "Pauline Yellock Paylor",
+        "birth": 1909,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/paylor",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Paylor",
+    "geneanet": "https://en.geneanet.org/surnames/paylor",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Paylor",
+    "houseofnames": "https://www.houseofnames.com/paylor-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

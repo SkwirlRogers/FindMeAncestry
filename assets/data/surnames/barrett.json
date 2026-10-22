@@ -1,0 +1,138 @@
+{
+  "surname": "Barrett",
+  "slug": "barrett",
+  "soundex": "B630",
+  "variants": [],
+  "nc_data": {
+    "total_records": 134,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 68
+      },
+      {
+        "county": "Moore County",
+        "count": 54
+      },
+      {
+        "county": "Pitt County",
+        "count": 4
+      },
+      {
+        "county": "Anson County",
+        "count": 3
+      },
+      {
+        "county": "Richmond County",
+        "count": 2
+      },
+      {
+        "county": "Wake County",
+        "count": 2
+      },
+      {
+        "county": "Cumberland County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1810,
+        "count": 2
+      },
+      {
+        "decade": 1820,
+        "count": 3
+      },
+      {
+        "decade": 1830,
+        "count": 2
+      },
+      {
+        "decade": 1840,
+        "count": 2
+      },
+      {
+        "decade": 1850,
+        "count": 7
+      },
+      {
+        "decade": 1860,
+        "count": 11
+      },
+      {
+        "decade": 1870,
+        "count": 19
+      },
+      {
+        "decade": 1880,
+        "count": 14
+      },
+      {
+        "decade": 1890,
+        "count": 17
+      },
+      {
+        "decade": 1900,
+        "count": 17
+      },
+      {
+        "decade": 1910,
+        "count": 14
+      },
+      {
+        "decade": 1920,
+        "count": 10
+      },
+      {
+        "decade": 1930,
+        "count": 8
+      },
+      {
+        "decade": 1940,
+        "count": 4
+      },
+      {
+        "decade": 1990,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1814,
+    "latest_birth": 1991,
+    "sample_records": [
+      {
+        "name": "Recent Record (Redacted)",
+        "birth": 1991,
+        "county": "Unknown County"
+      },
+      {
+        "name": "John Henry Barrett Jr",
+        "birth": 1945,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Nannie H Barrett",
+        "birth": 1909,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Johnnye Mae Barrett",
+        "birth": 1941,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Madeline Barrett",
+        "birth": 1901,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/barrett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Barrett",
+    "geneanet": "https://en.geneanet.org/surnames/barrett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Barrett",
+    "houseofnames": "https://www.houseofnames.com/barrett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

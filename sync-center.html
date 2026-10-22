@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Sync Center | FindMeAncestry™</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .sync-hero {
+      background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+      padding: 40px 0 32px;
+    }
+    .sync-hero h1 { font-size: 2rem; color: var(--clr-primary); }
+    .sync-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free" class="active">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div class="sync-hero">
+      <h1>🔌 Extension Sync Center</h1>
+      <p>Install the FindMeAncestry Manifest V3 browser extension to safely extract your genealogy platform data, family trees, and profile logs directly to your private account. No API keys needed — syncs through your own authenticated session.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom: 64px;">
+
+    <!-- Sync Status -->
+    <div class="sync-status-card">
+      <div class="sync-steps">
+        <div class="sync-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Install Extension</h4>
+            <p>Download and install the FindMeAncestry browser extension (Manifest V3). Available for Chrome and Firefox.</p>
+            <a href="#" class="btn btn-accent" style="margin-top: 8px; display: inline-block; padding: 6px 16px; font-size: 0.85rem;">Install Extension</a>
+          </div>
+        </div>
+
+        <div class="sync-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Launch Background Extension Sync</h4>
+            <p>The extension will securely extract your family tree data, DNA matches, and historical records using your own account credentials.</p>
+            <button class="btn btn-primary" style="margin-top: 8px; display: inline-block; padding: 6px 16px; font-size: 0.85rem;" onclick="launchSync()">Launch Background Extension Sync</button>
+          </div>
+        </div>
+
+        <div class="sync-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Data Synced to Dashboard</h4>
+            <p>Once sync completes, your data flows directly into your FindMeAncestry workspace. Use the Core Dashboard to build trees and ask ScoutAI questions.</p>
+            <a href="dashboard.html" class="btn btn-outline" style="margin-top: 8px; display: inline-block; padding: 6px 16px; font-size: 0.85rem;">Go to Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--clr-border); text-align: center;">
+        <span class="status-indicator status-disconnected"></span>
+        <strong style="color: var(--clr-text-muted);">Status: Not Connected</strong>
+      </div>
+    </div>
+
+    <!-- ScoutAI Assistance -->
+    <div style="margin-top: 32px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 24px;">
+      <h3 style="margin-bottom: 16px; color: var(--clr-primary);">Need ScoutAI Help?</h3>
+      <p style="color: var(--clr-text-muted); margin-bottom: 16px;">Ask Scout anything about the sync process, platform compatibility, or genealogy best practices.</p>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;" onclick="window.location.href='scout_chat.html?q=How+do+I+install+the+FindMeAncestry+browser+extension%3F+What+platforms+are+supported%3F'">How to Install Extension</button>
+        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;" onclick="window.location.href='scout_chat.html?q=Which+genealogy+platforms+can+I+sync+with+FindMeAncestry%3F'">Platform Compatibility</button>
+        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;" onclick="window.location.href='scout_chat.html?q=What+kind+of+data+does+the+extension+extract+and+how+is+it+protected%3F'">Data Security</button>
+        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;" onclick="window.location.href='scout_chat.html?q=Help+me+sync+my+family+tree+from+[platform+name]+to+FindMeAncestry'">Sync My Tree</button>
+      </div>
+
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--clr-border); text-align: center;">
+        <p style="color: var(--clr-text-muted); font-size: 0.85rem; margin-bottom: 12px;">ScoutAI is happy to help you link your genealogy platform results, trees, and DNA matches — free of charge. Any deeper research advice or full sync services are unlocked by your subscription tier.</p>
+        <a href="scout_chat.html" class="btn btn-accent" style="padding: 10px 24px;">Ask ScoutAI Anything →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Professional Family Reunification Services. 20 Years of Mending Families.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Workspaces</h4>
+        <ul>
+          <li><a href="dashboard.html">Core Dashboard</a></li>
+          <li><a href="dna-hub.html">DNA & Match Hub</a></li>
+          <li><a href="media-lab.html">Smart Vault</a></li>
+          <li><a href="map-view.html">Migration Map</a></li>
+          <li><a href="sync-center.html">Sync Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#pricing">Subscription Plans</a></li>
+          <li><a href="scout_chat.html">ScoutAI Chat</a></li>
+          <li><a href="findme_bridge.html">Ancestry Bridge</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+    </div>
+  </footer>
+
+  <script>
+    function launchSync() {
+      const isSubscribed = localStorage.getItem('findme_subscribed') === 'true';
+      const statusCard = document.querySelector('.sync-status-card');
+
+      if (isSubscribed) {
+        statusCard.innerHTML = '<p style="text-align:center; color:var(--clr-accent); font-weight:700; padding: 20px;">✅ ScoutAI bridge connection established. You now have full Forensic Explorer access including priority sync and exclusive tools.</p>';
+        statusCard.querySelector('div:last-child').innerHTML = '<span class="status-indicator status-connected"></span><strong>Status: Fully Connected</strong>';
+      } else {
+        alert('ScoutAI Full Sync requires an active subscription.\n\nFree tools:\n- Geospatial Migration Map\n- 12-Platform Genealogy Research Network\n- ScoutAI help with linking your trees & platforms\n\nUpgrade to unlock full extension sync with ScoutAI assistance.');
+        window.location.href = 'index.html#pricing';
+      }
+    }
+  </script>
+</body>
+</html>

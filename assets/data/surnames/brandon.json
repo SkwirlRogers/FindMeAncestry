@@ -1,0 +1,82 @@
+{
+  "surname": "Brandon",
+  "slug": "brandon",
+  "soundex": "B653",
+  "variants": [],
+  "nc_data": {
+    "total_records": 14,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 9
+      },
+      {
+        "county": "Caswell County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Catawba County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 6
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 4
+      }
+    ],
+    "earliest_birth": 1893,
+    "latest_birth": 1936,
+    "sample_records": [
+      {
+        "name": "Cleve Brandon",
+        "birth": 1893,
+        "county": "Person County"
+      },
+      {
+        "name": "Lottie Brandon",
+        "birth": 1918,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lorene Lee Brandon",
+        "birth": 1916,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Mary Brandon Brandon",
+        "birth": 1922,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Lillie Mae Brandon",
+        "birth": 1913,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/brandon",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Brandon",
+    "geneanet": "https://en.geneanet.org/surnames/brandon",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Brandon",
+    "houseofnames": "https://www.houseofnames.com/brandon-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

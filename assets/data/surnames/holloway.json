@@ -1,0 +1,62 @@
+{
+  "surname": "Holloway",
+  "slug": "holloway",
+  "soundex": "H400",
+  "variants": [
+    "hollowaey"
+  ],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1917,
+    "latest_birth": 1936,
+    "sample_records": [
+      {
+        "name": "Bretie Love Holloway",
+        "birth": 1917,
+        "county": "Person County"
+      },
+      {
+        "name": "Charles M. \"Charlie\" Holloway",
+        "birth": 1920,
+        "county": "Person County"
+      },
+      {
+        "name": "Charles Holloway",
+        "birth": 1936,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/holloway",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Holloway",
+    "geneanet": "https://en.geneanet.org/surnames/holloway",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Holloway",
+    "houseofnames": "https://www.houseofnames.com/holloway-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

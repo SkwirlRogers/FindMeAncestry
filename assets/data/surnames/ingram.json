@@ -1,0 +1,170 @@
+{
+  "surname": "Ingram",
+  "slug": "ingram",
+  "soundex": "I526",
+  "variants": [],
+  "nc_data": {
+    "total_records": 247,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 157
+      },
+      {
+        "county": "Anson County",
+        "count": 71
+      },
+      {
+        "county": "Richmond County",
+        "count": 9
+      },
+      {
+        "county": "Rockingham County",
+        "count": 4
+      },
+      {
+        "county": "Montgomery County",
+        "count": 1
+      },
+      {
+        "county": "Johnston County",
+        "count": 1
+      },
+      {
+        "county": "Rowan County",
+        "count": 1
+      },
+      {
+        "county": "Guilford County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1730,
+        "count": 1
+      },
+      {
+        "decade": 1740,
+        "count": 1
+      },
+      {
+        "decade": 1750,
+        "count": 2
+      },
+      {
+        "decade": 1760,
+        "count": 1
+      },
+      {
+        "decade": 1770,
+        "count": 8
+      },
+      {
+        "decade": 1780,
+        "count": 5
+      },
+      {
+        "decade": 1790,
+        "count": 5
+      },
+      {
+        "decade": 1800,
+        "count": 3
+      },
+      {
+        "decade": 1810,
+        "count": 8
+      },
+      {
+        "decade": 1820,
+        "count": 6
+      },
+      {
+        "decade": 1830,
+        "count": 8
+      },
+      {
+        "decade": 1840,
+        "count": 13
+      },
+      {
+        "decade": 1850,
+        "count": 22
+      },
+      {
+        "decade": 1860,
+        "count": 27
+      },
+      {
+        "decade": 1870,
+        "count": 26
+      },
+      {
+        "decade": 1880,
+        "count": 33
+      },
+      {
+        "decade": 1890,
+        "count": 35
+      },
+      {
+        "decade": 1900,
+        "count": 21
+      },
+      {
+        "decade": 1910,
+        "count": 4
+      },
+      {
+        "decade": 1920,
+        "count": 11
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      },
+      {
+        "decade": 1940,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1736,
+    "latest_birth": 1941,
+    "sample_records": [
+      {
+        "name": "Clary Ingram",
+        "birth": 1864,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Tobe Ingram",
+        "birth": 1841,
+        "county": "Anson County"
+      },
+      {
+        "name": "Drusie Ingram",
+        "birth": 1855,
+        "county": "Anson County"
+      },
+      {
+        "name": "Dbusy Ingram",
+        "birth": 1887,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Clem Ingram",
+        "birth": 1838,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/ingram",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Ingram",
+    "geneanet": "https://en.geneanet.org/surnames/ingram",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Ingram",
+    "houseofnames": "https://www.houseofnames.com/ingram-family-crest",
+    "one_name_org": "https://one-name.org/surnames_i/"
+  }
+}

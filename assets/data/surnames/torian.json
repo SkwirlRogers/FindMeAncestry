@@ -1,0 +1,51 @@
+{
+  "surname": "Torian",
+  "slug": "torian",
+  "soundex": "T650",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1854,
+    "latest_birth": 1941,
+    "sample_records": [
+      {
+        "name": "Lucy Torian",
+        "birth": 1854,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Elnora R Torian",
+        "birth": 1941,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/torian",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Torian",
+    "geneanet": "https://en.geneanet.org/surnames/torian",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Torian",
+    "houseofnames": "https://www.houseofnames.com/torian-family-crest",
+    "one_name_org": "https://one-name.org/surnames_t/"
+  }
+}

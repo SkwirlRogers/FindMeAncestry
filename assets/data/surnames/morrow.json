@@ -1,0 +1,47 @@
+{
+  "surname": "Morrow",
+  "slug": "morrow",
+  "soundex": "M600",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Caswell County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1903,
+    "latest_birth": 1905,
+    "sample_records": [
+      {
+        "name": "Sarah Rogers Morrow",
+        "birth": 1905,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Charlie Morrow",
+        "birth": 1903,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/morrow",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Morrow",
+    "geneanet": "https://en.geneanet.org/surnames/morrow",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Morrow",
+    "houseofnames": "https://www.houseofnames.com/morrow-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

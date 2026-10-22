@@ -1,0 +1,66 @@
+{
+  "surname": "Link",
+  "slug": "link",
+  "soundex": "L520",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 4
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1921,
+    "latest_birth": 1949,
+    "sample_records": [
+      {
+        "name": "Hattie Sue Link",
+        "birth": null,
+        "county": "Person County"
+      },
+      {
+        "name": "Amos Edward Link",
+        "birth": 1921,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Anthony E. Link",
+        "birth": 1947,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Charles K. Link",
+        "birth": 1948,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lyle W Link",
+        "birth": 1949,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/link",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Link",
+    "geneanet": "https://en.geneanet.org/surnames/link",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Link",
+    "houseofnames": "https://www.houseofnames.com/link-family-crest",
+    "one_name_org": "https://one-name.org/surnames_l/"
+  }
+}

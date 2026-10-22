@@ -1,0 +1,102 @@
+{
+  "surname": "Bradsher",
+  "slug": "bradsher",
+  "soundex": "B632",
+  "variants": [],
+  "nc_data": {
+    "total_records": 29,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 18
+      },
+      {
+        "county": "Unknown County",
+        "count": 11
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1780,
+        "count": 1
+      },
+      {
+        "decade": 1810,
+        "count": 1
+      },
+      {
+        "decade": 1820,
+        "count": 8
+      },
+      {
+        "decade": 1830,
+        "count": 3
+      },
+      {
+        "decade": 1840,
+        "count": 2
+      },
+      {
+        "decade": 1850,
+        "count": 2
+      },
+      {
+        "decade": 1860,
+        "count": 3
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1880,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 3
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1784,
+    "latest_birth": 1905,
+    "sample_records": [
+      {
+        "name": "Annie Ann Bradsher",
+        "birth": 1884,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Caroline Rogers Bradsher",
+        "birth": 1863,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Callie Bradsher",
+        "birth": 1877,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Dora Bradsher",
+        "birth": 1854,
+        "county": "Person County"
+      },
+      {
+        "name": "Thomas Bradsher",
+        "birth": 1857,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/bradsher",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Bradsher",
+    "geneanet": "https://en.geneanet.org/surnames/bradsher",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Bradsher",
+    "houseofnames": "https://www.houseofnames.com/bradsher-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

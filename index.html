@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindMeAncestry™ — Discover Your Family Story | Rogers & Barrett Creative Media</title>
+  <meta name="description" content="Discover your family history, DNA matches, and historical records with Scout Patterson (ScoutAI), your Private Family Detective. Powered by Rogers & Barrett Creative Media.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+</head>
+<body>
+
+  <!-- Header Navigation with Logo Image -->
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">
+          FindMeAncestry™ <span class="badge">PRO</span>
+        </div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+            <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html" class="active">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources &amp; Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:var(--clr-accent-light); border:1px solid var(--clr-accent); padding:4px 14px; border-radius:var(--radius-full); font-weight:700; font-size:0.85rem; color:var(--clr-primary); margin-bottom:16px;">
+          🌳 12-Platform Genealogy Research Network
+        </div>
+        <h1>Discover your true family story.</h1>
+        <p>Search billions of historical records across public archives and genealogy databases worldwide. Meet Scout Patterson, your personal Private Family Detective.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="scout_chat.html" class="btn btn-primary">Chat with ScoutAI →</a>
+          <a href="#pricing" class="btn btn-accent">View Plans</a>
+        </div>
+      </div>
+
+        <!-- Collapsible Search Form -->
+        <div class="hero-search-card" id="search">
+          <h3>🔍 Search Historical Records</h3>
+          <form class="search-form" onsubmit="return handleSearchSubmit(event)">
+
+            <!-- Collapsible Section: Names -->
+            <div class="search-accordion">
+              <div class="accordion-header" onclick="toggleAccordion('namesSection')">
+                <span class="accordion-title">Names</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content" id="namesSection">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First & Middle Name</label>
+                    <input type="text" id="firstName" placeholder="e.g. John" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="e.g. Patterson" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible Section: Vital Dates -->
+            <div class="search-accordion">
+              <div class="accordion-header" onclick="toggleAccordion('datesSection')">
+                <span class="accordion-title">Vital Dates</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content" id="datesSection">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                      <option value="">Any</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="unknown">Unknown</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="birthYear">Birth Year (Approx)</label>
+                    <input type="number" id="birthYear" placeholder="e.g. 1920" min="1600" max="2026">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="birthMonth">Birth Month</label>
+                    <input type="number" id="birthMonth" placeholder="1-12" min="1" max="12">
+                  </div>
+                  <div class="form-group">
+                    <label for="deathYear">Death Year (Approx)</label>
+                    <input type="number" id="deathYear" placeholder="e.g. 1985" min="1600" max="2026">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="marriageYear">Marriage Year</label>
+                    <input type="number" id="marriageYear" placeholder="e.g. 1945" min="1600" max="2026">
+                  </div>
+                  <div class="form-group">
+                    <label for="deathLocation">Death Location</label>
+                    <input type="text" id="deathLocation" placeholder="e.g. Charleston, SC" onkeyup="smartAutofill('deathLocation', this.value)">
+                   </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="form-group">
+                     <label for="marriageLocation">Marriage Location</label>
+                     <input type="text" id="marriageLocation" placeholder="e.g. Atlanta, GA" onkeyup="smartAutofill('marriageLocation', this.value)">
+                  </div>
+                  <div class="form-group"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible Section: Locations -->
+            <div class="search-accordion">
+              <div class="accordion-header" onclick="toggleAccordion('locationsSection')">
+                <span class="accordion-title">Locations <span style="color: var(--clr-primary); font-size: 0.8rem; vertical-align: middle;">ScoutAI ℹ</span></span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content" id="locationsSection">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="birthLocation">Birth Location / State</label>
+                    <input type="text" id="birthLocation" placeholder="e.g. Raleigh, NC" onkeyup="smartAutofill('birthLocation', this.value)">
+                  </div>
+                  <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" placeholder="e.g. United States" onkeyup="smartAutofill('country', this.value)"></
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="addressLine">Street Address</label>
+                    <input type="text" id="addressLine" placeholder="e.g. 123 Main St">
+                  </div>
+                  <div class="form-group">
+                    <label for="county">County / Parish / Borough</label>
+                    <input type="text" id="county" placeholder="e.g. Wake County">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="city">City / Town / Village</label>
+                    <input type="text" id="city" placeholder="e.g. Raleigh" onkeyup="smartAutofill('city', this.value)">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State / Province / Territory</label>
+                    <input type="text" id="state" placeholder="e.g. North Carolina" onkeyup="smartAutofill('state', this.value)">
+                  </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <a id="googleMapsLink" href="#" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; padding: 12px 16px; background: #4285f4; color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem; text-align: center; font-weight: 600; margin-top: 4px;">🗺 View on Google Maps</a>
+                  </div>
+                  <div class="form-group" style="display: flex; align-items: flex-end; justify-content: flex-end;">
+                    <button type="button" id="geographyHelpBtn" onclick="showGeographyHelper()" title="Need help finding historical geography? Click to ask ScoutAI about former counties, cities, towns, parishes and jurisdiction changes." style="padding: 10px 16px; background: var(--clr-primary); color: white; border: none; border-radius: 6px; font-size: 0.9rem; cursor: pointer; font-weight: 600;">ScoutAI Geography Helper</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible Section: Family -->
+            <div class="search-accordion">
+              <div class="accordion-header" onclick="toggleAccordion('familySection')">
+                <span class="accordion-title">Family</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content" id="familySection">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="spouseName">Spouse / Partner Name</label>
+                    <input type="text" id="spouseName" placeholder="e.g. Mary Elizabeth Brown">
+                  </div>
+                  <div class="form-group">
+                    <label for="fatherName">Father's Name</label>
+                    <input type="text" id="fatherName" placeholder="e.g. Robert James Smith">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="motherName">Mother's Name</label>
+                    <input type="text" id="motherName" placeholder="e.g. Susan Ann Wilson">
+                  </div>
+                  <div class="form-group">
+                    <label for="siblingName">Sibling Name(s)</label>
+                    <input type="text" id="siblingName" placeholder="e.g. James, Sarah">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible Section: Record Types -->
+            <div class="search-accordion">
+              <div class="accordion-header" onclick="toggleAccordion('recordsSection')">
+                <span class="accordion-title">Record Types</span>
+                <span class="accordion-icon">▼</span>
+              </div>
+              <div class="accordion-content" id="recordsSection">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="recordTypes">Record Type</label>
+                    <select id="recordTypes" multiple style="width:100%; height:120px; padding:4px;">
+                      <option value="birth">Birth Records</option>
+                      <option value="death">Death Records</option>
+                      <option value="marriage">Marriage Records</option>
+                      <option value="census">Census Records</option>
+                      <option value="military">Military Records</option>
+                      <option value="immigration">Immigration Records</option>
+                      <option value="court">Court Records</option>
+                      <option value="newspaper">Newspaper Archives</option>
+                      <option value="photos">Photos & Memories</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="keywords">Keywords / Notes</label>
+                    <input type="text" id="keywords" placeholder="e.g. immigration, military, naturalization">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 8px;">Begin Deep Search</button>
+          </form>
+        </div>
+    </div>
+  </section>
+
+  <!-- ScoutAI Highlight Banner -->
+  <div class="container">
+    <div class="scout-banner">
+      <div class="scout-banner-info">
+        <h2>Meet Scout Patterson (ScoutAI)</h2>
+        <p>Your Private Family Detective trained in Forensic Genealogy, DNA Triangulation, Family Advocacy, and Habitation & Geographical Theoretics.</p>
+      </div>
+      <a href="scout_chat.html" class="btn btn-accent" style="white-space: nowrap;">Consult Scout Now →</a>
+    </div>
+  </div>
+
+  <!-- What's Included in Every Plan -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What's Included in Every FYBF Plan</h2>
+        <p>20 Years of Mending Families. Every subscription includes our full research stack — no hidden fees, no gatekeeping.</p>
+      </div>
+      <div class="included-grid">
+        <div class="included-card">
+          <div class="included-icon">🔒</div>
+          <div>
+            <h4>Confidential Initial Consultation</h4>
+            <p>Private case review and strategy discussion — your information stays protected.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🧬</div>
+          <div>
+            <h4>DNA Match Analysis & Interpretation</h4>
+            <p>Match clustering, centimorgan (cM) evaluation, and parent-of-origin analysis.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🔬</div>
+          <div>
+            <h4>Quick DNA Match Review (Consult Phase)</h4>
+            <p>Preliminary DNA match analysis to assess parental lines and investigation viability.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🌳</div>
+          <div>
+            <h4>Family Tree Construction</h4>
+            <p>Building and refining trees from DNA matches to isolate biological parent lines.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">📋</div>
+          <div>
+            <h4>Census & Vital Records Research</h4>
+            <p>Census, birth, marriage, death, and public record analysis across 12+ platforms.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🔍</div>
+          <div>
+            <h4>Background & Identity Research</h4>
+            <p>Genealogical background checks, identity verification, timeline consistency — research-based only.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">📁</div>
+          <div>
+            <h4>Evidence Review & Documentation</h4>
+            <p>Organized findings with clear explanation of conclusions — you get the full picture.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">💬</div>
+          <div>
+            <h4>Ongoing Client Communication</h4>
+            <p>Regular updates and the ability to ask questions throughout the investigation.</p>
+          </div>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🛡️</div>
+          <div>
+            <h4>Secure & Ethical Case Handling</h4>
+            <p>All information handled with strict confidentiality and evidence-based rigor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Record Categories -->
+  <section class="section section-alt" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore Record Types</h2>
+        <p>Deep-dive analysis across verified archival sources — not surface-level mainstream searches. We trace the real history, filtering out noise and misinformation.</p>
+      </div>
+      <div class="categories-grid">
+        <a href="scout_chat.html?q=Search+obituary+records" class="category-card">
+          <span class="cat-icon">📰</span>
+          <h4>Obituaries</h4>
+          <p>Historical and recent obituary lookups with family connection mapping.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+census+records" class="category-card">
+          <span class="cat-icon">📊</span>
+          <h4>Census Records</h4>
+          <p>U.S. federal and state census data from 1790–1950 with household analysis.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+vital+records" class="category-card">
+          <span class="cat-icon">📜</span>
+          <h4>Vital Records</h4>
+          <p>Birth, marriage, and death certificates with parentage verification.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+military+records" class="category-card">
+          <span class="cat-icon">🎖️</span>
+          <h4>Military Records</h4>
+          <p>Service records, pension files, and draft registrations across conflicts.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+address+history" class="category-card">
+          <span class="cat-icon">📍</span>
+          <h4>Address History</h4>
+          <p>Residential timeline reconstruction with migration pattern analysis.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+marriage+divorce+records" class="category-card">
+          <span class="cat-icon">💒</span>
+          <h4>Marriage & Divorce</h4>
+          <p>Marriage certificates, divorce decrees, and spousal connection mapping.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+public+records" class="category-card">
+          <span class="cat-icon">🏛️</span>
+          <h4>Public Records</h4>
+          <p>Court records, property deeds, probate filings, and legal documents.</p>
+        </a>
+        <a href="scout_chat.html?q=Search+social+media" class="category-card">
+          <span class="cat-icon">📱</span>
+          <h4>Social Media & Digital</h4>
+          <p>Public social media review and digital footprint analysis.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Featured Book Showcase -->
+  <section class="section">
+    <div class="container">
+      <div style="background: var(--clr-surface); border: 2px solid var(--clr-accent); border-radius: var(--radius-lg); padding: 40px; display: flex; gap: 32px; flex-wrap: wrap; align-items: center;">
+        <img src="https://m.media-amazon.com/images/I/613haNcywpL._SL1491_.jpg" alt="Unraveling Your Roots book cover" style="width: 150px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+        <div style="flex: 1; min-width: 280px;">
+          <h3 style="font-size: 1.8rem; color: var(--clr-primary);">Unraveling Your Roots</h3>
+          <div style="font-weight: 700; color: var(--clr-accent-hover); margin-bottom: 12px;">by Skwirl Rogers • Rogers & Barrett Creative Media</div>
+          <p style="color: var(--clr-text-muted); margin-bottom: 20px;">The definitive guide to breaking through genealogy brick walls using DNA match triangulation, chromosome mapping, centimorgan analysis, and 85+ essential genealogy terms explained.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788?tag=arholdings22-20" target="_blank" class="btn btn-accent">Buy on Amazon →</a>
+            <a href="https://www.amazon.com/stores/Skwirl-Rogers/author/B0GQR54DG6?tag=arholdings22-20" target="_blank" class="btn btn-outline">Author Store</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Genealogy Glossary Section -->
+  <section class="section section-alt" id="glossary">
+    <div class="container">
+      <div class="section-header">
+        <h2>Glossary of Common Genealogy & DNA Terms</h2>
+        <p>Extracted from <em>Unraveling Your Roots</em>. Free terms available to all; full comprehensive dictionary unlocked with subscription.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div style="background:#fff; padding:20px; border-radius:var(--radius-md); border:1px solid var(--clr-border);">
+          <h4 style="color:var(--clr-primary);">Centimorgan (cM)</h4>
+          <p style="font-size:0.9rem; color:var(--clr-text-muted); margin-top:6px;">A unit of measurement for genetic linkage, used to express the distance between chromosome positions and calculate relationship proximity.</p>
+        </div>
+
+        <div style="background:#fff; padding:20px; border-radius:var(--radius-md); border:1px solid var(--clr-border);">
+          <h4 style="color:var(--clr-primary);">GEDCOM File</h4>
+          <p style="font-size:0.9rem; color:var(--clr-text-muted); margin-top:6px;">GEnealogical Data COMmunication file format used to exchange family tree data between different genealogy software programs.</p>
+        </div>
+
+        <div style="background:#fff; padding:20px; border-radius:var(--radius-md); border:1px solid var(--clr-border);">
+          <h4 style="color:var(--clr-primary);">Chromosome Triangulation</h4>
+          <p style="font-size:0.9rem; color:var(--clr-text-muted); margin-top:6px;">The process of identifying three or more people who share a common segment of DNA on the same chromosome inherited from a shared ancestor.</p>
+        </div>
+
+        <div style="background:#fff; padding:20px; border-radius:var(--radius-md); border:1px solid var(--clr-border);">
+          <h4 style="color:var(--clr-primary);">Habitation Theoretics</h4>
+          <p style="font-size:0.9rem; color:var(--clr-text-muted); margin-top:6px;">Reconstructing historical family movement and residence timelines based on land deeds, tax registers, and census schedules.</p>
+        </div>
+      </div>
+      
+      <div style="text-align:center; margin-top:28px;">
+        <a href="scout_chat.html" class="btn btn-primary">Ask ScoutAI for Any Genealogy Definition →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Comparison: ScoutAI vs DIY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Use ScoutAI vs Searching Alone?</h2>
+        <p>Scout Patterson does the heavy lifting — deep forensic analysis, not just keyword searches. Here's what changes when you have a real investigator.</p>
+      </div>
+      <div class="comparison-grid">
+        <div class="comparison-card highlighted">
+          <h3>ScoutAI Services</h3>
+          <div class="card-subtitle">Full forensic investigation</div>
+          <ul>
+            <li>Multi-platform deep archival sweep</li>
+            <li>DNA match triangulation & cM mapping</li>
+            <li>Automated family tree construction</li>
+            <li>Cross-referenced census, vital, & court records</li>
+            <li>Habitation timeline reconstruction</li>
+            <li>Evidence-based conclusions with documentation</li>
+            <li>Ongoing case updates & consultation</li>
+          </ul>
+          <a href="scout_chat.html" class="btn btn-accent" style="width:100%;">Start with Scout →</a>
+        </div>
+        <div class="comparison-vs">VS</div>
+        <div class="comparison-card">
+          <h3>DIY Search</h3>
+          <div class="card-subtitle">Surface-level lookup</div>
+          <ul>
+            <li>Single-platform keyword search</li>
+            <li>No DNA analysis or cM evaluation</li>
+            <li>Manual tree building (if any)</li>
+            <li>One record source at a time</li>
+            <li>No migration or timeline analysis</li>
+            <li>Unverified results, no documentation</li>
+            <li>No expert guidance or follow-up</li>
+          </ul>
+          <a href="scout_chat.html?demo=true" class="btn btn-outline" style="width:100%;">Try Demo Free →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Trial CTA -->
+  <section class="section section-alt">
+    <div class="container">
+    <div class="cta-banner">
+        <h2>Start Your Family Search Today</h2>
+        <div class="cta-slogan">"20 Years of Mending Families"</div>
+        <p>Your Professional Family Reunification Services. Get a free consultation and let Scout Patterson trace your roots with forensic precision.</p>
+        <p style="margin-top:8px;color:var(--clr-accent);font-weight:700;">Also meet Kayla/AssetieAI for unclaimed asset recovery — find what's yours too.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;">
+          <a href="scout_chat.html" class="btn btn-accent" style="font-size:1.05rem; padding: 14px 32px;">Free Consult with Scout →</a>
+          <a href="assetie_chat.html" class="btn btn-outline" style="font-size:1.05rem; padding: 14px 32px; border-color:#7c3aed; color:#7c3aed;">Meet AssetieAI →</a>
+          <a href="#pricing" class="btn btn-outline" style="font-size:1.05rem; padding: 14px 32px; border-color:#fff; color:#fff;">View Plans & Pricing</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Hub -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Learn About Genealogy & DNA</h2>
+        <p>Not sure where to begin? Explore our guides, watch how-tos, and discover what's possible with your family history.</p>
+      </div>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <div class="card-body">
+            <span class="card-tag">Getting Started</span>
+            <h4>Family History 101</h4>
+            <p>From building your first tree to understanding census records — a beginner's guide to tracing your roots.</p>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="card-body">
+            <span class="card-tag">DNA Basics</span>
+            <h4>Understanding DNA Matches</h4>
+            <p>How centimorgans work, what DNA segments tell you, and how to interpret your genetic connections.</p>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="card-body">
+            <span class="card-tag">Expert Tips</span>
+            <h4>Breaking Brick Walls</h4>
+            <p>Advanced techniques for solving genealogy mysteries — DNA triangulation, chromosome mapping, and more.</p>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="card-body">
+            <span class="card-tag">Resources</span>
+            <h4>Record Types Explained</h4>
+            <p>Census records, vital records, military files, obituaries — what each contains and how to read them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Subscriptions Section -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Competitive Subscription Plans</h2>
+        <p>Unlock deep-dive forensic research with ScoutAI. Non-subscribers can use the <strong>FindMeAncestry Demo Version</strong> for basic inquiries.</p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Tier 1 -->
+        <div class="pricing-card">
+          <div>
+            <h3>Discovery Tier</h3>
+            <p style="color: var(--clr-text-muted); font-size: 0.9rem;">Basic historical & census lookups</p>
+            <div class="price">$9.99 <span>/mo</span></div>
+            <ul class="pricing-features">
+              <li>Free public records & FamilySearch integration</li>
+              <li>Basic ScoutAI chat queries</li>
+              <li>Census & Vital Records search</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn btn-outline" style="width: 100%;" onclick="triggerGooglePay('Discovery', 9.99)">Pay with Google Pay</button>
+          </div>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="pricing-card featured">
+          <span class="badge-popular">MOST POPULAR</span>
+          <div>
+            <h3>Forensic Explorer</h3>
+            <p style="color: var(--clr-text-muted); font-size: 0.9rem;">Full DNA & lineage investigation</p>
+            <div class="price">$19.99 <span>/mo</span></div>
+            <ul class="pricing-features">
+              <li>Everything in Discovery Tier</li>
+              <li>Full ScoutAI "Private Family Detective"</li>
+              <li>DNA Match Triangulation & cM mapping</li>
+              <li>Geographical & Habitation Timeline modeling</li>
+              <li>Priority bridge coordination</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('Forensic Explorer', 19.99)">Pay with Google Pay</button>
+          </div>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pricing-card">
+          <div>
+            <h3>All-Access Advocate</h3>
+            <p style="color: var(--clr-text-muted); font-size: 0.9rem;">Complete biological family advocacy with full bridge access</p>
+            <div class="price">$29.99 <span>/mo</span></div>
+            <ul class="pricing-features">
+              <li>Everything in Forensic Explorer</li>
+              <li>Priority ScoutAI response processing</li>
+              <li>Family Reunification & Adoption research</li>
+              <li>Confidential Dossier Exports</li>
+<li>PowerHouse Discoveries-All Access Bridge: deep-dive lineage investigation, Priority Urgent Handling, and exclusive Advanced Triangulation Workbook access</li>
+          </ul>
+          <div>
+            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('All-Access Advocate', 29.99)">Pay with Google Pay</button>
+          </div>
+        </div>
+
+        <!-- Tier 4 (Featured - Top Tier) -->
+        <div class="pricing-card featured">
+          <span class="badge-popular">YOLO DEEP DIVE</span>
+          <div>
+            <h3>All-Access Investigator</h3>
+            <p style="color: var(--clr-text-muted); font-size: 0.9rem;">Exhaust every tool, every database, every method — no stone unturned</p>
+            <div class="price">$49.99 <span>/mo</span></div>
+            <ul class="pricing-features">
+              <li>Everything in All-Access Advocate</li>
+              <li>Unlimited ScoutAI queries — zero throttling</li>
+              <li>Comprehensive surname dissection (BehindTheName framework: etymology, variants, geography, migration, DNA, notables, cultural context)</li>
+              <li>Full Surname Research Center access with all tabs unlocked</li>
+              <li>Exhaustive tool utilization — DNA triangulation, chromosome browser, cM mapping, ICW analysis, segment export — every tool run to completion</li>
+              <li>Cross-platform research: FamilySearch, Ancestry, Geneanet, HouseOfNames, One-Name Studies, BehindTheName — all queried simultaneously</li>
+              <li>One-Name Study PDF/GEDMark/CSV exports included (unlimited)</li>
+              <li>Priority Urgent Handling on ALL cases</li>
+              <li>Full Forensic Ancestry Deep-Dive Report ($49.99 value) included monthly</li>
+              <li>Dedicated ScoutAI investigator sessions — extended deep-dive conversations with no time limits</li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('All-Access Investigator', 49.99)">Pay with Google Pay</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FindMeAncestry™</h3>
+        <span class="footer-subtext">Rogers & Barrett Creative Media</span>
+        <p>Your Professional Family Reunification Services. 20 Years of Mending Families. Powered by ScoutAI forensic genealogy and the 12-Platform Genealogy Research Network.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Record Types</h4>
+        <ul>
+          <li><a href="scout_chat.html?q=Search+obituary+records">Obituaries</a></li>
+          <li><a href="scout_chat.html?q=Search+vital+records">Vital Records</a></li>
+          <li><a href="scout_chat.html?q=Search+census+records">Census Records</a></li>
+          <li><a href="scout_chat.html?q=Search+military+records">Military Records</a></li>
+          <li><a href="scout_chat.html?q=Search+public+records">Public Records</a></li>
+          <li><a href="scout_chat.html?q=Search+address+history">Address History</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="scout_chat.html">ScoutAI Chat</a></li>
+          <li><a href="assetie_chat.html">AssetieAI Chat</a></li>
+          <li><a href="#pricing">Subscription Plans</a></li>
+          <li><a href="findme_bridge.html">Ancestry Bridge</a></li>
+          <li><a href="scout_chat.html?q=Search+family+tree">Family Tree Search</a></li>
+          <li><a href="scout_chat.html?q=Search+marriage+divorce+records">Marriage & Divorce</a></li>
+          <li><a href="scout_chat.html?q=Search+social+media">Social Media Check</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://findyourbabyfamily.com" target="_blank">FindYourBabyFamily</a></li>
+          <li><a href="https://www.amazon.com/stores/Skwirl-Rogers/author/B0GQR54DG6" target="_blank">Author Store</a></li>
+          <li><a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788" target="_blank">Buy the Book</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rogers & Barrett Creative Media. FindMeAncestry™ is a registered trademark of Abram Rogers Legacy Holdings LLC.</span>
+        <span>
+          <a href="https://findyourbabyfamily.com" target="_blank">FindYourBabyFamily</a> &middot;
+          <a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788" target="_blank">Unraveling Your Roots</a> &middot;
+          <a href="scout_chat.html">ScoutAI</a> &middot;
+          <a href="assetie_chat.html">AssetieAI</a>
+        </span>
+    </div>
+  </footer>
+
+  <!-- Google Pay & Search Handlers -->
+  <script>
+    // Accordion toggle
+    function toggleAccordion(sectionId) {
+      const content = document.getElementById(sectionId);
+      if (!content) return;
+      content.classList.toggle('open');
+      const icon = content.previousElementSibling ? content.previousElementSibling.querySelector('.accordion-icon') : null;
+      if (icon) icon.classList.toggle('open');
+
+      // Auto-open related sections when user starts typing in fields
+      if (content.classList.contains('open')) {
+        autoFillRelatedSections(sectionId);
+      }
+    }
+
+    // Smart autofill: when user fills a field, suggest/auto-fill related fields
+    function autoFillRelatedSections(currentSectionId) {
+      const cityEl = document.getElementById('city');
+      const stateEl = document.getElementById('state');
+      const birthLocEl = document.getElementById('birthLocation');
+
+      // If city and state are filled but birthLocation isn't, auto-fill birthLocation
+      if (cityEl && stateEl && birthLocEl) {
+        const cityVal = cityEl.value.trim();
+        const stateVal = stateEl.value.trim();
+        if (cityVal && stateVal && !birthLocEl.value) {
+          birthLocEl.value = `${cityVal}, ${stateVal}`;
+          updateGoogleMapsLink();
+        }
+      }
+
+      // If birthLocation is filled but city/state aren't, parse it
+      if (birthLocEl && birthLocEl.value && (!cityEl.value || !stateEl.value)) {
+        const parts = birthLocEl.value.split(',').map(p => p.trim());
+        if (parts.length >= 2) {
+          if (!cityEl.value) cityEl.value = parts[0];
+          if (!stateEl.value) stateEl.value = parts[1];
+        }
+        updateGoogleMapsLink();
+      }
+
+      // Auto-fill deathLocation with birthLocation if not specified
+      const deathLocEl = document.getElementById('deathLocation');
+      if (deathLocEl && birthLocEl && birthLocEl.value && !deathLocEl.value) {
+        deathLocEl.value = birthLocEl.value;
+      }
+    }
+
+    // Smart autofill: propagate address details across fields
+    function smartAutofill(fieldId, value) {
+      const cityEl = document.getElementById('city');
+      const stateEl = document.getElementById('state');
+      const countryEl = document.getElementById('country');
+      const deathLocEl = document.getElementById('deathLocation');
+      const marriageLocEl = document.getElementById('marriageLocation');
+
+      // When city is filled, auto-fill death/marriage location if they're empty
+      if (fieldId === 'city' || fieldId === 'birthLocation') {
+        const cityVal = cityEl ? cityEl.value.trim() : '';
+        const stateVal = stateEl ? stateEl.value.trim() : '';
+        if (cityVal && stateVal) {
+          const locStr = `${cityVal}, ${stateVal}`;
+          if (deathLocEl && !deathLocEl.value) deathLocEl.value = locStr;
+          if (marriageLocEl && !marriageLocEl.value) marriageLocEl.value = locStr;
+        }
+      }
+
+      // When country changes, propagate to all location fields
+      if (fieldId === 'country' && countryEl) {
+        // Country typically stays same across locations, but we don't auto-clear other fields
+      }
+
+      // Auto-update Google Maps link
+      updateGoogleMapsLink();
+    }
+
+    // Auto-open Names section by default
+    window.addEventListener('load', function() {
+      const namesContent = document.getElementById('namesSection');
+      if (namesContent) {
+        namesContent.classList.add('open');
+        const icon = namesContent.previousElementSibling ? namesContent.previousElementSibling.querySelector('.accordion-icon') : null;
+        if (icon) icon.classList.add('open');
+      }
+    });
+    // Auto-generate Google Maps link from location fields
+    function updateGoogleMapsLink() {
+      const street = document.getElementById('addressLine') ? document.getElementById('addressLine').value.trim() : '';
+      const city = document.getElementById('city') ? document.getElementById('city').value.trim() : '';
+      const state = document.getElementById('state') ? document.getElementById('state').value.trim() : '';
+      const country = document.getElementById('country') ? document.getElementById('country').value.trim() : '';
+      const birthLoc = document.getElementById('birthLocation') ? document.getElementById('birthLocation').value.trim() : '';
+
+      let locationStr = '';
+      if (street) locationStr += street + ', ';
+      if (city) locationStr += city + ', ';
+      if (state) locationStr += state;
+      if (!locationStr && birthLoc) locationStr = birthLoc;
+      if (!locationStr && country) locationStr = country;
+
+      const linkEl = document.getElementById('googleMapsLink');
+      if (locationStr) {
+        linkEl.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationStr)}`;
+        linkEl.textContent = `🗺 View "${locationStr}" on Google Maps`;
+      } else {
+        linkEl.href = '#';
+        linkEl.textContent = '🗺 Enter location to view on Google Maps';
+      }
+    }
+
+    // ScoutAI Geography Helper — asks about historical jurisdiction changes
+    function showGeographyHelper() {
+      const birthLocation = document.getElementById('birthLocation') ? document.getElementById('birthLocation').value.trim() : '';
+      const city = document.getElementById('city') ? document.getElementById('city').value.trim() : '';
+      const state = document.getElementById('state') ? document.getElementById('state').value.trim() : '';
+
+      let locationContext = '';
+      if (city) locationContext += city + ', ';
+      if (state) locationContext += state;
+      if (!locationContext) locationContext = birthLocation || 'your search area';
+
+      const question = prompt(
+        `📍 ScoutAI Historical Geography Helper\n\nEnter your question about historical jurisdictions for "${locationContext}":\n\nExamples:\n- "What counties existed in Wake County NC in 1850?"\n- "Former city names in Charleston SC"\n- "Parish changes in Louisiana before 1900"\n- "Town name changes in upstate New York"\n\nYour question:`,
+        `What county/parish/city changes occurred in ${locationContext} between 1850 and 1950?`
+      );
+
+      if (question && question.trim()) {
+        const fullQuery = `Historical geography question for ${locationContext}: ${question.trim()}`;
+        window.location.href = `scout_chat.html?q=${encodeURIComponent(fullQuery)}`;
+      }
+    }
+
+    // Attach event listeners to location fields to auto-update Google Maps link
+    function attachLocationListeners() {
+      const locationFields = ['addressLine', 'city', 'state', 'country', 'birthLocation'];
+      locationFields.forEach(function(fieldId) {
+        const el = document.getElementById(fieldId);
+        if (el) {
+          el.addEventListener('input', updateGoogleMapsLink);
+        }
+      });
+      // Initial update
+      updateGoogleMapsLink();
+    }
+
+    // ScoutAI Geography Helper button
+    document.addEventListener('DOMContentLoaded', function() {
+      attachLocationListeners();
+      const geoBtn = document.getElementById('geographyHelpBtn');
+      if (geoBtn) {
+        geoBtn.onclick = showGeographyHelper;
+      }
+    });
+
+    function handleSearchSubmit(e) {
+      e.preventDefault();
+      const fn = document.getElementById('firstName').value.trim();
+      const ln = document.getElementById('lastName').value.trim();
+      const yr = document.getElementById('birthYear').value.trim();
+      const gender = document.getElementById('gender') ? document.getElementById('gender').value : '';
+      const street = document.getElementById('addressLine') ? document.getElementById('addressLine').value.trim() : '';
+      const city = document.getElementById('city') ? document.getElementById('city').value.trim() : '';
+      const state = document.getElementById('state') ? document.getElementById('state').value.trim() : '';
+      const country = document.getElementById('country') ? document.getElementById('country').value.trim() : '';
+      const county = document.getElementById('county') ? document.getElementById('county').value.trim() : '';
+      const birthLoc = document.getElementById('birthLocation') ? document.getElementById('birthLocation').value.trim() : '';
+
+      let query = `Find records for ${fn} ${ln}`;
+      if (birthLoc) query += ` in ${birthLoc}`;
+      if (city) query += `, ${city}`;
+      if (state) query += `, ${state}`;
+      if (country) query += `, ${country}`;
+      if (street) query += `. Address: ${street}`;
+      if (county) query += `, ${county} County`;
+      if (yr) query += ` born around ${yr}`;
+      const birthMonth = document.getElementById('birthMonth') ? document.getElementById('birthMonth').value.trim() : '';
+      if (birthMonth) query += ` ${birthMonth}`;
+      if (gender) query += `. Gender: ${gender}`;
+      const deathYr = document.getElementById('deathYear') ? document.getElementById('deathYear').value.trim() : '';
+      if (deathYr) query += `. Died around ${deathYr}`;
+      const deathLoc = document.getElementById('deathLocation') ? document.getElementById('deathLocation').value.trim() : '';
+      if (deathLoc) query += ` in ${deathLoc}`;
+      const marriageYr = document.getElementById('marriageYear') ? document.getElementById('marriageYear').value.trim() : '';
+      if (marriageYr) query += `. Married around ${marriageYr}`;
+      const marriageLoc = document.getElementById('marriageLocation') ? document.getElementById('marriageLocation').value.trim() : '';
+      if (marriageLoc) query += ` in ${marriageLoc}`;
+      const spouse = document.getElementById('spouseName') ? document.getElementById('spouseName').value.trim() : '';
+      if (spouse) query += `. Spouse/partner: ${spouse}`;
+      const father = document.getElementById('fatherName') ? document.getElementById('fatherName').value.trim() : '';
+      if (father) query += `. Father: ${father}`;
+      const mother = document.getElementById('motherName') ? document.getElementById('motherName').value.trim() : '';
+      if (mother) query += `. Mother: ${mother}`;
+      const sibling = document.getElementById('siblingName') ? document.getElementById('siblingName').value.trim() : '';
+      if (sibling) query += `. Sibling(s): ${sibling}`;
+      const keywords = document.getElementById('keywords') ? document.getElementById('keywords').value.trim() : '';
+      if (keywords) query += `. Keywords: ${keywords}`;
+
+      window.location.href = `scout_chat.html?q=${encodeURIComponent(query)}`;
+      return false;
+    }
+
+    function onGooglePayLoaded() {
+      console.log("Google Pay API script loaded");
+    }
+
+    function triggerGooglePay(tierName, amount) {
+      const paymentsClient = new google.payments.api.PaymentsClient({environment: 'TEST'});
+      const paymentDataRequest = {
+        apiVersion: 2,
+        apiVersionMinor: 0,
+        allowedPaymentMethods: [{
+          type: 'CARD',
+          parameters: {
+            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+            allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA']
+          },
+          tokenizationSpecification: {
+            type: 'PAYMENT_GATEWAY',
+            parameters: {
+              'gateway': 'example',
+              'gatewayMerchantId': 'exampleGatewayMerchantId'
+            }
+          }
+        }],
+        merchantInfo: {
+          merchantId: '12345678901234567890',
+          merchantName: 'Rogers & Barrett Creative Media'
+        },
+        transactionInfo: {
+          totalPriceStatus: 'FINAL',
+          totalPriceLabel: 'Total',
+          totalPrice: amount.toString(),
+          currencyCode: 'USD',
+          countryCode: 'US'
+        }
+      };
+
+      paymentsClient.loadPaymentData(paymentDataRequest)
+        .then(function(paymentData) {
+          alert(`Success! Subscribed to ${tierName}. Full ScoutAI access unlocked.`);
+          localStorage.setItem('findme_subscribed', 'true');
+          window.location.href = 'scout_chat.html';
+        })
+        .catch(function(err) {
+          if (confirm(`[TEST SIMULATION] Subscribe to ${tierName} for $${amount}/mo using Google Pay?`)) {
+            localStorage.setItem('findme_subscribed', 'true');
+            alert("Subscription active! Redirecting to ScoutAI...");
+            window.location.href = 'scout_chat.html';
+          }
+        });
+    }
+  </script>
+</body>
+</html>

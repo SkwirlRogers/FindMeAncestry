@@ -1,0 +1,72 @@
+{
+  "surname": "Fry",
+  "slug": "fry",
+  "soundex": "F600",
+  "variants": [
+    "frey"
+  ],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      },
+      {
+        "county": "Anson County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1910,
+        "count": 4
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1913,
+    "latest_birth": 1931,
+    "sample_records": [
+      {
+        "name": "Beatrice Evelyn Fry-Bennett",
+        "birth": 1931,
+        "county": "Anson County"
+      },
+      {
+        "name": "Juanita Fry",
+        "birth": 1913,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Virelenia Fry",
+        "birth": 1920,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Gustha Fry",
+        "birth": 1924,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Ester Fry",
+        "birth": 1915,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/fry",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Fry",
+    "geneanet": "https://en.geneanet.org/surnames/fry",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Fry",
+    "houseofnames": "https://www.houseofnames.com/fry-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

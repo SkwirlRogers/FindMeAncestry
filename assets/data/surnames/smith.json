@@ -1,0 +1,90 @@
+{
+  "surname": "Smith",
+  "slug": "smith",
+  "soundex": "S530",
+  "variants": [],
+  "nc_data": {
+    "total_records": 17,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 12
+      },
+      {
+        "county": "Person County",
+        "count": 3
+      },
+      {
+        "county": "Guilford County",
+        "count": 1
+      },
+      {
+        "county": "Anson County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 6
+      },
+      {
+        "decade": 1900,
+        "count": 5
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 3
+      },
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1870,
+    "latest_birth": 1940,
+    "sample_records": [
+      {
+        "name": "Mary Marie Smith",
+        "birth": 1930,
+        "county": "Guilford County"
+      },
+      {
+        "name": "Tinnie Smith",
+        "birth": 1900,
+        "county": "Anson County"
+      },
+      {
+        "name": "Carrie Louise Smith",
+        "birth": 1929,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Laura Ann Virginia Davis Smith",
+        "birth": 1903,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Claudius Benjamin Smith",
+        "birth": 1890,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/smith",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Smith",
+    "geneanet": "https://en.geneanet.org/surnames/smith",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Smith",
+    "houseofnames": "https://www.houseofnames.com/smith-family-crest",
+    "one_name_org": "https://one-name.org/surnames_s/"
+  }
+}

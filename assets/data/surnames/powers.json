@@ -1,0 +1,35 @@
+{
+  "surname": "Powers",
+  "slug": "powers",
+  "soundex": "P620",
+  "variants": [
+    "powerse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [],
+    "earliest_birth": null,
+    "latest_birth": null,
+    "sample_records": [
+      {
+        "name": "Tonie Powers",
+        "birth": null,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/powers",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Powers",
+    "geneanet": "https://en.geneanet.org/surnames/powers",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Powers",
+    "houseofnames": "https://www.houseofnames.com/powers-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

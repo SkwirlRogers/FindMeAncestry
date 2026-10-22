@@ -1,0 +1,60 @@
+{
+  "surname": "Carver",
+  "slug": "carver",
+  "soundex": "C616",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1909,
+    "latest_birth": 1920,
+    "sample_records": [
+      {
+        "name": "Janie Carver",
+        "birth": 1920,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lucy Ann Carver",
+        "birth": 1909,
+        "county": "Person County"
+      },
+      {
+        "name": "Flossie Carver",
+        "birth": 1916,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/carver",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Carver",
+    "geneanet": "https://en.geneanet.org/surnames/carver",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Carver",
+    "houseofnames": "https://www.houseofnames.com/carver-family-crest",
+    "one_name_org": "https://one-name.org/surnames_c/"
+  }
+}

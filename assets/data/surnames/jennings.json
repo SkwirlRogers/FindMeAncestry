@@ -1,0 +1,40 @@
+{
+  "surname": "Jennings",
+  "slug": "jennings",
+  "soundex": "J552",
+  "variants": [
+    "jenningse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1940,
+    "latest_birth": 1940,
+    "sample_records": [
+      {
+        "name": "Elvenia Rogers Jennings",
+        "birth": 1940,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/jennings",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Jennings",
+    "geneanet": "https://en.geneanet.org/surnames/jennings",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Jennings",
+    "houseofnames": "https://www.houseofnames.com/jennings-family-crest",
+    "one_name_org": "https://one-name.org/surnames_j/"
+  }
+}

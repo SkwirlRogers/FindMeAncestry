@@ -1,0 +1,71 @@
+{
+  "surname": "Gentry",
+  "slug": "gentry",
+  "soundex": "G536",
+  "variants": [
+    "gentrey"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Alamance County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1888,
+    "latest_birth": 1935,
+    "sample_records": [
+      {
+        "name": "Dessie M Gentry",
+        "birth": 1888,
+        "county": "Unknown County"
+      },
+      {
+        "name": "John William Gentry",
+        "birth": 1933,
+        "county": "Unknown County"
+      },
+      {
+        "name": "John William Gentry",
+        "birth": 1910,
+        "county": "Person County"
+      },
+      {
+        "name": "Robert Lee Gentry",
+        "birth": 1935,
+        "county": "Alamance County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/gentry",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Gentry",
+    "geneanet": "https://en.geneanet.org/surnames/gentry",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Gentry",
+    "houseofnames": "https://www.houseofnames.com/gentry-family-crest",
+    "one_name_org": "https://one-name.org/surnames_g/"
+  }
+}

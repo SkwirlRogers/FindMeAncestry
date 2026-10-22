@@ -1,0 +1,40 @@
+{
+  "surname": "Hughes",
+  "slug": "hughes",
+  "soundex": "H220",
+  "variants": [
+    "hughese"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1920,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1924,
+    "latest_birth": 1924,
+    "sample_records": [
+      {
+        "name": "Lillian Hughes",
+        "birth": 1924,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hughes",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hughes",
+    "geneanet": "https://en.geneanet.org/surnames/hughes",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hughes",
+    "houseofnames": "https://www.houseofnames.com/hughes-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

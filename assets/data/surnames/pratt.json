@@ -1,0 +1,56 @@
+{
+  "surname": "Pratt",
+  "slug": "pratt",
+  "soundex": "P630",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Anson County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 1
+      },
+      {
+        "decade": 1950,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1891,
+    "latest_birth": 1950,
+    "sample_records": [
+      {
+        "name": "Carrie Virginia Little Pratt",
+        "birth": 1924,
+        "county": "Anson County"
+      },
+      {
+        "name": "Julia Virginia Pratt",
+        "birth": 1950,
+        "county": "Anson County"
+      },
+      {
+        "name": "James \"Son\" Pratt",
+        "birth": 1891,
+        "county": "Anson County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/pratt",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Pratt",
+    "geneanet": "https://en.geneanet.org/surnames/pratt",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Pratt",
+    "houseofnames": "https://www.houseofnames.com/pratt-family-crest",
+    "one_name_org": "https://one-name.org/surnames_p/"
+  }
+}

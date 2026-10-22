@@ -1,0 +1,38 @@
+{
+  "surname": "Mendenhall",
+  "slug": "mendenhall",
+  "soundex": "M535",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1850,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1852,
+    "latest_birth": 1852,
+    "sample_records": [
+      {
+        "name": "Harriet McCrae Ingram Mendenhall",
+        "birth": 1852,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/mendenhall",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Mendenhall",
+    "geneanet": "https://en.geneanet.org/surnames/mendenhall",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Mendenhall",
+    "houseofnames": "https://www.houseofnames.com/mendenhall-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "surname": "Gunn",
+  "slug": "gunn",
+  "soundex": "G500",
+  "variants": [],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      },
+      {
+        "county": "Orange County",
+        "count": 2
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      },
+      {
+        "decade": 1950,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1863,
+    "latest_birth": 1950,
+    "sample_records": [
+      {
+        "name": "Allie Lee Gunn",
+        "birth": 1908,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Jacob Astor \"Jake\" Gunn",
+        "birth": 1917,
+        "county": "Person County"
+      },
+      {
+        "name": "Larry Donnell Gunn",
+        "birth": 1950,
+        "county": "Orange County"
+      },
+      {
+        "name": "Otis Elbert \"Odie\" Gunn",
+        "birth": 1915,
+        "county": "Caswell County"
+      },
+      {
+        "name": "Mary Ruth Gunn",
+        "birth": 1950,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/gunn",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Gunn",
+    "geneanet": "https://en.geneanet.org/surnames/gunn",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Gunn",
+    "houseofnames": "https://www.houseofnames.com/gunn-family-crest",
+    "one_name_org": "https://one-name.org/surnames_g/"
+  }
+}

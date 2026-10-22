@@ -1,0 +1,164 @@
+{
+  "surname": "Rogers",
+  "slug": "rogers",
+  "soundex": "R262",
+  "variants": [
+    "rogerse"
+  ],
+  "nc_data": {
+    "total_records": 670,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 301
+      },
+      {
+        "county": "Unknown County",
+        "count": 239
+      },
+      {
+        "county": "Alamance County",
+        "count": 45
+      },
+      {
+        "county": "Caswell County",
+        "count": 30
+      },
+      {
+        "county": "Orange County",
+        "count": 19
+      },
+      {
+        "county": "Pender County",
+        "count": 13
+      },
+      {
+        "county": "Nash County",
+        "count": 10
+      },
+      {
+        "county": "Granville County",
+        "count": 8
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1710,
+        "count": 1
+      },
+      {
+        "decade": 1750,
+        "count": 1
+      },
+      {
+        "decade": 1780,
+        "count": 2
+      },
+      {
+        "decade": 1800,
+        "count": 2
+      },
+      {
+        "decade": 1810,
+        "count": 2
+      },
+      {
+        "decade": 1820,
+        "count": 5
+      },
+      {
+        "decade": 1830,
+        "count": 8
+      },
+      {
+        "decade": 1840,
+        "count": 12
+      },
+      {
+        "decade": 1850,
+        "count": 21
+      },
+      {
+        "decade": 1860,
+        "count": 35
+      },
+      {
+        "decade": 1870,
+        "count": 41
+      },
+      {
+        "decade": 1880,
+        "count": 47
+      },
+      {
+        "decade": 1890,
+        "count": 43
+      },
+      {
+        "decade": 1900,
+        "count": 76
+      },
+      {
+        "decade": 1910,
+        "count": 101
+      },
+      {
+        "decade": 1920,
+        "count": 95
+      },
+      {
+        "decade": 1930,
+        "count": 57
+      },
+      {
+        "decade": 1940,
+        "count": 78
+      },
+      {
+        "decade": 1950,
+        "count": 25
+      },
+      {
+        "decade": 1960,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1716,
+    "latest_birth": 1964,
+    "sample_records": [
+      {
+        "name": "Robert \"Bob\" Rogers",
+        "birth": 1830,
+        "county": "Person County"
+      },
+      {
+        "name": "John H. Rogers",
+        "birth": 1904,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Jane Rogers",
+        "birth": 1921,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Joseph Joe Rogers",
+        "birth": 1915,
+        "county": "Person County"
+      },
+      {
+        "name": "Hallie Lee Rogers",
+        "birth": 1916,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/rogers",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Rogers",
+    "geneanet": "https://en.geneanet.org/surnames/rogers",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Rogers",
+    "houseofnames": "https://www.houseofnames.com/rogers-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

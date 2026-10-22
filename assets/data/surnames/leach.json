@@ -1,0 +1,64 @@
+{
+  "surname": "Leach",
+  "slug": "leach",
+  "soundex": "L200",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Richmond County",
+        "count": 1
+      },
+      {
+        "county": "Unknown County",
+        "count": 1
+      },
+      {
+        "county": "Hoke County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 1
+      },
+      {
+        "decade": 1880,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1835,
+    "latest_birth": 1882,
+    "sample_records": [
+      {
+        "name": "Rowland Leach",
+        "birth": 1854,
+        "county": "Richmond County"
+      },
+      {
+        "name": "Narcissus Leach",
+        "birth": 1882,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Rebecca Leach",
+        "birth": 1835,
+        "county": "Hoke County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/leach",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Leach",
+    "geneanet": "https://en.geneanet.org/surnames/leach",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Leach",
+    "houseofnames": "https://www.houseofnames.com/leach-family-crest",
+    "one_name_org": "https://one-name.org/surnames_l/"
+  }
+}

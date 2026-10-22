@@ -1,0 +1,40 @@
+{
+  "surname": "Hicks",
+  "slug": "hicks",
+  "soundex": "H200",
+  "variants": [
+    "hickse"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Northampton County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1940,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1944,
+    "latest_birth": 1944,
+    "sample_records": [
+      {
+        "name": "Edna Inez Miles Hicks Shakur",
+        "birth": 1944,
+        "county": "Northampton County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hicks",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hicks",
+    "geneanet": "https://en.geneanet.org/surnames/hicks",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hicks",
+    "houseofnames": "https://www.houseofnames.com/hicks-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

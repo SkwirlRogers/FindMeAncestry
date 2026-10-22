@@ -1,0 +1,38 @@
+{
+  "surname": "Wagoner",
+  "slug": "wagoner",
+  "soundex": "W256",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1863,
+    "latest_birth": 1863,
+    "sample_records": [
+      {
+        "name": "William Wagoner",
+        "birth": 1863,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/wagoner",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Wagoner",
+    "geneanet": "https://en.geneanet.org/surnames/wagoner",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Wagoner",
+    "houseofnames": "https://www.houseofnames.com/wagoner-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

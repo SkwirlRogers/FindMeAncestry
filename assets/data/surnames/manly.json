@@ -1,0 +1,40 @@
+{
+  "surname": "Manly",
+  "slug": "manly",
+  "soundex": "M540",
+  "variants": [
+    "manley"
+  ],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Wake County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1874,
+    "latest_birth": 1874,
+    "sample_records": [
+      {
+        "name": "Bessie Elizabeth Manly",
+        "birth": 1874,
+        "county": "Wake County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/manly",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Manly",
+    "geneanet": "https://en.geneanet.org/surnames/manly",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Manly",
+    "houseofnames": "https://www.houseofnames.com/manly-family-crest",
+    "one_name_org": "https://one-name.org/surnames_m/"
+  }
+}

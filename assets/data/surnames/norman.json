@@ -1,0 +1,82 @@
+{
+  "surname": "Norman",
+  "slug": "norman",
+  "soundex": "N655",
+  "variants": [],
+  "nc_data": {
+    "total_records": 12,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 6
+      },
+      {
+        "county": "Alamance County",
+        "count": 3
+      },
+      {
+        "county": "Orange County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 2
+      },
+      {
+        "decade": 1910,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 5
+      },
+      {
+        "decade": 1960,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1900,
+    "latest_birth": 1964,
+    "sample_records": [
+      {
+        "name": "John Green Bradsher Norman",
+        "birth": 1900,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Susie Norman",
+        "birth": 1927,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Annie Lee Norman",
+        "birth": 1929,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Claude Henry Norman",
+        "birth": 1930,
+        "county": "Alamance County"
+      },
+      {
+        "name": "Charlie Hoover Norman Sr",
+        "birth": 1932,
+        "county": "Orange County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/norman",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Norman",
+    "geneanet": "https://en.geneanet.org/surnames/norman",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Norman",
+    "houseofnames": "https://www.houseofnames.com/norman-family-crest",
+    "one_name_org": "https://one-name.org/surnames_n/"
+  }
+}

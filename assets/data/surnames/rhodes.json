@@ -1,0 +1,76 @@
+{
+  "surname": "Rhodes",
+  "slug": "rhodes",
+  "soundex": "R320",
+  "variants": [
+    "rhodese"
+  ],
+  "nc_data": {
+    "total_records": 7,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 5
+      },
+      {
+        "county": "Moore County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1830,
+        "count": 1
+      },
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 2
+      },
+      {
+        "decade": 1860,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1833,
+    "latest_birth": 1869,
+    "sample_records": [
+      {
+        "name": "Caroline Rhodes",
+        "birth": 1842,
+        "county": "Moore County"
+      },
+      {
+        "name": "Julia Rhodes",
+        "birth": 1833,
+        "county": "Moore County"
+      },
+      {
+        "name": "John M Rhodes",
+        "birth": 1851,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Susan Rhodes",
+        "birth": 1859,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Thomas Rhodes",
+        "birth": 1864,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/rhodes",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Rhodes",
+    "geneanet": "https://en.geneanet.org/surnames/rhodes",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Rhodes",
+    "houseofnames": "https://www.houseofnames.com/rhodes-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

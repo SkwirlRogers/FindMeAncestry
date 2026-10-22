@@ -1,0 +1,76 @@
+{
+  "surname": "Kelly",
+  "slug": "kelly",
+  "soundex": "K400",
+  "variants": [
+    "kelley"
+  ],
+  "nc_data": {
+    "total_records": 9,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 6
+      },
+      {
+        "county": "Moore County",
+        "count": 3
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1850,
+        "count": 4
+      },
+      {
+        "decade": 1860,
+        "count": 3
+      },
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1820,
+    "latest_birth": 1871,
+    "sample_records": [
+      {
+        "name": "Catherine J. \"CJ\" Kelly",
+        "birth": 1850,
+        "county": "Moore County"
+      },
+      {
+        "name": "John McL Kelly",
+        "birth": 1820,
+        "county": "Moore County"
+      },
+      {
+        "name": "Dr. Adam David Kelly Sr.",
+        "birth": 1860,
+        "county": "Moore County"
+      },
+      {
+        "name": "John Kelly",
+        "birth": 1852,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Alexander Alex Kelly",
+        "birth": 1854,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/kelly",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Kelly",
+    "geneanet": "https://en.geneanet.org/surnames/kelly",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Kelly",
+    "houseofnames": "https://www.houseofnames.com/kelly-family-crest",
+    "one_name_org": "https://one-name.org/surnames_k/"
+  }
+}

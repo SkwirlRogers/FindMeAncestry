@@ -1,0 +1,70 @@
+{
+  "surname": "Howard",
+  "slug": "howard",
+  "soundex": "H630",
+  "variants": [],
+  "nc_data": {
+    "total_records": 5,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1920,
+        "count": 3
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1897,
+    "latest_birth": 1931,
+    "sample_records": [
+      {
+        "name": "Charlie Howard",
+        "birth": 1897,
+        "county": "Person County"
+      },
+      {
+        "name": "Mary Anna Howard-Foster",
+        "birth": 1924,
+        "county": "Person County"
+      },
+      {
+        "name": "Maud Howard",
+        "birth": 1925,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mable Howard-Brooks",
+        "birth": 1929,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Willie Howard",
+        "birth": 1931,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/howard",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Howard",
+    "geneanet": "https://en.geneanet.org/surnames/howard",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Howard",
+    "houseofnames": "https://www.houseofnames.com/howard-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}

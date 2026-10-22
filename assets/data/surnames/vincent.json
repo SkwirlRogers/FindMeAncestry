@@ -1,0 +1,74 @@
+{
+  "surname": "Vincent",
+  "slug": "vincent",
+  "soundex": "V525",
+  "variants": [],
+  "nc_data": {
+    "total_records": 8,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 4
+      },
+      {
+        "county": "Unknown County",
+        "count": 4
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1840,
+        "count": 1
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1940,
+        "count": 4
+      }
+    ],
+    "earliest_birth": 1847,
+    "latest_birth": 1947,
+    "sample_records": [
+      {
+        "name": "Malinda Vincent",
+        "birth": 1847,
+        "county": "Person County"
+      },
+      {
+        "name": "Carrie Sue Vincent",
+        "birth": 1914,
+        "county": "Person County"
+      },
+      {
+        "name": "Easter Vincent\\Rogers (nee Vincent-Adopted by Aunt Malinda)",
+        "birth": 1893,
+        "county": "Person County"
+      },
+      {
+        "name": "Pashion Rogers Vincent",
+        "birth": 1912,
+        "county": "Person County"
+      },
+      {
+        "name": "Shirley F Vincent",
+        "birth": 1943,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/vincent",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Vincent",
+    "geneanet": "https://en.geneanet.org/surnames/vincent",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Vincent",
+    "houseofnames": "https://www.houseofnames.com/vincent-family-crest",
+    "one_name_org": "https://one-name.org/surnames_v/"
+  }
+}

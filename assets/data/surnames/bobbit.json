@@ -1,0 +1,38 @@
+{
+  "surname": "Bobbit",
+  "slug": "bobbit",
+  "soundex": "B130",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1870,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1876,
+    "latest_birth": 1876,
+    "sample_records": [
+      {
+        "name": "Mary Ada Bobbit",
+        "birth": 1876,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/bobbit",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Bobbit",
+    "geneanet": "https://en.geneanet.org/surnames/bobbit",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Bobbit",
+    "houseofnames": "https://www.houseofnames.com/bobbit-family-crest",
+    "one_name_org": "https://one-name.org/surnames_b/"
+  }
+}

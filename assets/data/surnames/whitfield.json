@@ -1,0 +1,56 @@
+{
+  "surname": "Whitfield",
+  "slug": "whitfield",
+  "soundex": "W314",
+  "variants": [],
+  "nc_data": {
+    "total_records": 3,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1880,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 2
+      }
+    ],
+    "earliest_birth": 1880,
+    "latest_birth": 1906,
+    "sample_records": [
+      {
+        "name": "Robert Henry \"Bob\"  Whitfield",
+        "birth": 1880,
+        "county": "Person County"
+      },
+      {
+        "name": "Rena Whitfield-Malone",
+        "birth": 1906,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Inez Whitfield",
+        "birth": 1906,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/whitfield",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Whitfield",
+    "geneanet": "https://en.geneanet.org/surnames/whitfield",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Whitfield",
+    "houseofnames": "https://www.houseofnames.com/whitfield-family-crest",
+    "one_name_org": "https://one-name.org/surnames_w/"
+  }
+}

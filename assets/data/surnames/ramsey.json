@@ -1,0 +1,64 @@
+{
+  "surname": "Ramsey",
+  "slug": "ramsey",
+  "soundex": "R520",
+  "variants": [
+    "ramsy",
+    "ramseey"
+  ],
+  "nc_data": {
+    "total_records": 4,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 3
+      },
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1907,
+    "latest_birth": 1947,
+    "sample_records": [
+      {
+        "name": "Flossie Ramsey",
+        "birth": 1907,
+        "county": "Person County"
+      },
+      {
+        "name": "Jasper Ramsey",
+        "birth": 1944,
+        "county": "Unknown County"
+      },
+      {
+        "name": "John D Ramsey",
+        "birth": 1945,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Lessie Mae Ramsey",
+        "birth": 1947,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/ramsey",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Ramsey",
+    "geneanet": "https://en.geneanet.org/surnames/ramsey",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Ramsey",
+    "houseofnames": "https://www.houseofnames.com/ramsey-family-crest",
+    "one_name_org": "https://one-name.org/surnames_r/"
+  }
+}

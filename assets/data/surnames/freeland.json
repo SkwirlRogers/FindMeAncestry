@@ -1,0 +1,38 @@
+{
+  "surname": "Freeland",
+  "slug": "freeland",
+  "soundex": "F645",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Washington County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1899,
+    "latest_birth": 1899,
+    "sample_records": [
+      {
+        "name": "Sarah Freeland",
+        "birth": 1899,
+        "county": "Washington County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/freeland",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Freeland",
+    "geneanet": "https://en.geneanet.org/surnames/freeland",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Freeland",
+    "houseofnames": "https://www.houseofnames.com/freeland-family-crest",
+    "one_name_org": "https://one-name.org/surnames_f/"
+  }
+}

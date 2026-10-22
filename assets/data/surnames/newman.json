@@ -1,0 +1,38 @@
+{
+  "surname": "Newman",
+  "slug": "newman",
+  "soundex": "N550",
+  "variants": [],
+  "nc_data": {
+    "total_records": 1,
+    "top_counties": [
+      {
+        "county": "Person County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1860,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1866,
+    "latest_birth": 1866,
+    "sample_records": [
+      {
+        "name": "Anna Newman",
+        "birth": 1866,
+        "county": "Person County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/newman",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Newman",
+    "geneanet": "https://en.geneanet.org/surnames/newman",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Newman",
+    "houseofnames": "https://www.houseofnames.com/newman-family-crest",
+    "one_name_org": "https://one-name.org/surnames_n/"
+  }
+}

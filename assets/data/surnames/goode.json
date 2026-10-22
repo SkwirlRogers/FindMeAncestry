@@ -1,0 +1,47 @@
+{
+  "surname": "Goode",
+  "slug": "goode",
+  "soundex": "G300",
+  "variants": [],
+  "nc_data": {
+    "total_records": 2,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 2
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1930,
+        "count": 1
+      }
+    ],
+    "earliest_birth": 1899,
+    "latest_birth": 1934,
+    "sample_records": [
+      {
+        "name": "Bennett Goode",
+        "birth": 1934,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Kanda L Goode",
+        "birth": 1899,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/goode",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Goode",
+    "geneanet": "https://en.geneanet.org/surnames/goode",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Goode",
+    "houseofnames": "https://www.houseofnames.com/goode-family-crest",
+    "one_name_org": "https://one-name.org/surnames_g/"
+  }
+}

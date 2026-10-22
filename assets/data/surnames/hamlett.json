@@ -1,0 +1,110 @@
+{
+  "surname": "Hamlett",
+  "slug": "hamlett",
+  "soundex": "H543",
+  "variants": [],
+  "nc_data": {
+    "total_records": 19,
+    "top_counties": [
+      {
+        "county": "Unknown County",
+        "count": 15
+      },
+      {
+        "county": "Person County",
+        "count": 2
+      },
+      {
+        "county": "Orange County",
+        "count": 1
+      },
+      {
+        "county": "Caswell County",
+        "count": 1
+      }
+    ],
+    "birth_decades": [
+      {
+        "decade": 1800,
+        "count": 1
+      },
+      {
+        "decade": 1820,
+        "count": 1
+      },
+      {
+        "decade": 1830,
+        "count": 2
+      },
+      {
+        "decade": 1850,
+        "count": 3
+      },
+      {
+        "decade": 1860,
+        "count": 1
+      },
+      {
+        "decade": 1870,
+        "count": 2
+      },
+      {
+        "decade": 1890,
+        "count": 1
+      },
+      {
+        "decade": 1900,
+        "count": 1
+      },
+      {
+        "decade": 1910,
+        "count": 2
+      },
+      {
+        "decade": 1930,
+        "count": 2
+      },
+      {
+        "decade": 1940,
+        "count": 3
+      }
+    ],
+    "earliest_birth": 1805,
+    "latest_birth": 1947,
+    "sample_records": [
+      {
+        "name": "Edith Jane Hamlett",
+        "birth": 1879,
+        "county": "Orange County"
+      },
+      {
+        "name": "Martha Jane Hamlett",
+        "birth": 1901,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Mary Magdeline Hamlett",
+        "birth": 1914,
+        "county": "Unknown County"
+      },
+      {
+        "name": "Robert Lee Hamlett Jr",
+        "birth": 1894,
+        "county": "Person County"
+      },
+      {
+        "name": "John Hamlett",
+        "birth": 1835,
+        "county": "Unknown County"
+      }
+    ]
+  },
+  "resources": {
+    "behindthename": "https://surnames.behindthename.com/name/hamlett",
+    "familysearch": "https://www.familysearch.org/en/surname?surname=Hamlett",
+    "geneanet": "https://en.geneanet.org/surnames/hamlett",
+    "ancestry": "https://www.ancestry.com/name-meaning?surname=Hamlett",
+    "houseofnames": "https://www.houseofnames.com/hamlett-family-crest",
+    "one_name_org": "https://one-name.org/surnames_h/"
+  }
+}
