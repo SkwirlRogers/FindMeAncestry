@@ -1,0 +1,45 @@
+/* Load after styles.css. Page integration is required before these rules apply. */
+.hero-grid > *, .form-row > *, .included-card > *, .footer-grid > *,
+.dashboard-container > *, .sync-step > * { min-width: 0; }
+.form-group input, .form-group select { width: 100%; min-width: 0; max-width: 100%; }
+.pricing-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.included-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.categories-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.learning-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.media-upload-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); }
+.dashboard-scout-panel .scout-input-bar input { min-width: 0; font-size: 1rem; }
+.tree-view-tabs { flex-wrap: wrap; }
+.dna-provider-logos { flex-wrap: wrap; }
+.btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; text-align: center; }
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid var(--clr-primary); outline-offset: 3px; }
+.site-footer :where(a, button):focus-visible, .cta-banner :where(a, button):focus-visible { outline-color: var(--clr-accent); }
+@media (max-width: 900px) {
+  .dashboard-container { flex-direction: column; height: auto; }
+  .dashboard-tree-panel { flex: none; min-height: 320px; }
+  .dashboard-scout-panel { flex: none; height: 520px; max-height: 80dvh; }
+}
+@media (max-width: 600px) {
+  .container { padding-inline: 16px; }
+  .section { padding-block: 40px; }
+  .hero { padding-block: 36px 48px; }
+  .hero-grid { gap: 28px; }
+  .hero-text h1 { font-size: clamp(2rem, 8vw, 3rem); overflow-wrap: anywhere; }
+  .hero-search-card { padding: 16px; }
+  .hero-search-card h3 { font-size: 1.2rem; }
+  .form-row { grid-template-columns: minmax(0, 1fr); }
+  .accordion-header { padding: 14px 12px; gap: 8px; }
+  .scout-banner, .cta-banner { padding: 28px 20px; }
+  .section-header h2, .cta-banner h2 { font-size: 1.8rem; }
+  .pricing-card, .comparison-card { padding: 28px 20px; }
+  .site-footer { padding-inline: 20px; }
+  .workspace-header { padding: 12px 16px; }
+  .dashboard-scout-panel .scout-input-bar { gap: 8px; padding: 12px; }
+  .dashboard-scout-panel .scout-input-bar input { padding-inline: 10px; }
+  .map-timeline-scrubber { width: calc(100% - 24px); padding: 12px; gap: 8px; flex-wrap: wrap; border-radius: var(--radius-md); }
+  .map-timeline-scrubber input[type="range"] { min-width: 0; }
+  .per-use-pricing { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .category-card, .pricing-card, .media-card, .accordion-content,
+  .accordion-icon, .workspace-link.warp-link, .workspace-link.warp-link::before { transition: none; animation: none; }
+}
