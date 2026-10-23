@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaylaAI — Personal Asset & Investment Advisor</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .ky-hero{background:linear-gradient(160deg,#0a3d62 0%,#1e90ff 55%,#3ab0ff 100%);padding:40px 32px 20px;color:#fff;position:relative;overflow:hidden}
+    .ky-hero h1{font-size:clamp(24px,4vw,40px);font-weight:900;line-height:1.1;margin-bottom:8px}
+    .ky-hero p{font-size:clamp(13px,1.8vw,16px);color:rgba(255,255,255,0.85);max-width:600px;margin:0 auto}
+  </style>
+</head>
+<body>
+  <header class="ancestry-header">
+    <a href="index.html" class="ancestry-brand" style="flex-direction: row; align-items: center; gap: 14px;">
+      <img src="assets/logo.jpg" alt="FindMeAncestry Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--clr-accent);">
+      <div>
+        <div class="ancestry-logo">FindMeAncestry™ <span class="badge">PRO</span></div>
+        <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
+      </div>
+    </a>
+    <nav class="ancestry-nav" id="mainNav">
+      <a href="index.html">🔎 Search Records</a>
+      <a href="scout_chat.html">💬 ScoutAI Chat</a>
+      <a href="kayla_chat.html" class="workspace-link" data-tier="free">🤖 KaylaAI</a>
+      <a href="dashboard.html" class="workspace-link" data-tier="subscriber">🖥️ Dashboard</a>
+      <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
+      <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
+      <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
+      <a href="sync-center.html" class="workspace-link" data-tier="free">🔌 Sync Center</a>
+      <a href="surname-center.html" class="workspace-link" data-tier="subscriber">🏷️ Surname Center</a>
+      <a href="resource-hub.html" class="workspace-link" data-tier="free">🧰 Resources & Tools</a>
+      <a href="ceeyoassets.html" class="workspace-link" data-tier="free">💰 CeeYoAssets</a>
+      <a href="scout_chat.html?demo=true" class="btn btn-accent" style="padding: 8px 20px; font-size: 0.85rem;">🎯 Try Demo</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </header>
+  <section class="ky-hero">
+    <div style="max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:40px;padding:6px 18px;font-size:13px;font-weight:600;color:#fff;margin-bottom:12px;">🤖 KaylaAI — Personal Asset & Investment Advisor</div>
+      <h1>Welcome to KaylaAI</h1>
+      <p>Ask Kayla about your portfolio, investment opportunities, tax optimization, and more. Powered by SkwirlAI‑Kayla.</p>
+    </div>
+  </section>
+
+  <div class="chat-container" style="max-width:800px;margin:0 auto;padding:24px;">
+    <div class="chat-box" style="margin-top:16px;">
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="typing-indicator" id="typingIndicator">KaylaAI is thinking...</div>
+      <div class="quick-actions">
+        <button class="quick-btn" onclick="sendQuick('What is the best tax‑advantaged account for me?')">💰 Tax Advice</button>
+        <button class="quick-btn" onclick="sendQuick('Show me recent performance of my portfolio')">📈 Portfolio</button>
+        <button class="quick-btn" onclick="sendQuick('Suggest low‑risk investments for 2027')">🔍 Investment Ideas</button>
+      </div>
+      <div class="chat-input-area">
+        <textarea id="chatInput" placeholder="Ask Kayla..." rows="1" onkeydown="if(event.key==='Enter' && !event.shiftKey){event.preventDefault();sendMessage()}"></textarea>
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const typingIndicator = document.getElementById('typingIndicator');
+    let chatHistory = [];
+    async function sendMessage(){
+      const msg = chatInput.value.trim();
+      if(!msg) return;
+      chatMessages.innerHTML += `<div class="msg user">${msg}</div>`;
+      chatInput.value='';
+      sendBtn.disabled=true;
+      typingIndicator.classList.add('active');
+      chatHistory.push({role:'user',content:msg});
+      try{
+        const resp = await fetch('/api/kayla/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,history:chatHistory.slice(-10)})});
+        const data = await resp.json();
+        typingIndicator.classList.remove('active');
+        const reply = data.response || 'KaylaAI is unavailable.';
+        chatMessages.innerHTML += `<div class="msg agent"><strong>KaylaAI:</strong> ${reply}</div>`;
+        chatHistory.push({role:'assistant',content:reply});
+      }catch(e){
+        typingIndicator.classList.remove('active');
+        chatMessages.innerHTML += `<div class="msg agent"><strong>KaylaAI:</strong> Error contacting service.</div>`;
+      }
+      sendBtn.disabled=false;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    function sendQuick(text){
+      chatInput.value = text;
+      sendMessage();
+    }
+    chatInput.addEventListener('input',function(){
+      this.style.height='auto';
+      this.style.height=Math.min(this.scrollHeight,120)+'px';
+    });
+  </script>
+
+  <script src="assets/js/floating-chat.js"></script>
+  <script src="assets/js/service-worker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/assets/js/service-worker.js')
+        .then(()=>console.log('Service Worker registered'))
+        .catch(err=>console.error('SW registration failed:',err));
+    }
+  </script>
+</body>
+</html>
