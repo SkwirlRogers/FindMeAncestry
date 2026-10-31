@@ -12,6 +12,17 @@
     }
     .dashboard-hero h1 { font-size: 2rem; color: var(--clr-primary); }
     .dashboard-hero p { color: var(--clr-text-muted); font-size: 1.1rem; }
+    #access-banner {
+      max-width: 1180px;
+      margin: 0 auto 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(79,70,229,0.12), rgba(16,185,129,0.12));
+      border: 1px solid rgba(79,70,229,0.25);
+      color: var(--clr-primary);
+      font-weight: 600;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -48,11 +59,13 @@
     </div>
   </div>
 
+  <div id="access-banner" data-app-status></div>
+
   <!-- Access Gate: Subscribers Only -->
   <div class="access-gate" id="accessGate" style="display: none;">
     <div class="gate-content">
       <h2>🔒 Subscriber Access Only</h2>
-      <p>The Core Dashboard & Workspace — with pedigree tree views, fan charts, timeline analysis, and the always-on ScoutAI Copilot — is available with any paid monthly subscription (Discovery $9.99/mo, Forensic Explorer $19.99/mo, All-Access Advocate $29.99/mo, or All-Access Investigator $49.99/mo).</p>
+      <p>The Core Dashboard & Workspace — with pedigree tree views, fan charts, timeline analysis, and the always-on ScoutAI Copilot — is available with any paid monthly subscription (Discovery, Explorer, Advocate, or Investigator).</p>
       <a href="index.html#pricing" class="btn btn-accent" style="margin-right: 12px;">View Subscription Plans</a>
       <a href="map-view.html" class="btn btn-outline" style="border-color: #fff; color: #fff; margin-top: 12px;">Try the Free Migration Map</a>
     </div>
@@ -138,14 +151,15 @@
     </div>
   </footer>
 
+  <script src="assets/js/app-state.js"></script>
   <script>
-    const isSubscribed = localStorage.getItem('findme_subscribed') === 'true';
+    const isSubscribed = localStorage.getItem('findme_subscribed') === 'true' || AppState.isSubscribed();
     const workspace = document.getElementById('dashboardWorkspace');
 
     if (!isSubscribed && workspace) {
       const banner = document.createElement('div');
       banner.style.cssText = 'background:linear-gradient(90deg,#c9a84c,#8a6d2b);color:#fff;padding:12px 20px;text-align:center;font-size:0.9rem;border-radius:8px;margin-bottom:16px;';
-      banner.innerHTML = '🔓 <strong>Upgrade for full access.</strong> Some features require a subscription. <a href="index.html#pricing" style="color:#fff;text-decoration:underline;margin-left:8px;">View Plans →</a>';
+      banner.innerHTML = '🔓 <strong>Upgrade for full access.</strong> Some features require a subscription. <a href="index.html#pricing" style="color:#fff;text-decoration:underline;margin-left:8px;">View Plans</a>';
       workspace.prepend(banner);
     }
 
@@ -179,13 +193,13 @@
         const response = await fetch('/api/scout/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: text, isSubscribed: localStorage.getItem('findme_subscribed') === 'true' })
+          body: JSON.stringify({ message: text, isSubscribed: localStorage.getItem('findme_subscribed') === 'true' || AppState.isSubscribed() })
         });
         const data = await response.json();
         chatBox.removeChild(typingDiv);
         const scoutDiv = document.createElement('div');
         scoutDiv.className = 'message scout';
-        scoutDiv.innerHTML = data.reply || "Scout is unavailable.";
+        scoutDiv.innerHTML = data.reply || 'Scout is unavailable.';
         chatBox.appendChild(scoutDiv);
       } catch (err) {
         chatBox.removeChild(typingDiv);
@@ -197,14 +211,14 @@
       chatBox.scrollTop = chatBox.scrollHeight;
     }
   </script>
-    <script src="assets/js/floating-chat.js"></script>
-    <script src="assets/js/service-worker.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/assets/js/service-worker.js")
-          .then(() => console.log("Service Worker registered"))
-          .catch(err => console.error("Service Worker registration failed:", err));
-      }
-    </script>
+  <script src="assets/js/floating-chat.js"></script>
+  <script src="assets/js/service-worker.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/assets/js/service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("Service Worker registration failed:", err));
+    }
+  </script>
 </body>
 </html>
