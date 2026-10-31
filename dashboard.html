@@ -23,6 +23,60 @@
       font-weight: 600;
       display: none;
     }
+    .workspace-stack {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .workspace-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(12, 35, 64, 0.08);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+    }
+    .workspace-card h3 {
+      margin: 0 0 14px;
+      color: var(--clr-primary);
+      font-size: 1.1rem;
+    }
+    .case-item, .search-item {
+      border: 1px solid rgba(12,35,64,0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      background: #f7fafc;
+    }
+    .case-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .case-pill {
+      display: inline-flex;
+      border-radius: 999px;
+      background: rgba(11, 127, 151, 0.12);
+      color: var(--clr-primary);
+      font-size: 0.72rem;
+      padding: 4px 8px;
+      text-transform: capitalize;
+    }
+    .muted { color: var(--clr-text-muted); }
+    .panel-form input, .panel-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(12,35,64,0.12);
+      margin-bottom: 12px;
+      font: inherit;
+    }
+    .panel-form textarea { min-height: 100px; resize: vertical; }
+    @media (max-width: 900px) {
+      .workspace-stack { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -34,10 +88,10 @@
         <span class="ancestry-subtext">Rogers & Barrett Creative Media</span>
       </div>
     </a>
-            <nav class="ancestry-nav" id="mainNav">
+    <nav class="ancestry-nav" id="mainNav">
       <a href="index.html">🔎 Search Records</a>
       <a href="scout_chat.html">💬 ScoutAI Chat</a>
-      <a href="dashboard.html" class="workspace-link" data-tier="subscriber" class="active">🖥️ Dashboard</a>
+      <a href="dashboard.html" class="workspace-link active" data-tier="subscriber">🖥️ Dashboard</a>
       <a href="dna-hub.html" class="workspace-link" data-tier="per-use">🧬 DNA Hub</a>
       <a href="media-lab.html" class="workspace-link" data-tier="per-use">📜 Media Lab</a>
       <a href="map-view.html" class="workspace-link" data-tier="free">🗺️ Migration Map</a>
@@ -61,19 +115,49 @@
 
   <div id="access-banner" data-app-status></div>
 
-  <!-- Access Gate: Subscribers Only -->
   <div class="access-gate" id="accessGate" style="display: none;">
     <div class="gate-content">
       <h2>🔒 Subscriber Access Only</h2>
-      <p>The Core Dashboard & Workspace — with pedigree tree views, fan charts, timeline analysis, and the always-on ScoutAI Copilot — is available with any paid monthly subscription (Discovery, Explorer, Advocate, or Investigator).</p>
+      <p>The Core Dashboard & Workspace — with pedigree tree views, fan charts, timeline analysis, and the always-on ScoutAI Copilot — is available with any paid monthly subscription.</p>
       <a href="index.html#pricing" class="btn btn-accent" style="margin-right: 12px;">View Subscription Plans</a>
       <a href="map-view.html" class="btn btn-outline" style="border-color: #fff; color: #fff; margin-top: 12px;">Try the Free Migration Map</a>
     </div>
   </div>
 
   <div class="container" style="padding-bottom: 64px;" id="dashboardWorkspace">
-    <div class="dashboard-container">
-      <!-- LEFT PANEL: Pedigree Tree Charts -->
+    <div class="workspace-stack">
+      <div class="workspace-card">
+        <h3>Account & Workspace</h3>
+        <div id="account-panel"></div>
+      </div>
+
+      <div class="workspace-card">
+        <h3>Create a Research Case</h3>
+        <form id="case-form" class="panel-form">
+          <input id="case-title" type="text" placeholder="Case title" />
+          <textarea id="case-notes" placeholder="Add notes, source hints, or context"></textarea>
+          <button class="btn btn-accent" type="submit">Create Case</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="workspace-stack" style="margin-top: 24px;">
+      <div class="workspace-card">
+        <h3>Saved Cases</h3>
+        <div id="case-list"></div>
+      </div>
+
+      <div class="workspace-card">
+        <h3>Saved Searches</h3>
+        <form id="search-form" class="panel-form">
+          <input id="search-query" type="text" placeholder="Save a search query" />
+          <button class="btn btn-outline" type="submit">Save Search</button>
+        </form>
+        <div id="recent-searches"></div>
+      </div>
+    </div>
+
+    <div class="dashboard-container" style="margin-top: 24px;">
       <div class="dashboard-tree-panel">
         <div class="tree-view-tabs">
           <div class="tree-view-tab active" onclick="switchTreeView('pedigreeView')">Pedigree View</div>
@@ -101,7 +185,6 @@
         </div>
       </div>
 
-      <!-- RIGHT PANEL: ScoutAI Copilot -->
       <div class="dashboard-scout-panel">
         <div class="scout-header">
           🕵️‍♂️ ScoutAI Copilot — Private Family Detective
@@ -152,6 +235,7 @@
   </footer>
 
   <script src="assets/js/app-state.js"></script>
+  <script src="assets/js/case-workspace.js"></script>
   <script>
     const isSubscribed = localStorage.getItem('findme_subscribed') === 'true' || AppState.isSubscribed();
     const workspace = document.getElementById('dashboardWorkspace');
