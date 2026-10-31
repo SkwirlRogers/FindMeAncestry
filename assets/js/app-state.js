@@ -1,5 +1,38 @@
 const APP_STORAGE_KEY = 'findme_app_state_v1';
 
+const PLAN_CATALOG = {
+  demo: {
+    name: 'Demo',
+    tier: 'demo',
+    premium: false,
+    description: 'Explore the platform in preview mode',
+  },
+  'Discovery': {
+    name: 'Discovery',
+    tier: 'starter',
+    premium: false,
+    description: 'Light family search access',
+  },
+  'Forensic Explorer': {
+    name: 'Forensic Explorer',
+    tier: 'subscriber',
+    premium: true,
+    description: 'Full research workspace and AI access',
+  },
+  'Advocate': {
+    name: 'Advocate',
+    tier: 'subscriber',
+    premium: true,
+    description: 'Advanced case management and family advocacy tools',
+  },
+  'Investigator': {
+    name: 'Investigator',
+    tier: 'subscriber',
+    premium: true,
+    description: 'Full deep-dive investigation suite',
+  },
+};
+
 function defaultState() {
   return {
     user: null,
@@ -36,6 +69,11 @@ const AppState = {
     localStorage.setItem(APP_STORAGE_KEY, JSON.stringify({ ...defaultState(), ...state, lastUpdated: new Date().toISOString() }));
   },
 
+  getPlanInfo(planName = this.get().plan || 'demo') {
+    const name = planName || 'demo';
+    return PLAN_CATALOG[name] || PLAN_CATALOG.demo;
+  },
+
   login(email, fullName = 'Member', role = 'member') {
     const state = this.get();
     state.user = {
@@ -44,7 +82,10 @@ const AppState = {
       role,
       loggedInAt: new Date().toISOString(),
     };
-    state.plan = state.plan || 'demo';
+    if (!state.plan || !PLAN_CATALOG[state.plan]) {
+      state.plan = 'demo';
+    }
+    state.tier = this.getPlanInfo(state.plan).tier;
     state.subscribed = Boolean(state.subscribed);
     this.save(state);
     return state;
@@ -63,7 +104,7 @@ const AppState = {
   subscribe(plan = 'Forensic Explorer') {
     const state = this.get();
     state.plan = plan;
-    state.tier = 'subscriber';
+    state.tier = this.getPlanInfo(plan).tier;
     state.subscribed = true;
     this.save(state);
     return state;
@@ -85,11 +126,24 @@ const AppState = {
     return this.get().plan || 'demo';
   },
 
+  hasAccess(requiredTier = 'subscriber') {
+    const state = this.get();
+    const currentTier = state.tier || 'demo';
+    if (requiredTier === 'subscriber') {
+      return state.subscribed || currentTier === 'subscriber';
+    }
+    if (requiredTier === 'starter') {
+      return state.subscribed || currentTier === 'starter' || currentTier === 'subscriber';
+    }
+    return true;
+  },
+
   renderStatus(targetSelector = '[data-app-status]') {
     const nodes = document.querySelectorAll(targetSelector);
     const state = this.get();
     const user = state.user;
-    const label = user ? `${user.fullName} · ${state.plan}` : `Demo Mode · ${state.plan}`;
+    const planLabel = this.getPlanInfo(state.plan).name;
+    const label = user ? `${user.fullName} · ${planLabel}` : `Demo Mode · ${planLabel}`;
 
     nodes.forEach((node) => {
       node.textContent = label;
@@ -178,6 +232,7 @@ const AppState = {
 };
 
 window.AppState = AppState;
+window.PLAN_CATALOG = PLAN_CATALOG;
 
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
