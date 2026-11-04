@@ -9,7 +9,7 @@
   style.textContent = `
     #floating-chat-widget{position:fixed;right:22px;bottom:22px;z-index:1200;width:58px;height:58px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--clr-primary,#172554);color:#fff;box-shadow:0 8px 28px rgba(0,0,0,.25);cursor:pointer}
     #floating-chat-widget svg{width:27px;height:27px}
-    #floating-chat-modal{position:fixed;right:20px;bottom:92px;z-index:1199;width:min( min(980px, calc(100vw - 40px)), calc(100vw - 40px));height:min(720px, calc(100vh - 120px));background:var(--clr-surface,#fff);border:1px solid var(--clr-border,#dbe4ee);border-radius:16px;box-shadow:0 18px 60px rgba(0,0,0,.28);overflow:hidden;display:none}
+    #floating-chat-modal{position:fixed;right:20px;bottom:92px;z-index:1199;width:min(980px, calc(100vw - 40px));height:min(720px, calc(100vh - 120px));background:var(--clr-surface,#fff);border:1px solid var(--clr-border,#dbe4ee);border-radius:16px;box-shadow:0 18px 60px rgba(0,0,0,.28);overflow:hidden;display:none}
     #floating-chat-modal.open{display:block}
     #floating-chat-modal iframe{display:block;width:100%;height:100%;border:0;background:#fff}
     @media(max-width:700px){#floating-chat-modal{inset:8px;width:auto;height:auto;bottom:8px;border-radius:12px}#floating-chat-widget{right:16px;bottom:16px}}
