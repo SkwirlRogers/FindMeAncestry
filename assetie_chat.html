@@ -148,7 +148,7 @@
         const data = await resp.json();
         typingIndicator.classList.remove('active');
 
-        const reply = data.response || 'AssetieAI is temporarily unavailable. Please try again.';
+        const reply = data.response || data.reply || 'AssetieAI is temporarily unavailable. Please try again.';
         chatMessages.innerHTML += `<div class="msg agent"><strong>AssetieAI:</strong> ${formatReply(reply)}</div>`;
         chatHistory.push({ role: 'assistant', content: reply });
       } catch (err) {
