@@ -42,6 +42,6 @@
 
   addAgent({id:'fma-scout',label:'ScoutAI',icon:'🕵️',side:'right',url:'scout_chat.html?embed=1',className:'fma-scout-fab'});
   if(isHome){
-    addAgent({id:'fma-kayla',label:'KaylaAI',icon:'💼',side:'left',url:'kayla_chat.html?embed=1',className:'fma-kayla-fab'});
+    addAgent({id:'fma-kayla',label:'Kayla',icon:'💼',side:'left',url:'assetie_chat.html?embed=1',className:'fma-kayla-fab'});
   }
 })();
