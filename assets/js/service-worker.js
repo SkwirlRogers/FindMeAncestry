@@ -1,11 +1,11 @@
 // Service Worker for FindMeAncestry static site
-const CACHE_NAME = 'findme-ancestry-v1';
+const CACHE_NAME = 'findme-ancestry-v2';
 const URLs_TO_CACHE = [
   '/',
   '/index.html',
   '/assets/styles.css',
   '/assets/js/google-pay.js',
-  '/assets/js/floating-chat.js',
+  '/assets/js/floating-chat.js',\n  '/kayla_chat.html',
   '/assets/logo.jpg',
   // Additional core assets can be added here
 ];
