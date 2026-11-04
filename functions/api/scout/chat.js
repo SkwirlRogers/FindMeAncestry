@@ -68,7 +68,7 @@ export async function onRequestPost({ request, env }) {
 
   const message = typeof body.message === 'string' ? body.message.slice(0, 4000).trim() : '';
   if (!message) return json({ error: 'Message is required' }, 400);
-  const isSubscribed = Boolean(body.isSubscribed);
+  // Never accept entitlement claims from browser-controlled request data.\n  // Until a server-verified identity/billing check is wired in, all public calls are demo-tier.\n  const isSubscribed = false;
   const lower = message.toLowerCase();
 
   if (/(unclaimed asset|unclaimed property|estate recovery|unclaimed money)/.test(lower)) {
