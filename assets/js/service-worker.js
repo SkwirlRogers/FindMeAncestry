@@ -7,7 +7,7 @@ const URLs_TO_CACHE = [
   '/assets/js/google-pay.js',
   '/assets/js/floating-chat.js',
   '/scout_chat.html',
-  '/kayla_chat.html',
+  '/assetie_chat.html',
   '/assets/logo.jpg',
   // Additional core assets can be added here
 ];
