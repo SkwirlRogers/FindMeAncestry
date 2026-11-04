@@ -69,7 +69,7 @@
     async function sendMessage(){
       const msg = chatInput.value.trim();
       if(!msg) return;
-      chatMessages.innerHTML += `<div class="msg user">${msg}</div>`;
+      const userBubble = document.createElement('div');\n      userBubble.className = 'msg user';\n      userBubble.textContent = msg;\n      chatMessages.appendChild(userBubble);
       chatInput.value='';
       sendBtn.disabled=true;
       typingIndicator.classList.add('active');
@@ -79,11 +79,11 @@
         const data = await resp.json();
         typingIndicator.classList.remove('active');
         const reply = data.response || 'KaylaAI is unavailable.';
-        chatMessages.innerHTML += `<div class="msg agent"><strong>KaylaAI:</strong> ${reply}</div>`;
+        const agentBubble = document.createElement('div');\n        agentBubble.className = 'msg agent';\n        const agentLabel = document.createElement('strong');\n        agentLabel.textContent = 'KaylaAI: ';\n        agentBubble.append(agentLabel, document.createTextNode(reply));\n        chatMessages.appendChild(agentBubble);
         chatHistory.push({role:'assistant',content:reply});
       }catch(e){
         typingIndicator.classList.remove('active');
-        chatMessages.innerHTML += `<div class="msg agent"><strong>KaylaAI:</strong> Error contacting service.</div>`;
+        const errorBubble = document.createElement('div');\n        errorBubble.className = 'msg agent';\n        errorBubble.textContent = 'KaylaAI: Error contacting service.';\n        chatMessages.appendChild(errorBubble);
       }
       sendBtn.disabled=false;
       chatMessages.scrollTop = chatMessages.scrollHeight;
