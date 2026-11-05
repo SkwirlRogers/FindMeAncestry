@@ -6,7 +6,6 @@
   <title>FindMeAncestry™ — Discover Your Family Story | Rogers & Barrett Creative Media</title>
   <meta name="description" content="Discover your family history, DNA matches, and historical records with Scout Patterson (ScoutAI), your Private Family Detective. Powered by Rogers & Barrett Creative Media.">
   <link rel="stylesheet" href="assets/styles.css">
-  <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
 </head>
 <body>
 
@@ -546,6 +545,7 @@
       <div class="section-header">
         <h2>Competitive Subscription Plans</h2>
         <p>Unlock deep-dive forensic research with ScoutAI. Non-subscribers can use the <strong>FindMeAncestry Demo Version</strong> for basic inquiries.</p>
+        <p style="margin-top:10px;color:var(--clr-text-muted);font-size:0.92rem;">Paid checkout is being prepared. Explore the free demo now—no payment details required.</p>
       </div>
 
       <div class="pricing-grid">
@@ -563,7 +563,7 @@
             </ul>
           </div>
           <div>
-            <button class="btn btn-outline" style="width: 100%;" onclick="triggerGooglePay('Discovery', 9.99)">Pay with Google Pay</button>
+            <button class="btn btn-accent" style="width: 100%;" onclick="startFreeDemo()">Try Free Demo</button>
           </div>
         </div>
 
@@ -583,7 +583,7 @@
             </ul>
           </div>
           <div>
-            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('Forensic Explorer', 19.99)">Pay with Google Pay</button>
+            <button class="btn btn-accent" style="width: 100%;" onclick="startFreeDemo()">Try Free Demo</button>
           </div>
         </div>
 
@@ -601,7 +601,7 @@
 <li>PowerHouse Discoveries-All Access Bridge: deep-dive lineage investigation, Priority Urgent Handling, and exclusive Advanced Triangulation Workbook access</li>
           </ul>
           <div>
-            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('All-Access Advocate', 29.99)">Pay with Google Pay</button>
+            <button class="btn btn-accent" style="width: 100%;" onclick="startFreeDemo()">Try Free Demo</button>
           </div>
         </div>
 
@@ -626,7 +626,7 @@
             </ul>
           </div>
           <div>
-            <button class="btn btn-accent" style="width: 100%;" onclick="triggerGooglePay('All-Access Investigator', 49.99)">Pay with Google Pay</button>
+            <button class="btn btn-accent" style="width: 100%;" onclick="startFreeDemo()">Try Free Demo</button>
           </div>
         </div>
 
@@ -890,56 +890,10 @@
       return false;
     }
 
-    function onGooglePayLoaded() {
-      console.log("Google Pay API script loaded");
+    function startFreeDemo() {
+      window.location.href = 'scout_chat.html?demo=true';
     }
 
-    function triggerGooglePay(tierName, amount) {
-      const paymentsClient = new google.payments.api.PaymentsClient({environment: 'TEST'});
-      const paymentDataRequest = {
-        apiVersion: 2,
-        apiVersionMinor: 0,
-        allowedPaymentMethods: [{
-          type: 'CARD',
-          parameters: {
-            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-            allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA']
-          },
-          tokenizationSpecification: {
-            type: 'PAYMENT_GATEWAY',
-            parameters: {
-              'gateway': 'example',
-              'gatewayMerchantId': 'exampleGatewayMerchantId'
-            }
-          }
-        }],
-        merchantInfo: {
-          merchantId: '12345678901234567890',
-          merchantName: 'Rogers & Barrett Creative Media'
-        },
-        transactionInfo: {
-          totalPriceStatus: 'FINAL',
-          totalPriceLabel: 'Total',
-          totalPrice: amount.toString(),
-          currencyCode: 'USD',
-          countryCode: 'US'
-        }
-      };
-
-      paymentsClient.loadPaymentData(paymentDataRequest)
-        .then(function(paymentData) {
-          alert(`Success! Subscribed to ${tierName}. Full ScoutAI access unlocked.`);
-          localStorage.setItem('findme_subscribed', 'true');
-          window.location.href = 'scout_chat.html';
-        })
-        .catch(function(err) {
-          if (confirm(`[TEST SIMULATION] Subscribe to ${tierName} for $${amount}/mo using Google Pay?`)) {
-            localStorage.setItem('findme_subscribed', 'true');
-            alert("Subscription active! Redirecting to ScoutAI...");
-            window.location.href = 'scout_chat.html';
-          }
-        });
-    }
   </script>
 <script src="assets/js/floating-chat.js"></script>
   <script src="assets/js/service-worker.js"></script>
