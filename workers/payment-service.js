@@ -27,7 +27,7 @@ export async function verifyAndActivatePurchase(_env, _userId, provider) {
   if (!displayName) {
     return {
       ok: false,
-      error: \`Unsupported payment provider: \${provider}\`,
+      error: 'Unsupported payment provider: ' + String(provider || ''),
       status: 'verification_failed',
     };
   }
@@ -35,7 +35,7 @@ export async function verifyAndActivatePurchase(_env, _userId, provider) {
   return {
     ok: false,
     provider: normalizedProvider,
-    error: \`\${displayName} receipt verification is not implemented. No subscription was activated.\`,
+    error: displayName + ' receipt verification is not implemented. No subscription was activated.',
     status: 'provider_not_configured',
   };
 }
