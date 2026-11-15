@@ -92,7 +92,7 @@
         el.setAttribute('aria-hidden', 'true');
       });
       document.querySelectorAll('.fma-agent-fab[aria-expanded="true"]').forEach((el) => el.setAttribute('aria-expanded', 'false'));
-      if (!frame.src || frame.src === window.location.href) frame.src = frame.dataset.src;
+      if (!frame.dataset.loaded) { frame.src = frame.dataset.src; frame.dataset.loaded = 'true'; }
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       button.setAttribute('aria-expanded', 'true');
@@ -107,7 +107,7 @@
   addAgent({
     id: 'fma-scout',
     label: 'Scout',
-    url: 'scout_chat.html?embed=1',
+    url: '/scout_chat.html?embed=1',
     className: 'fma-scout-fab',
     orb: true
   });
@@ -117,7 +117,7 @@
       id: 'fma-kayla',
       label: 'Kayla',
       icon: '💼',
-      url: 'assetie_chat.html?embed=1',
+      url: '/assetie_chat.html?embed=1',
       className: 'fma-kayla-fab'
     });
   }
