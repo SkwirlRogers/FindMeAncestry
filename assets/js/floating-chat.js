@@ -9,6 +9,7 @@
   const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
   const root = document.createElement('div');
   root.id = 'fma-agent-launchers';
+  root.setAttribute('role', 'region');
   root.setAttribute('aria-label', 'FindMeAncestry assistant launchers');
   document.body.appendChild(root);
 
