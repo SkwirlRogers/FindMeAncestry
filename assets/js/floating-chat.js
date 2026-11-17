@@ -110,7 +110,7 @@
   addAgent({
     id: 'fma-scout',
     label: 'Scout',
-    url: '/scout_chat.html?embed=1',
+    url: '/scout_chat?embed=1',
     className: 'fma-scout-fab',
     orbClass: 'fma-scout-orb'
   });
@@ -118,7 +118,7 @@
   addAgent({
     id: 'fma-assettie',
     label: 'Assettie AI',
-    url: '/assetie_chat.html?embed=1',
+    url: '/assetie_chat?embed=1',
     className: 'fma-assettie-fab',
     orbClass: 'fma-assettie-orb'
   });
