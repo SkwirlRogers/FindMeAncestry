@@ -10,3 +10,13 @@
 
 /api/*
   Cache-Control: no-store
+
+# Allow only the two named assistant pages to be embedded by the FYBF Wix site.
+# Other FindMeAncestry pages retain the global SAMEORIGIN framing protection.
+/scout_chat.html
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
+
+/assetie_chat.html
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
