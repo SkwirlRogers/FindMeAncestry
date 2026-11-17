@@ -14,7 +14,7 @@
 
   const style = document.createElement('style');
   style.id = 'fma-agent-orb-styles';
-  style.textContent = \`
+  style.textContent = `
     #fma-agent-launchers{position:relative;z-index:10001}
     .fma-agent-fab{position:fixed;bottom:20px;width:82px;height:88px;padding:0;border:0;background:transparent;color:#fff;cursor:pointer;z-index:10001;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
     .fma-agent-fab:focus-visible{outline:3px solid #fbbf24;outline-offset:5px;border-radius:18px}
@@ -36,7 +36,7 @@
     @keyframes fma-orb-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
     @media(prefers-reduced-motion:reduce){.fma-orb{animation:none;transition:none}}
     @media(max-width:700px){.fma-agent-modal{inset:0;width:100vw;height:100dvh;border:0;border-radius:0}.fma-agent-fab{bottom:14px}.fma-scout-fab{right:8px}.fma-assettie-fab{left:8px}}
-  \`;
+  `;
   document.head.appendChild(style);
 
   function addAgent({ id, label, url, className, orbClass }) {
