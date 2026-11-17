@@ -1,6 +1,7 @@
 // Service Worker for FindMeAncestry static site
-const CACHE_NAME = 'findme-ancestry-v2';
-const URLs_TO_CACHE = [
+// v3 refreshes the cached site-wide Scout orb launcher.
+const CACHE_NAME = 'findme-ancestry-v3';
+const URLS_TO_CACHE = [
   '/',
   '/index.html',
   '/assets/styles.css',
