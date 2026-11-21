@@ -750,31 +750,14 @@
     </div>
   </footer>
 
-  <!-- Claim Modal -->
+  <!-- Claim information: intake is intentionally disabled until secure case storage is deployed. -->
   <div class="modal-overlay" id="claimModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeClaimModal()">&times;</button>
-      <h3>📋 File Claim</h3>
-      <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:16px;">AssetieAI will process your filing. Average recovery: $1,800. Processing time: 5-10 business days.</p>
-      <input type="hidden" id="claimAssetId">
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Full Name *</label>
-        <input type="text" id="claimName" class="form-input" placeholder="Legal name as it appears on records">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Email Address *</label>
-        <input type="email" id="claimEmail" class="form-input" placeholder="you@email.com">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Phone (Optional)</label>
-        <input type="tel" id="claimPhone" class="form-input" placeholder="(555) 123-4567">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Relationship to Asset Owner (Optional)</label>
-        <input type="text" id="claimRelationship" class="form-input" placeholder="e.g. Direct heir, Spouse, Descendant">
-      </div>
-      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="submitClaim()">⚡ Submit Claim Now</button>
-      <p id="claimStatus" style="font-size:0.8rem;color:var(--clr-text-muted);margin-top:12px;text-align:center;"></p>
+      <h3>📋 Claim preparation</h3>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">CeeYoAssets is not accepting claim submissions yet. No claim has been filed, and we cannot verify ownership or eligibility. Do not enter Social Security numbers, banking details, identity documents, or other sensitive information here.</p>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Use the official government portal shown for the property to review its requirements and submit directly to the responsible agency. AssetieAI can help explain the public instructions, but it cannot approve or file a claim on your behalf.</p>
+      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="closeClaimModal()">Close</button>
     </div>
   </div>
 
@@ -812,7 +795,7 @@
     NJ:{n:'New Jersey',url:'https://www.unclaimedproperty.nj.gov/',r:'northeast'},
     NM:{n:'New Mexico',url:'http://www.tax.newmexico.gov/Individuals/search-unclaimed-property.aspx',r:'west'},
     NY:{n:'New York',url:'https://www.osc.ny.gov/unclaimed-funds',r:'northeast'},
-    NC:{n:'North Carolina',url:'https://www.nccash.com/',r:'southeast'},
+    NC:{n:'North Carolina',url:'https://www.nccash.gov/',r:'southeast'},
     ND:{n:'North Dakota',url:'https://www.land.nd.gov/UnclaimedProperty/',r:'midwest'},
     OH:{n:'Ohio',url:'https://www.com.ohio.gov/unfd/',r:'midwest'},
     OK:{n:'Oklahoma',url:'https://www.oktreasure.com/',r:'midwest'},
@@ -951,7 +934,7 @@
     if (!last) { alert('Please enter at least a last name.'); return; }
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.style.display = 'block';
-    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔍 Searching 50 states + federal databases + local/county records...</p>';
+    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔎 Preparing official public-record search links...</p>';
     try {
       let url = `/api/ceeyoassets/search-enhanced?last=${encodeURIComponent(last)}`;
       if (first) url += `&first=${encodeURIComponent(first)}`;
@@ -963,7 +946,7 @@
       const data = await resp.json();
       if (!data.results || data.results.length === 0) {
         resultsDiv.innerHTML = `
-          <p style="color:var(--clr-text-muted);">No matches found in our database. <strong>Don't stop here — search these official portals directly:</strong></p>
+          <p style="color:var(--clr-text-muted);">No centralized property database is connected yet, so this page cannot confirm matches. <strong>Continue with these official search portals:</strong></p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;">
             <a href="https://unclaimed.org" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>🏠 Unclaimed.org</strong><br><span class="source">Search all 50 states directly</span></a>
             <a href="https://missingmoney.com" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>💰 MissingMoney.com</strong><br><span class="source">NAUPA multi-state search</span></a>
