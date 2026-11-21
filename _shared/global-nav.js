@@ -11,7 +11,7 @@
   // Public hubs available on the shared FYBF/FindMeAncestry domain.
   // Unavailable legacy port-based hubs are intentionally omitted until they have real routes.
   const HUBS = [
-    { id: 'findmeancestry', name: 'FindMeAncestry', path: '/', icon: '🔍', desc: 'Ancestry Discovery' },
+    { id: 'findmeancestry', name: 'FindMeAncestry', path: '/findmeancestry/', icon: '🔍', desc: 'Ancestry Discovery' },
     { id: 'nationalarchives', name: 'National Archives', path: '/nationalarchives/', icon: '🏛️', desc: 'Records & Repositories' },
     { id: 'bookhub', name: 'FRU Legacy Library', path: '/fru-skwirl-legacy-library.html', icon: '📖', desc: 'Family Research Library' },
     { id: 'ceeyoassets', name: 'CeeYoAssets', path: '/ceeyoassets.html', icon: '💰', desc: 'Unclaimed Assets' },
