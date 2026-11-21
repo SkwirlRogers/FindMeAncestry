@@ -11,22 +11,22 @@ function bridgeBase(env) {
 export async function onRequestGet({ env }) {
   const base = bridgeBase(env);
   if (!base) {
-    // Return mock online status when bridge URL is not configured (development mode)
     return json({
-      ok: true,
+      ok: false,
       configured: false,
-      bridge: 'mock_online',
-      status: 'online',
-      detail: 'Bridge not configured; returning mock online status for development purposes.'
-    });
+      bridge: 'not_configured',
+      status: 'offline',
+      detail: 'The genealogy bridge is not configured for this deployment. No live FamilySearch or Ancestry search is connected.',
+    }, 503);
   }
   try {
-    const response = await fetch(`${base}/api/findme/status`);
-    return new Response(await response.text(), {
+    const response = await fetch(`${base}/api/findme/status`, { headers: { 'cache-control': 'no-store' } });
+    const text = await response.text();
+    return new Response(text, {
       status: response.status,
       headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
     });
   } catch {
-    return json({ ok: false, error: 'Bridge unreachable' }, 502);
+    return json({ ok: false, configured: true, bridge: 'unreachable', status: 'offline', error: 'Bridge unreachable' }, 502);
   }
 }
