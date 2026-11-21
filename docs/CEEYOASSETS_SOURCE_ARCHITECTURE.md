@@ -34,7 +34,7 @@ The private `ceeyo-source-atlas` snapshot in `rnb-intelligence-inbox` contains 9
 | Newspapers | 1 |
 | **Total** | **93** |
 
-The historical capture statuses were 70 full captures, 2 partial, 10 external, 9 evidence-only, and 2 retired. These are capture statuses as of 2026-10-24, not current source-health checks. Several URLs have since changed; for example, North Carolina's official portal is now `https://www.nccash.gov/`, not the old `nccash.com` domain. Revalidate every URL before publishing it as a verified source.
+The historical capture statuses were 70 full captures, 2 partial, 10 external, 9 evidence-only, and 2 retired. These are capture statuses as of 2026-10-24, not current source-health checks. Several URLs have since changed; for example, North Carolina's official portal is now `https://www.nccash.gov/`, not the old `nccash.com` domain. The source JSON contains generic DOL and PBGC home-page entries, but no airline-specific benefit source, no direct PBGC unclaimed-benefit search endpoint, and no explicit property-tax refund source. Those categories need dedicated, current official endpoints added and verified. Revalidate every URL before publishing it as a verified source.
 
 The R2 handoffs describe three rounds of source capture and atlas work. The proposed site-integration patch was staged but the handoff explicitly says it was not applied to the live `fma_repo` surface. The atlas is a private research catalogue, not a live lookup backend. The separate `NEXUS_SURPRISE_HANDOFF.md` makes broad claims about 191 cloned engines and 60+ state asset portals, but those claims are not substantiated by a live connector or a verified source registry; they are not treated as deployed capabilities.
 
