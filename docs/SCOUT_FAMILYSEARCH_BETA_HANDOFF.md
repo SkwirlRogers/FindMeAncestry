@@ -68,10 +68,17 @@ Do not label Scout as FamilySearch API-connected until a real authenticated Beta
 
 ## 6. Other genealogy services found in mail
 
-- **MyHeritage:** consumer Data-plan trial and affiliate correspondence; no developer API access was issued. A May 2026 terms email explicitly noted restrictions on AI and automated data extraction.
-- **Ancestry:** consumer Pro Tools subscription/marketing; no developer API access was issued or requested in the email results.
-- **Pinterest:** API access request denied; not a genealogy data provider.
-- Other messages were book-promotion outreach, not API approvals.
+| Service | Mail evidence | API/developer access |
+|---|---|---|
+| **Ancestry** | Pro Tools purchased 2025-11-27; renewal notices followed; membership cancellation notice 2026-04-24 due to outdated payment information | None found |
+| **MyHeritage** | Account created 2025-12-13; 14-day Data-plan trial began; payment declined at trial end 2025-12-28 and paid-plan access ended; affiliate application submitted 2026-03-17 with no approval found | None found |
+| **GEDmatch** | Welcome email 2026-08-15 confirms a free account was activated | None found |
+| **Fold3** | Discount promotions only; no purchase confirmation found | None found |
+| **Newspapers.com** | Mentioned as a benefit of Ancestry All Access promotions; no standalone purchase confirmation found | None found |
+| **OldNews.com** | Seven-day trial promotion only; no signup confirmation found | None found |
+| **Findmypast, Geneanet, American Ancestors** | No related emails found in the searched mailboxes | None found |
+
+A MyHeritage terms-update email dated 2026-05-11 called out restrictions on AI and automated data extraction. Do not build automated extraction against MyHeritage from the consumer trial or affiliate relationship. Ancestry Pro Tools was a consumer subscription, not API permission. GEDmatch account activation is not API permission.
 
 FamilySearch is the only direct genealogy developer API access confirmed in the searched mailboxes. Other services can be linked as user-directed research portals or support authorized GEDCOM/data imports where allowed; do not scrape their private member records or infer API access from a subscription.
 
