@@ -750,31 +750,14 @@
     </div>
   </footer>
 
-  <!-- Claim Modal -->
+  <!-- Claim information: intake is intentionally disabled until secure case storage is deployed. -->
   <div class="modal-overlay" id="claimModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeClaimModal()">&times;</button>
-      <h3>📋 File Claim</h3>
-      <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:16px;">AssetieAI will process your filing. Average recovery: $1,800. Processing time: 5-10 business days.</p>
-      <input type="hidden" id="claimAssetId">
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Full Name *</label>
-        <input type="text" id="claimName" class="form-input" placeholder="Legal name as it appears on records">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Email Address *</label>
-        <input type="email" id="claimEmail" class="form-input" placeholder="you@email.com">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Phone (Optional)</label>
-        <input type="tel" id="claimPhone" class="form-input" placeholder="(555) 123-4567">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Relationship to Asset Owner (Optional)</label>
-        <input type="text" id="claimRelationship" class="form-input" placeholder="e.g. Direct heir, Spouse, Descendant">
-      </div>
-      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="submitClaim()">⚡ Submit Claim Now</button>
-      <p id="claimStatus" style="font-size:0.8rem;color:var(--clr-text-muted);margin-top:12px;text-align:center;"></p>
+      <h3>📋 Claim preparation</h3>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">CeeYoAssets is not accepting claim submissions yet. No claim has been filed, and we cannot verify ownership or eligibility. Do not enter Social Security numbers, banking details, identity documents, or other sensitive information here.</p>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Use the official government portal shown for the property to review its requirements and submit directly to the responsible agency. AssetieAI can help explain the public instructions, but it cannot approve or file a claim on your behalf.</p>
+      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="closeClaimModal()">Close</button>
     </div>
   </div>
 
