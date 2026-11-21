@@ -750,31 +750,14 @@
     </div>
   </footer>
 
-  <!-- Claim Modal -->
+  <!-- Claim information: intake is intentionally disabled until secure case storage is deployed. -->
   <div class="modal-overlay" id="claimModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeClaimModal()">&times;</button>
-      <h3>📋 File Claim</h3>
-      <p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:16px;">AssetieAI will process your filing. Average recovery: $1,800. Processing time: 5-10 business days.</p>
-      <input type="hidden" id="claimAssetId">
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Full Name *</label>
-        <input type="text" id="claimName" class="form-input" placeholder="Legal name as it appears on records">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Email Address *</label>
-        <input type="email" id="claimEmail" class="form-input" placeholder="you@email.com">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Phone (Optional)</label>
-        <input type="tel" id="claimPhone" class="form-input" placeholder="(555) 123-4567">
-      </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-weight:600;font-size:0.85rem;display:block;margin-bottom:4px;">Relationship to Asset Owner (Optional)</label>
-        <input type="text" id="claimRelationship" class="form-input" placeholder="e.g. Direct heir, Spouse, Descendant">
-      </div>
-      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="submitClaim()">⚡ Submit Claim Now</button>
-      <p id="claimStatus" style="font-size:0.8rem;color:var(--clr-text-muted);margin-top:12px;text-align:center;"></p>
+      <h3>📋 Claim preparation</h3>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">CeeYoAssets is not accepting claim submissions yet. No claim has been filed, and we cannot verify ownership or eligibility. Do not enter Social Security numbers, banking details, identity documents, or other sensitive information here.</p>
+      <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Use the official government portal shown for the property to review its requirements and submit directly to the responsible agency. AssetieAI can help explain the public instructions, but it cannot approve or file a claim on your behalf.</p>
+      <button class="btn-primary" style="width:100%;padding:14px;font-size:1rem;" onclick="closeClaimModal()">Close</button>
     </div>
   </div>
 
@@ -812,7 +795,7 @@
     NJ:{n:'New Jersey',url:'https://www.unclaimedproperty.nj.gov/',r:'northeast'},
     NM:{n:'New Mexico',url:'http://www.tax.newmexico.gov/Individuals/search-unclaimed-property.aspx',r:'west'},
     NY:{n:'New York',url:'https://www.osc.ny.gov/unclaimed-funds',r:'northeast'},
-    NC:{n:'North Carolina',url:'https://www.nccash.com/',r:'southeast'},
+    NC:{n:'North Carolina',url:'https://www.nccash.gov/',r:'southeast'},
     ND:{n:'North Dakota',url:'https://www.land.nd.gov/UnclaimedProperty/',r:'midwest'},
     OH:{n:'Ohio',url:'https://www.com.ohio.gov/unfd/',r:'midwest'},
     OK:{n:'Oklahoma',url:'https://www.oktreasure.com/',r:'midwest'},
@@ -907,38 +890,11 @@
     }
   }
 
-  function openClaimModal(assetId) {
-    document.getElementById('claimAssetId').value = assetId;
-    document.getElementById('claimStatus').textContent = '';
+  function openClaimModal() {
     document.getElementById('claimModal').classList.add('active');
   }
   function closeClaimModal() {
     document.getElementById('claimModal').classList.remove('active');
-  }
-  async function submitClaim() {
-    const assetId = document.getElementById('claimAssetId').value;
-    const name = document.getElementById('claimName').value.trim();
-    const email = document.getElementById('claimEmail').value.trim();
-    const phone = document.getElementById('claimPhone').value.trim();
-    const relationship = document.getElementById('claimRelationship').value.trim();
-    if (!name || !email) { document.getElementById('claimStatus').textContent = 'Please enter your name and email.'; return; }
-    document.getElementById('claimStatus').textContent = '⏳ Submitting claim...';
-    try {
-      const resp = await fetch('/api/ceeyoassets/claim', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ asset_id: assetId, claimant_name: name, claimant_email: email, claimant_phone: phone, relationship })
-      });
-      const data = await resp.json();
-      if (data.claim_id) {
-        document.getElementById('claimStatus').innerHTML = `<span style="color:var(--clr-accent);font-weight:700;">✓ Claim submitted!</span><br>Claim ID: ${data.claim_id}<br>Status: ${data.status}<br>AssetieAI will process your filing shortly.`;
-        setTimeout(closeClaimModal, 5000);
-      } else {
-        document.getElementById('claimStatus').innerHTML = `<span style="color:#EF4444;">✗ ${data.error || 'Claim failed'}</span>`;
-      }
-    } catch (err) {
-      document.getElementById('claimStatus').innerHTML = '<span style="color:#EF4444;">✗ Network error. Please try again.</span>';
-    }
   }
   async function runSearch() {
     const first = document.getElementById('scanFirst').value.trim();
@@ -951,7 +907,7 @@
     if (!last) { alert('Please enter at least a last name.'); return; }
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.style.display = 'block';
-    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔍 Searching 50 states + federal databases + local/county records...</p>';
+    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔎 Preparing official public-record search links...</p>';
     try {
       let url = `/api/ceeyoassets/search-enhanced?last=${encodeURIComponent(last)}`;
       if (first) url += `&first=${encodeURIComponent(first)}`;
@@ -963,7 +919,7 @@
       const data = await resp.json();
       if (!data.results || data.results.length === 0) {
         resultsDiv.innerHTML = `
-          <p style="color:var(--clr-text-muted);">No matches found in our database. <strong>Don't stop here — search these official portals directly:</strong></p>
+          <p style="color:var(--clr-text-muted);">No centralized property database is connected yet, so this page cannot confirm matches. <strong>Continue with these official search portals:</strong></p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;">
             <a href="https://unclaimed.org" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>🏠 Unclaimed.org</strong><br><span class="source">Search all 50 states directly</span></a>
             <a href="https://missingmoney.com" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>💰 MissingMoney.com</strong><br><span class="source">NAUPA multi-state search</span></a>
@@ -978,7 +934,7 @@
         html += `<div class="result-item" style="flex-wrap:wrap;gap:8px;">
           <div style="flex:1;min-width:200px;"><strong>${r.name_preview}</strong><br><span style="font-size:0.8rem;color:var(--clr-text-muted);">${r.asset_type} • ${r.status}</span></div>
           <div class="amount">${r.value_range}</div>
-          ${r.claimable ? `<button class="claim-btn" onclick="openClaimModal('${r.id}')">⚡ Claim This Asset</button>` : '<span style="font-size:0.75rem;color:var(--clr-text-muted);">Under review</span>'}
+          <span style="font-size:0.75rem;color:var(--clr-text-muted);">Verify eligibility and claim directly with the official agency</span>
         </div>`;
       });
       html += `<div style="margin-top:16px;padding:12px;background:var(--clr-surface-alt);border-radius:8px;border:1px solid var(--clr-border);">
@@ -1099,9 +1055,8 @@
         <button onclick="sendFloatQuick('Help me search MissingMoney.com')">🌐 Multi-state</button>
       </div>
       <div class="chat-panel-input">
-        <button class="upload-btn" id="floatUploadBtn" onclick="document.getElementById('floatFileInput').click()" title="Attach document (ID, death cert, heir docs)">📎</button>
-        <input type="file" id="floatFileInput" style="display:none;" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" onchange="handleFloatFile(this)">
         <input type="text" id="floatChatInput" placeholder="Ask about unclaimed assets..." onkeydown="if(event.key==='Enter')sendFloatMessage()">
+        <p style="font-size:0.68rem;color:var(--clr-text-muted);margin:4px 0 0;grid-column:1/-1;">Do not send Social Security numbers, bank details, identity documents, claim forms, or private claim records in this chat.</p>
         <button id="floatSendBtn" onclick="sendFloatMessage()">Send</button>
       </div>
     </div>
@@ -1122,11 +1077,8 @@
         <a href="https://unclaimed.org" target="_blank" class="portal-link" style="text-align:center;font-weight:700;">→ Unclaimed.org (All States)</a>
       </div>
       <div class="sidebar-section">
-        <h5>📋 Claim Status</h5>
-        <div class="claim-check">
-          <input type="text" id="floatClaimId" placeholder="Enter Claim ID">
-          <button onclick="checkFloatClaim()">Check</button>
-        </div>
+        <h5>📋 Claim Submission & Status</h5>
+        <p style="font-size:0.78rem;color:var(--clr-text-muted);">CeeYoAssets does not accept claim documents or track agency claims yet. Use the official agency portal for submission and status updates.</p>
       </div>
       <div class="sidebar-section" style="background:linear-gradient(135deg,#0e4d6e,#1a759f);border-radius:12px;padding:14px;color:#fff;">
         <h5 style="color:#d4af37;border-bottom-color:rgba(255,255,255,0.2);">🧑‍👧‍👦 Need Family Research?</h5>
@@ -1139,7 +1091,6 @@
 
   <script>
   let floatChatHistory = [];
-  let floatPendingFile = null;
 
   function toggleChatPanel() {
     const p = document.getElementById('chatPanel');
@@ -1156,90 +1107,42 @@
     sendFloatMessage();
   }
 
-  function handleFloatFile(input) {
-    const file = input.files[0];
-    if (!file) return;
-    const msgs = document.getElementById('floatChatMessages');
-    floatPendingFile = file;
-    msgs.innerHTML += `<div class="msg file">📎 <strong>${escapeHtmlFloat(file.name)}</strong> (${(file.size/1024).toFixed(1)} KB) attached — ready to send with your next message</div>`;
-    msgs.scrollTop = msgs.scrollHeight;
-    document.getElementById('floatChatInput').focus();
-  }
-
-  async function checkFloatClaim() {
-    const claimId = document.getElementById('floatClaimId').value.trim();
-    if (!claimId) { alert('Please enter a Claim ID.'); return; }
-    const msgs = document.getElementById('floatChatMessages');
-    const typing = document.getElementById('floatTyping');
-    msgs.innerHTML += `<div class="msg user">📋 Checking claim ${escapeHtmlFloat(claimId)}...</div>`;
-    typing.classList.add('active');
-    msgs.scrollTop = msgs.scrollHeight;
-    try {
-      const resp = await fetch(`/api/ceeyoassets/claim/${encodeURIComponent(claimId)}`);
-      const data = await resp.json();
-      typing.classList.remove('active');
-      if (data.claim_id) {
-        msgs.innerHTML += `<div class="msg claim">📋 <strong>Claim ${data.claim_id}</strong><br>Status: <strong>${data.status || 'In progress'}</strong><br>${data.message || 'Our team will update you by email as your claim progresses.'}</div>`;
-      } else {
-        msgs.innerHTML += `<div class="msg claim">📋 Claim ${escapeHtmlFloat(claimId)} not found. Double-check the ID from your confirmation email, or contact familiesrushelp@gmail.com.</div>`;
-      }
-    } catch (err) {
-      typing.classList.remove('active');
-      msgs.innerHTML += `<div class="msg claim">⚠️ Could not reach claim service. Please try again or email familiesrushelp@gmail.com.</div>`;
-    }
-    msgs.scrollTop = msgs.scrollHeight;
-  }
-
   async function sendFloatMessage() {
     const inp = document.getElementById('floatChatInput');
     const msg = inp.value.trim();
-    if (!msg && !floatPendingFile) return;
+    if (!msg) return;
 
     const msgs = document.getElementById('floatChatMessages');
     const typing = document.getElementById('floatTyping');
     const btn = document.getElementById('floatSendBtn');
-    const uploadBtn = document.getElementById('floatUploadBtn');
 
-    let userText = msg;
-    if (floatPendingFile) {
-      userText = (userText ? userText + '\n' : '') + `[📎 Attached: ${floatPendingFile.name}]`;
-    }
-    msgs.innerHTML += `<div class="msg user">${escapeHtmlFloat(userText)}</div>`;
+    msgs.innerHTML += `<div class="msg user">${escapeHtmlFloat(msg)}</div>`;
     inp.value = '';
     btn.disabled = true;
-    uploadBtn.disabled = true;
     typing.classList.add('active');
     msgs.scrollTop = msgs.scrollHeight;
 
-    floatChatHistory.push({ role: 'user', content: userText });
+    floatChatHistory.push({ role: 'user', content: msg });
 
     try {
-      const fd = new FormData();
-      fd.append('message', msg || 'I attached a document for review.');
-      if (floatPendingFile) fd.append('file', floatPendingFile);
-      fd.append('history', JSON.stringify(floatChatHistory.slice(-10)));
-
       const resp = await fetch('/api/assetie/chat', {
         method: 'POST',
-        body: fd
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: msg, history: floatChatHistory.slice(-10) })
       });
       const data = await resp.json();
       typing.classList.remove('active');
 
-      const reply = data.response || 'AssetieAI is temporarily unavailable. Please try again.';
+      const reply = data.reply || data.response || 'AssetieAI is temporarily unavailable. Please try again.';
       msgs.innerHTML += `<div class="msg agent"><strong>AssetieAI:</strong> ${formatFloatReply(reply)}</div>`;
       floatChatHistory.push({ role: 'assistant', content: reply });
-      if (floatPendingFile) {
-        msgs.innerHTML += `<div class="msg claim">📎 <strong>${escapeHtmlFloat(floatPendingFile.name)}</strong> received. Our team can review it — for full claim filing, use the form above or email familiesrushelp@gmail.com.</div>`;
-      }
-      floatPendingFile = null;
+
     } catch (err) {
       typing.classList.remove('active');
       msgs.innerHTML += `<div class="msg agent"><strong>AssetieAI:</strong> Connection issue — please try again in a moment.</div>`;
     }
 
     btn.disabled = false;
-    uploadBtn.disabled = false;
     msgs.scrollTop = msgs.scrollHeight;
   }
 
