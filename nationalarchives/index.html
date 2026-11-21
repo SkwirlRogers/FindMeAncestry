@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkwirlWorld: National Archival &amp; Deep Research — 50-State Genealogy Jurisdiction Directory</title>
+<meta name="description" content="SkwirlWorld's National Archival &amp; Deep Research portal — search all 50 states' counties, parishes, boroughs, census areas, and independent cities. Powered by Abraham 'Mr. Abram' Rogers, CAO.">
+<link rel="stylesheet" href="../_shared/global.css">
+<style>
+/* --- National Archives local overrides --- */
+[data-hub="nationalarchives"] .hero-search input,
+[data-hub="nationalarchives"] .hero-search select {
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+}
+[data-hub="nationalarchives"] .hero-search input:focus,
+[data-hub="nationalarchives"] .hero-search select:focus {
+  border-color: var(--clr-secondary);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+}
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+}
+.state-card {
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-border-light);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+}
+.state-card:hover {
+  border-color: var(--clr-secondary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.state-card.active {
+  border-color: var(--clr-secondary);
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(27,58,92,0.08));
+  box-shadow: var(--shadow-md);
+}
+.state-card .abbr {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  line-height: 1;
+}
+.state-card .name {
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  margin-top: 4px;
+}
+.state-card .count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--clr-secondary);
+  margin-top: 2px;
+}
+.state-detail-panel {
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-secondary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 20px;
+  display: none;
+}
+.state-detail-panel.visible { display: block; }
+.state-detail-panel h3 {
+  font-size: 1.25rem;
+  color: var(--clr-primary);
+  margin-bottom: 8px;
+}
+.state-detail-panel .state-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.state-detail-panel .state-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-primary);
+  transition: all var(--transition-fast);
+}
+.state-detail-panel .state-links a:hover {
+  background: var(--clr-primary);
+  color: var(--clr-text-inverse);
+}
+.jurisdiction-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.jurisdiction-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-border-light);
+  transition: all var(--transition-base);
+}
+.jurisdiction-chip:hover {
+  border-color: var(--clr-primary);
+  box-shadow: var(--shadow-sm);
+}
+.jurisdiction-chip .chip-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--clr-primary);
+  color: var(--clr-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.jurisdiction-chip .chip-info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+.jurisdiction-chip .chip-info p {
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+  margin: 0;
+}
+.resource-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border-light);
+  padding: 24px;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+.resource-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--clr-primary-light);
+}
+.resource-card .rc-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--clr-primary);
+  color: var(--clr-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 14px;
+}
+.resource-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.resource-card p {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 0;
+}
+.book-promo-card {
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-secondary);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+.newsletter-card {
+  background: linear-gradient(135deg, rgba(27,58,92,0.04), rgba(201,168,76,0.04));
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+.data-schema-pre {
+  background: var(--clr-bg);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--clr-border-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: var(--clr-text);
+}
+.result-count {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-top: 8px;
+}
+.table-wrap {
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  margin-top: 12px;
+}
+.sidebar-panel {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+.sidebar-panel h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--clr-primary);
+}
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  transition: all var(--transition-fast);
+}
+.sidebar-links a:hover {
+  background: var(--clr-primary);
+  color: var(--clr-text-inverse);
+  border-color: var(--clr-primary);
+}
+@media (max-width: 1024px) {
+  .archives-layout { grid-template-columns: 1fr !important; }
+  .state-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+}
+@media (max-width: 768px) {
+  .state-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+  .hero-search-form { flex-direction: column; }
+  .hero-search-form .form-group { min-width: 100%; }
+}
+</style>
+</head>
+<body data-hub="nationalarchives">
+
+<!-- Global Nav Injection Points -->
+<div id="utility-strip"></div>
+<div id="site-header"></div>
+
+<!-- Hero Section -->
+<section class="hero" id="search">
+  <div class="container">
+    <h1>National Archival &amp; Deep Research</h1>
+    <p class="lead">The definitive 50-state genealogy jurisdiction directory. Explore counties, parishes, boroughs, census areas, independent cities, former jurisdictions, and boundary changes across every state and territory.</p>
+    <p class="archive-disclaimer" style="font-size:0.82rem;color:var(--clr-text-muted);margin:10px 0 0;">An independent SkwirlWorld genealogy and archival research directory. Not affiliated with or operated by the U.S. National Archives and Records Administration.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;">
+      <a href="data/genealogy-dashboard.html" class="btn btn-accent">Open the 50-State Jurisdiction Dashboard →</a>
+      <a href="../index.html" class="btn btn-secondary">Back to FindMeAncestry</a>
+    </div>
+    <div class="hero-search" style="margin-top:32px;">
+      <h2>Search the 50-State Jurisdiction Directory</h2>
+      <div class="search-form hero-search-form">
+        <div class="form-group" style="flex:2;">
+          <label>Search</label>
+          <input type="text" id="searchInput" placeholder="Search state, abbreviation, subdivision type, notes...">
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <select id="stateFilter"><option value="">All States</option></select>
+        </div>
+        <div class="form-group">
+          <label>Subdivision Type</label>
+          <select id="typeFilter"><option value="">All Types</option></select>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select id="statusFilter">
+            <option value="">All Status</option>
+            <option value="current">Current</option>
+            <option value="former">Former</option>
+            <option value="renamed">Renamed</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:0;">
+          <label>&nbsp;</label>
+          <button class="btn btn-primary" id="searchBtn">Search</button>
+        </div>
+        <div class="form-group" style="flex:0;">
+          <label>&nbsp;</label>
+          <button class="btn btn-secondary" id="resetBtn">Reset</button>
+        </div>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<section style="background:var(--clr-primary-dark);padding:24px 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;color:var(--clr-text-inverse);">
+      <div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--clr-secondary);">50</div>
+        <div style="font-size:0.8rem;opacity:0.8;">States &amp; Territories</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--clr-secondary);">3,000+</div>
+        <div style="font-size:0.8rem;opacity:0.8;">Counties &amp; Subdivisions</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--clr-secondary);">100%</div>
+        <div style="font-size:0.8rem;opacity:0.8;">Free Directory</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--clr-secondary);">20+</div>
+        <div style="font-size:0.8rem;opacity:0.8;">Years Research</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="container" style="padding-top:40px;padding-bottom:60px;">
+
+  <div style="display:grid;grid-template-columns:280px 1fr;gap:24px;" class="archives-layout">
+
+    <!-- Left Sidebar -->
+    <aside style="display:flex;flex-direction:column;gap:20px;">
+
+      <div class="sidebar-panel">
+        <h3>Research Tools</h3>
+        <div class="sidebar-links" id="toolLinks"></div>
+      </div>
+
+      <div class="sidebar-panel">
+        <h3>Jurisdiction Types</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;" id="jurisdictionTypes">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Counties</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Parishes (Louisiana)</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Boroughs (Alaska, New York)</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Census Areas (Alaska)</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Independent Cities (VA, MO)</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Former Counties</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Renamed Jurisdictions</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:var(--radius-sm);background:var(--clr-surface-alt);border:1px solid var(--clr-border-light);font-size:0.85rem;"><span style="color:var(--clr-secondary);">&#9679;</span> Boundary Changes</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--clr-text-muted);margin-top:12px;margin-bottom:0;">Each state includes links to FamilySearch county pages, USGenWeb projects, state archives, library guides, and county history resources. Former and renamed jurisdictions tracked for deep research.</p>
+      </div>
+
+      <div class="sidebar-panel">
+        <h3>CAO Agent</h3>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+          <div style="width:48px;height:48px;border-radius:var(--radius-md);background:var(--clr-primary);color:var(--clr-text-inverse);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#127963;</div>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;">Abraham &ldquo;Mr. Abram&rdquo; Rogers</div>
+            <div style="font-size:0.8rem;color:var(--clr-secondary);font-weight:600;">Chief Archives Officer</div>
+          </div>
+        </div>
+        <p style="font-size:0.8rem;color:var(--clr-text-muted);margin-bottom:0;">Specializes in county-level genealogy jurisdiction intelligence, boundary change tracking, FamilySearch/USGenWeb resource mapping, and historical place-name resolution. Interface via <code style="font-size:0.75rem;background:var(--clr-bg);padding:2px 6px;border-radius:4px;">/api/genealogy</code>.</p>
+      </div>
+
+      <div class="sidebar-panel">
+        <h3>Data Schema</h3>
+        <pre class="data-schema-pre">jurisdiction_id
+state_name
+state_abbr
+jurisdiction_name
+jurisdiction_type
+status_current_or_former
+parent_jurisdiction
+effective_start_date
+effective_end_date
+renamed_from
+renamed_to
+boundary_change_notes
+familysearch_url
+usgenweb_url
+state_archive_url
+state_library_url
+county_history_url
+local_library_url
+historical_atlas_url
+notes
+source_url
+source_title
+last_verified</pre>
+      </div>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <main style="display:flex;flex-direction:column;gap:40px;">
+
+      <!-- State Directory Table -->
+      <section>
+        <h2 style="margin-bottom:4px;">50-State Directory</h2>
+        <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:0;">Complete listing of all U.S. states and territories with subdivision counts, types, and resource links.</p>
+        <div class="table-wrap">
+          <table id="dirTable">
+            <thead><tr></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- State Grid -->
+      <section>
+        <h2 style="margin-bottom:4px;">State Grid</h2>
+        <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Click any state to view detailed jurisdiction information, resource links, and subdivision data.</p>
+        <div class="state-grid" id="stateGrid"></div>
+        <div class="state-detail-panel" id="stateDetail"></div>
+      </section>
+
+      <!-- Jurisdiction Types -->
+      <section>
+        <h2 style="margin-bottom:16px;">Jurisdiction Coverage</h2>
+        <div class="jurisdiction-chips">
+          <div class="jurisdiction-chip">
+            <div class="chip-icon">&#127963;</div>
+            <div class="chip-info"><h4>Counties</h4><p>3,143 total across 48 states</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon" style="background:var(--clr-secondary);">&#127963;</div>
+            <div class="chip-info"><h4>Parishes</h4><p>64 in Louisiana</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon">&#127963;</div>
+            <div class="chip-info"><h4>Boroughs</h4><p>Alaska &amp; New York</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon" style="background:var(--clr-secondary);">&#127963;</div>
+            <div class="chip-info"><h4>Census Areas</h4><p>10 in Alaska</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon">&#127963;</div>
+            <div class="chip-info"><h4>Independent Cities</h4><p>Virginia &amp; Missouri</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon" style="background:var(--clr-secondary);">&#127963;</div>
+            <div class="chip-info"><h4>Former Counties</h4><p>Historical tracking</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon">&#127963;</div>
+            <div class="chip-info"><h4>Renamed Jurisdictions</h4><p>Name-change mapping</p></div>
+          </div>
+          <div class="jurisdiction-chip">
+            <div class="chip-icon" style="background:var(--clr-secondary);">&#127963;</div>
+            <div class="chip-info"><h4>Boundary Changes</h4><p>Line-shift intelligence</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Resources -->
+      <section>
+        <h2 style="margin-bottom:16px;">Core Research Record Types</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+          <div class="resource-card">
+            <div class="rc-icon">&#128202;</div>
+            <h3>Census Records</h3>
+            <p>Federal census 1790&ndash;1950, state censuses, mortality schedules, agricultural &amp; manufacturing schedules.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon" style="background:var(--clr-secondary);">&#9878;</div>
+            <h3>Military Records</h3>
+            <p>Service records, pension files, draft registrations, bounty land warrants, veteran cemetery records.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon">&#9992;</div>
+            <h3>Immigration Records</h3>
+            <p>Ship manifests, naturalization records, passenger lists, border crossing records, alien registration.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon" style="background:var(--clr-secondary);">&#128203;</div>
+            <h3>Vital Records</h3>
+            <p>Birth, marriage, and death certificates. Divorce records. State vital records office directories.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon">&#127968;</div>
+            <h3>Land Records</h3>
+            <p>Deeds, grants, patents, homestead records, Bureau of Land Management tract books, plats.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon" style="background:var(--clr-secondary);">&#9878;</div>
+            <h3>Court Records</h3>
+            <p>Civil &amp; criminal case files, equity dockets, court journals, circuit court records.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon">&#128220;</div>
+            <h3>Probate Records</h3>
+            <p>Wills, estate inventories, administration bonds, guardianship records, probate packets.</p>
+          </div>
+          <div class="resource-card">
+            <div class="rc-icon" style="background:var(--clr-secondary);">&#9962;</div>
+            <h3>Church Records</h3>
+            <p>Baptismal registers, membership rolls, marriage records, burial records, church histories.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book Promo -->
+      <section>
+        <div class="book-promo-card">
+          <h2 style="margin-bottom:12px;">Unraveling Your Roots</h2>
+          <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+            <img src="https://m.media-amazon.com/images/I/613haNcywpL._SL1491_.jpg" alt="Unraveling Roots" style="width:110px;border-radius:var(--radius-md);box-shadow:var(--shadow-md);">
+            <div style="flex:1;min-width:240px;">
+              <p style="font-size:0.95rem;color:var(--clr-text-muted);margin-bottom:12px;">by <strong>Skwirl Rogers</strong> &mdash; The definitive guide to breaking through genealogy brick walls using DNA match triangulation. Chromosome mapping, centimorgan analysis, forensic techniques, and 85+ genealogy terms.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <a href="https://www.amazon.com/Unraveling-Roots-Exploring-Genealogy-Triangulation/dp/B0GMYB2788?tag=arholdings22-20" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm">Buy on Amazon</a>
+                <a href="../fru-skwirl-legacy-library.html" class="btn btn-secondary btn-sm">Book Hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section>
+        <div class="newsletter-card">
+          <h2 style="margin-bottom:8px;">SkwirlWorld Newsletter</h2>
+          <p style="font-size:0.9rem;color:var(--clr-text-muted);margin-bottom:16px;">Weekly genealogy research tips, archival discoveries, unclaimed property alerts, and DNA triangulation strategies &mdash; straight to your inbox.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+            <select id="nl-archives-type" style="padding:10px 14px;border:2px solid var(--clr-border);border-radius:var(--radius-sm);background:var(--clr-surface);color:var(--clr-text);font-size:0.85rem;min-width:180px;">
+              <option value="genealogy-tips">Genealogy Tips &amp; Tricks</option>
+              <option value="asset-alerts">Unclaimed Property Alerts</option>
+              <option value="dna-updates">DNA Analysis Updates</option>
+              <option value="weekly-digest">Weekly Digest</option>
+            </select>
+            <input type="email" id="nl-archives-email" placeholder="Your email address" style="flex:1;min-width:220px;padding:10px 14px;border:2px solid var(--clr-border);border-radius:var(--radius-sm);background:var(--clr-surface);color:var(--clr-text);font-size:0.85rem;">
+            <button class="btn btn-primary btn-sm" onclick="subscribeNewsletter('archives','nl-archives-email','nl-archives-type')">Subscribe Free</button>
+          </div>
+          <p id="nl-archives-msg" style="font-size:0.8rem;color:var(--clr-primary-light);margin-top:10px;display:none;margin-bottom:0;"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- Cross-Hub Navigator -->
+<div id="cross-hub-nav"></div>
+
+<!-- Footer -->
+<div id="site-footer"></div>
+
+<!-- Scripts -->
+<script src="../_shared/global-nav.js"></script>
+<script src="../_shared/global-utils.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  const rows = [
+    {State:"Alabama",Abbrev:"AL",Subdivision_Count:67,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Alabama,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/alabama-local-history-genealogy",Notes:"67 counties; formed 1819. Defunct: Alabama Territory counties."},
+    {State:"Alaska",Abbrev:"AK",Subdivision_Count:29,Subdivision_Type:"boroughs/census areas",FamilySearch:"https://www.familysearch.org/en/wiki/Alaska,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/alaska-local-history-genealogy",Notes:"19 organized boroughs + 10 census areas. No counties."},
+    {State:"Arizona",Abbrev:"AZ",Subdivision_Count:15,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Arizona,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/arizona-local-history-genealogy",Notes:"15 counties. Former: Pah-Ute County (extinct)."},
+    {State:"Arkansas",Abbrev:"AR",Subdivision_Count:75,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Arkansas,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/arkansas-local-history-genealogy",Notes:"75 counties. Former: Lovely, Miller, Arkansas Territory counties."},
+    {State:"California",Abbrev:"CA",Subdivision_Count:58,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/California,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/california-local-history-genealogy",Notes:"58 counties. Former: Klamath, Pautah, Surprise Valley counties."},
+    {State:"Colorado",Abbrev:"CO",Subdivision_Count:64,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Colorado,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/colorado-local-history-genealogy",Notes:"64 counties. Former: Greenwood, Placerville, North Colorado Territory."},
+    {State:"Connecticut",Abbrev:"CT",Subdivision_Count:8,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Connecticut,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/connecticut-local-history-genealogy",Notes:"8 counties; county govt abolished 1960. Historical towns are key."},
+    {State:"Delaware",Abbrev:"DE",Subdivision_Count:3,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Delaware,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/delaware-local-history-genealogy",Notes:"3 counties. One of the original 13 colonies."},
+    {State:"Florida",Abbrev:"FL",Subdivision_Count:67,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Florida,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/florida-local-history-genealogy",Notes:"67 counties. Former: Benton, Mosquito, St. Johns (colonial)."},
+    {State:"Georgia",Abbrev:"GA",Subdivision_Count:159,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Georgia,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/georgia-local-history-genealogy",Notes:"159 counties; most of any state east of Mississippi."},
+    {State:"Hawaii",Abbrev:"HI",Subdivision_Count:5,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Hawaii,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/hawaii-local-history-genealogy",Notes:"5 counties. Kalawao County is unique (leper settlement)."},
+    {State:"Idaho",Abbrev:"ID",Subdivision_Count:44,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Idaho,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/idaho-local-history-genealogy",Notes:"44 counties. Former: Alturas, Boise, Logan, Oneida counties."},
+    {State:"Illinois",Abbrev:"IL",Subdivision_Count:102,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Illinois,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/illinois-local-history-genealogy",Notes:"102 counties. Former: Dane, Edgar, Gallatin counties."},
+    {State:"Indiana",Abbrev:"IN",Subdivision_Count:92,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Indiana,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/indiana-local-history-genealogy",Notes:"92 counties. Former: Richardville, Broadaxe counties."},
+    {State:"Iowa",Abbrev:"IA",Subdivision_Count:99,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Iowa,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/iowa-local-history-genealogy",Notes:"99 counties. Former: Bancroft, Crocker, Wahkaw counties."},
+    {State:"Kansas",Abbrev:"KS",Subdivision_Count:105,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Kansas,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/kansas-local-history-genealogy",Notes:"105 counties. Former: Breckinridge, Hunter, Otoe, Peketon counties."},
+    {State:"Kentucky",Abbrev:"KY",Subdivision_Count:120,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Kentucky,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/kentucky-local-history-genealogy",Notes:"120 counties. Former: Fincastle, Kentucky County, Virginia."},
+    {State:"Louisiana",Abbrev:"LA",Subdivision_Count:64,Subdivision_Type:"parishes",FamilySearch:"https://www.familysearch.org/en/wiki/Louisiana,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/louisiana-local-history-genealogy",Notes:"64 parishes (not counties). Former parishes exist."},
+    {State:"Maine",Abbrev:"ME",Subdivision_Count:16,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Maine,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/maine-local-history-genealogy",Notes:"16 counties. Part of Massachusetts until 1820."},
+    {State:"Maryland",Abbrev:"MD",Subdivision_Count:23,Subdivision_Type:"counties + 1 independent city",FamilySearch:"https://www.familysearch.org/en/wiki/Maryland,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/maryland-local-history-genealogy",Notes:"23 counties + Baltimore City (independent). Colonial origins."},
+    {State:"Massachusetts",Abbrev:"MA",Subdivision_Count:14,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Massachusetts,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/massachusetts-local-history-genealogy",Notes:"14 counties; some govt functions abolished. Suffolk Co. key."},
+    {State:"Michigan",Abbrev:"MI",Subdivision_Count:83,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Michigan,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/michigan-local-history-genealogy",Notes:"83 counties. Former: Michilimackinac, Iowa, Manitou counties."},
+    {State:"Minnesota",Abbrev:"MN",Subdivision_Count:87,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Minnesota,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/minnesota-local-history-genealogy",Notes:"87 counties. Former: Pembina, Wahnahta, Monongalia."},
+    {State:"Mississippi",Abbrev:"MS",Subdivision_Count:82,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Mississippi,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/mississippi-local-history-genealogy",Notes:"82 counties. Former: Pickering, Alabama Territory counties."},
+    {State:"Missouri",Abbrev:"MO",Subdivision_Count:114,Subdivision_Type:"counties + 1 independent city",FamilySearch:"https://www.familysearch.org/en/wiki/Missouri,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/missouri-local-history-genealogy",Notes:"114 counties + St. Louis City (independent)."},
+    {State:"Montana",Abbrev:"MT",Subdivision_Count:56,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Montana,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/montana-local-history-genealogy",Notes:"56 counties. Former: Dawson, Meagher, Yellowstone (territorial)."},
+    {State:"Nebraska",Abbrev:"NE",Subdivision_Count:93,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Nebraska,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/nebraska-local-history-genealogy",Notes:"93 counties. Former: Blackbird, Buffalo, Clayton, Jackson counties."},
+    {State:"Nevada",Abbrev:"NV",Subdivision_Count:16,Subdivision_Type:"counties + 1 independent city",FamilySearch:"https://www.familysearch.org/en/wiki/Nevada,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/nevada-local-history-genealogy",Notes:"16 counties + Carson City (independent). Former: Bullfrog, Humboldt, Lake counties."},
+    {State:"New Hampshire",Abbrev:"NH",Subdivision_Count:10,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/New_Hampshire,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/new-hampshire-local-history-genealogy",Notes:"10 counties. One of original 13 colonies."},
+    {State:"New Jersey",Abbrev:"NJ",Subdivision_Count:21,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/New_Jersey,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/new-jersey-local-history-genealogy",Notes:"21 counties. Original colonial divisions."},
+    {State:"New Mexico",Abbrev:"NM",Subdivision_Count:33,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/New_Mexico,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/new-mexico-local-history-genealogy",Notes:"33 counties. Former: Santa Ana, San Miguel, Taos (territorial)."},
+    {State:"New York",Abbrev:"NY",Subdivision_Count:62,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/New_York,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/new-york-local-history-genealogy",Notes:"62 counties. Former: Charlotte, Tryon, Cumberland, Gloucester counties."},
+    {State:"North Carolina",Abbrev:"NC",Subdivision_Count:100,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/North_Carolina,_United_States_Genealogy",USGenWeb:"https://www.ncgenweb.us/county-list/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/north-carolina-local-history-genealogy",Notes:"100 counties. Former: Albemarle, Bath, Bute, Tryon, Dobbs, Glasgow."},
+    {State:"North Dakota",Abbrev:"ND",Subdivision_Count:53,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/North_Dakota,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/north-dakota-local-history-genealogy",Notes:"53 counties. Former: Billinghurst, DeKalb, Towner, Gingras."},
+    {State:"Ohio",Abbrev:"OH",Subdivision_Count:88,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Ohio,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/ohio-local-history-genealogy",Notes:"88 counties. Former: Washington (military district)."},
+    {State:"Oklahoma",Abbrev:"OK",Subdivision_Count:77,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Oklahoma,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/oklahoma-local-history-genealogy",Notes:"77 counties. Former Indian Territory districts."},
+    {State:"Oregon",Abbrev:"OR",Subdivision_Count:36,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Oregon,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/oregon-local-history-genealogy",Notes:"36 counties. Former: Champoeg, Clackamas, Twality, Vancouver."},
+    {State:"Pennsylvania",Abbrev:"PA",Subdivision_Count:67,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Pennsylvania,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/pennsylvania-local-history-genealogy",Notes:"67 counties. Original 3 counties: Bucks, Chester, Philadelphia."},
+    {State:"Rhode Island",Abbrev:"RI",Subdivision_Count:5,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Rhode_Island,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/rhode-island-local-history-genealogy",Notes:"5 counties; county govt abolished 1846."},
+    {State:"South Carolina",Abbrev:"SC",Subdivision_Count:46,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/South_Carolina,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/south-carolina-local-history-genealogy",Notes:"46 counties. Former: Berkeley, Colleton, Craven, Granville districts."},
+    {State:"South Dakota",Abbrev:"SD",Subdivision_Count:66,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/South_Dakota,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/south-dakota-local-history-genealogy",Notes:"66 counties. Former: Armstrong, Ashmore, Pratt, Pyatt, Schnasse."},
+    {State:"Tennessee",Abbrev:"TN",Subdivision_Count:95,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Tennessee,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/tennessee-local-history-genealogy",Notes:"95 counties. Former: Caswell, Henry, James, Spencer, Tennessee (territorial)."},
+    {State:"Texas",Abbrev:"TX",Subdivision_Count:254,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Texas,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/texas-local-history-genealogy",Notes:"254 counties; most of any state. Former: Davila, Presidio del Norte, Santa Fe."},
+    {State:"Utah",Abbrev:"UT",Subdivision_Count:29,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Utah,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/utah-local-history-genealogy",Notes:"29 counties. Former: Carson, Green River, Utah Territory counties."},
+    {State:"Vermont",Abbrev:"VT",Subdivision_Count:14,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Vermont,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/vermont-local-history-genealogy",Notes:"14 counties. Independent republic until 1791."},
+    {State:"Virginia",Abbrev:"VA",Subdivision_Count:95,Subdivision_Type:"counties + 38 independent cities",FamilySearch:"https://www.familysearch.org/en/wiki/Virginia,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/virginia-local-history-genealogy",Notes:"95 counties + 38 independent cities. Former: Fincastle, Illinois, Kentucky counties."},
+    {State:"Washington",Abbrev:"WA",Subdivision_Count:39,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Washington,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/washington-local-history-genealogy",Notes:"39 counties. Former: Chehalis, Columbia, Ferguson, Quillehute."},
+    {State:"West Virginia",Abbrev:"WV",Subdivision_Count:55,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/West_Virginia,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/west-virginia-local-history-genealogy",Notes:"55 counties. Former: Berkeley, Jefferson (part of VA until 1863)."},
+    {State:"Wisconsin",Abbrev:"WI",Subdivision_Count:72,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Wisconsin,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/wisconsin-local-history-genealogy",Notes:"72 counties. Former: Brown, Crawford, Iowa, Michigan Territory."},
+    {State:"Wyoming",Abbrev:"WY",Subdivision_Count:23,Subdivision_Type:"counties",FamilySearch:"https://www.familysearch.org/en/wiki/Wyoming,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/wyoming-local-history-genealogy",Notes:"23 counties. Former: Carter, Fremont, Pease, Sweetwater."},
+    {State:"District of Columbia",Abbrev:"DC",Subdivision_Count:1,Subdivision_Type:"federal district",FamilySearch:"https://www.familysearch.org/en/wiki/District_of_Columbia,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/district-of-columbia-local-history-genealogy",Notes:"1 federal district; not a state. Former: Washington County, Alexandria County."},
+    {State:"Puerto Rico",Abbrev:"PR",Subdivision_Count:78,Subdivision_Type:"municipios",FamilySearch:"https://www.familysearch.org/en/wiki/Puerto_Rico,_United_States_Genealogy",USGenWeb:"https://www.usgenweb.org/",State_Archive:"https://www.archives.gov/research/genealogy/state-archives",State_Library:"https://guides.loc.gov/puerto-rico-local-history-genealogy",Notes:"78 municipios. US territory with Spanish colonial records."}
+  ];
+
+  const toolLinks = [
+    ['FamilySearch Wiki','https://www.familysearch.org/en/wiki/Main_Page'],
+    ['USGenWeb Project','https://www.usgenweb.org/'],
+    ['National Archives Genealogy','https://www.archives.gov/research/genealogy'],
+    ['Library of Congress Guides','https://guides.loc.gov/local-history-and-genealogy'],
+    ['State Archives Directory','https://www.archives.gov/research/genealogy/state-archives'],
+    ['Census Bureau County Guide','https://www.census.gov/geographies/reference-files/time-series/geo/county-adjacency.html'],
+    ['NCGenWeb (NC Home State)','https://www.ncgenweb.us/county-list/']
+  ];
+
+  const searchInput = document.getElementById('searchInput');
+  const stateFilter = document.getElementById('stateFilter');
+  const typeFilter = document.getElementById('typeFilter');
+  const statusFilter = document.getElementById('statusFilter');
+  const resultCount = document.getElementById('resultCount');
+  const stateGrid = document.getElementById('stateGrid');
+  const stateDetail = document.getElementById('stateDetail');
+  const dirTable = document.getElementById('dirTable');
+  const thead = dirTable.querySelector('thead tr');
+  const tbody = dirTable.querySelector('tbody');
+
+  const dirCols = ['State','Abbrev','Subdivision_Count','Subdivision_Type','Notes'];
+  dirCols.forEach(function(c){
+    var th = document.createElement('th');
+    th.textContent = c.replace(/_/g,' ');
+    thead.appendChild(th);
+  });
+
+  var typeSet = [];
+  rows.forEach(function(r){ if(typeSet.indexOf(r.Subdivision_Type)===-1) typeSet.push(r.Subdivision_Type); });
+  typeSet.sort().forEach(function(v){
+    var o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    typeFilter.appendChild(o);
+  });
+
+  rows.map(function(r){return r.State;}).sort().forEach(function(v){
+    var o = document.createElement('option');
+    o.value = v; o.textContent = v;
+    stateFilter.appendChild(o);
+  });
+
+  document.getElementById('toolLinks').innerHTML = toolLinks.map(function(tu){
+    return '<a href="'+tu[1]+'" target="_blank" rel="noopener noreferrer">&#10148; '+tu[0]+'</a>';
+  }).join('');
+
+  function linkify(v){
+    if(String(v).startsWith('http')) return '<a href="'+v+'" target="_blank" rel="noopener noreferrer" style="color:var(--clr-primary);font-weight:600;">link</a>';
+    return v;
+  }
+
+  function getFiltered(){
+    var q = searchInput.value.toLowerCase().trim();
+    var tf = typeFilter.value;
+    var sf = stateFilter.value;
+    var stf = statusFilter.value;
+    return rows.filter(function(r){
+      if(tf && r.Subdivision_Type !== tf) return false;
+      if(sf && r.State !== sf) return false;
+      if(stf === 'current' && r.Notes.toLowerCase().indexOf('former') !== -1 && r.Subdivision_Type.indexOf('former') !== -1) return false;
+      if(q && Object.values(r).join(' ').toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function renderTable(data){
+    tbody.innerHTML = data.map(function(r){
+      return '<tr>'+dirCols.map(function(c){return '<td>'+linkify(r[c] != null ? r[c] : '')+'</td>';}).join('')+'</tr>';
+    }).join('');
+    resultCount.textContent = data.length+' of '+rows.length+' states/territories shown';
+  }
+
+  function renderGrid(data){
+    stateGrid.innerHTML = data.map(function(r){
+      return '<div class="state-card" data-abbr="'+r.Abbrev+'" onclick="window._selectState(\''+r.Abbrev+'\')">'+
+        '<div class="abbr">'+r.Abbrev+'</div>'+
+        '<div class="name">'+r.State+'</div>'+
+        '<div class="count">'+r.Subdivision_Count+' '+r.Subdivision_Type+'</div>'+
+      '</div>';
+    }).join('');
+  }
+
+  window._selectState = function(abbr){
+    var r = rows.find(function(x){return x.Abbrev===abbr;});
+    if(!r) return;
+    document.querySelectorAll('.state-card').forEach(function(c){c.classList.remove('active');});
+    var card = document.querySelector('.state-card[data-abbr="'+abbr+'"]');
+    if(card) card.classList.add('active');
+
+    stateDetail.innerHTML = '<h3>'+r.State+' ('+r.Abbrev+')</h3>'+
+      '<p style="font-size:0.95rem;color:var(--clr-text-muted);margin-bottom:4px;">'+r.Subdivision_Count+' '+r.Subdivision_Type+'</p>'+
+      '<p style="font-size:0.85rem;color:var(--clr-text-muted);margin-bottom:12px;">'+r.Notes+'</p>'+
+      '<div class="state-links">'+
+        '<a href="'+r.FamilySearch+'" target="_blank" rel="noopener noreferrer">&#128218; FamilySearch Wiki</a>'+
+        '<a href="'+r.USGenWeb+'" target="_blank" rel="noopener noreferrer">&#128270; USGenWeb</a>'+
+        '<a href="'+r.State_Archive+'" target="_blank" rel="noopener noreferrer">&#127963; State Archives</a>'+
+        '<a href="'+r.State_Library+'" target="_blank" rel="noopener noreferrer">&#128218; Library of Congress</a>'+
+      '</div>';
+    stateDetail.classList.add('visible');
+    stateDetail.scrollIntoView({behavior:'smooth',block:'nearest'});
+  };
+
+  function render(){
+    var filtered = getFiltered();
+    renderTable(filtered);
+    renderGrid(filtered);
+  }
+
+  searchInput.addEventListener('input', render);
+  stateFilter.addEventListener('change', render);
+  typeFilter.addEventListener('change', render);
+  statusFilter.addEventListener('change', render);
+  document.getElementById('searchBtn').addEventListener('click', render);
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    searchInput.value = '';
+    stateFilter.value = '';
+    typeFilter.value = '';
+    statusFilter.value = '';
+    stateDetail.classList.remove('visible');
+    document.querySelectorAll('.state-card').forEach(function(c){c.classList.remove('active');});
+    render();
+  });
+
+  render();
+
+  window.subscribeNewsletter = function(source, emailFieldId, typeFieldId){
+    var msgEl = document.getElementById('nl-'+source+'-msg');
+    if(msgEl){
+      msgEl.style.display='block';
+      msgEl.style.color='var(--clr-text-muted)';
+      msgEl.textContent='Newsletter signup is not connected on this page yet. For research enquiries, contact familiesrushelp@gmail.com.';
+    }
+  };
+
+})();
+</script>
+</body>
+</html>
