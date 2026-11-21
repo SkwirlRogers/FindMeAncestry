@@ -30,3 +30,18 @@ This recovery adds the public directory and dashboard to the FindMeAncestry copy
 - The archived Playwright login automation for third-party genealogy sites is not enabled. Use official APIs, user-authorized exports, and permitted portal links.
 - The recovered static pages are a research directory, not a live universal genealogy search engine.
 - Database-backed jurisdiction search and automated data refresh remain separate engineering tasks.
+
+## FYBF publication copy
+
+The FYBF Wix site now has these public routes:
+- `/findmeancestry/index.html`: FindMeAncestry copy.
+- `/findmeancestry/scout_chat.html`: Scout connected to the existing public FYBF orb-chat Worker.
+- `/findmeancestry/resource-hub.html`: official-source resource directory.
+- `/nationalarchives/index.html`: SkwirlWorld National Archives.
+- `/nationalarchives/data/genealogy-dashboard.html`: 50-state jurisdiction dashboard.
+
+The main FYBF homepage links to FindMeAncestry and National Archives. Scout's existing orb has an additional National Archives shortcut; the two-orb Scout/Assettie architecture remains unchanged.
+
+The public copy deliberately omits the R2 surname JSON collection because those files contain individual names, birth years, counties and recent sample records. A privacy review is required before any such family-level data can be published. The public surname page is a privacy notice placeholder.
+
+The recovered FastAPI starter sources are retained only as historical references. Both archived API files configure wildcard CORS with credentials enabled. They must not be deployed as-is; implement explicit origin allowlists, authentication, rate limits, and a reviewed data contract first. The archived Node server and CAO service were not copied into production because their local-port dependencies and security configuration are incomplete.
