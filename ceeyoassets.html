@@ -1122,7 +1122,7 @@
     typing.classList.add('active');
     msgs.scrollTop = msgs.scrollHeight;
 
-    floatChatHistory.push({ role: 'user', content: userText });
+    floatChatHistory.push({ role: 'user', content: msg });
 
     try {
       const resp = await fetch('/api/assetie/chat', {
