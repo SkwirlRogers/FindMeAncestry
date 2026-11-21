@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scout | FindMeAncestry Family Research Assistant</title>
+<meta name="description" content="Ask Scout for genealogy, DNA-match education and historical-record research guidance.">
+<link rel="stylesheet" href="../assets/styles.css"><meta name="robots" content="index,follow"></head>
+<body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">FindMeAncestry</a>
+<nav class="main-nav" aria-label="FindMeAncestry navigation"><a href="index.html">FindMeAncestry Home</a><a href="resource-hub.html">Research Resources</a><a href="dna-hub.html">DNA Education</a><a href="../nationalarchives/index.html">National Archives</a><a href="../ceeyoassets.html">CeeYoAssets</a></nav></div></header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Scout • Family History Research Assistant</p><h1>Ask Scout</h1>
+<p class="hero-lead">Scout helps you plan genealogy research, understand DNA-match evidence, evaluate historical records and organize next steps.</p>
+<p class="fine-print">Scout provides research guidance. It does not search private member databases, log into Ancestry or MyHeritage, or access Kayla's private archive. FamilySearch Beta API authentication is not yet connected.</p></div></section>
+<section class="section"><div class="container">
+<div class="chat-container" style="max-width:900px;margin:0 auto;background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:22px;display:flex;flex-direction:column;gap:16px;">
+<div id="scout-messages" role="log" aria-live="polite" aria-relevant="additions" style="display:flex;flex-direction:column;gap:12px;min-height:280px;max-height:55vh;overflow:auto;">
+<div class="notice"><strong>Scout:</strong> Tell me the family-history question you're working on. I can help organize evidence, compare possible relationships and identify appropriate official records to consult.</div>
+</div>
+<form id="scout-form" style="display:flex;gap:10px;flex-wrap:wrap;">
+<label for="scout-input" class="sr-only">Your genealogy question</label>
+<input id="scout-input" name="message" maxlength="1600" required placeholder="Ask Scout about a relative, DNA match, record or research plan..." style="flex:1;min-width:220px;padding:14px;border:1px solid var(--clr-border);border-radius:12px;">
+<button class="btn btn-primary" type="submit" id="scout-send">Send</button>
+</form>
+<p id="scout-status" class="fine-print" role="status" aria-live="polite"></p>
+<p class="fine-print"><strong>Privacy:</strong> Do not send Social Security numbers, passwords, raw DNA files, kit IDs, identity documents, bank details or private information about other people.</p>
+</div>
+</div></section>
+<section class="section section-soft"><div class="container card-grid three">
+<article class="info-card"><h2>National Archives</h2><p>Browse the independent SkwirlWorld state and territory genealogy directory.</p><a href="../nationalarchives/index.html">Open directory</a></article>
+<article class="info-card"><h2>DNA Education</h2><p>Review relationship ranges, triangulation concepts and evidence organization.</p><a href="dna-hub.html">Open DNA Hub</a></article>
+<article class="info-card"><h2>FRU Legacy Library</h2><p>Find family-history learning materials and research guides.</p><a href="../fru-skwirl-legacy-library.html">Open library</a></article>
+</div></section>
+</main>
+<script>
+(function(){
+ const form=document.getElementById('scout-form');
+ const input=document.getElementById('scout-input');
+ const messages=document.getElementById('scout-messages');
+ const status=document.getElementById('scout-status');
+ const button=document.getElementById('scout-send');
+ const history=[];
+ function addMessage(role,text){
+   const node=document.createElement('div');
+   node.className=role==='user'?'notice user-message':'notice assistant-message';
+   node.style.whiteSpace='pre-wrap';
+   node.textContent=(role==='user'?'You: ':'Scout: ')+text;
+   messages.appendChild(node);
+   messages.scrollTop=messages.scrollHeight;
+ }
+ form.addEventListener('submit',async function(event){
+   event.preventDefault();
+   const message=input.value.trim();
+   if(!message)return;
+   if(message.length>1600){status.textContent='Please keep the message under 1,600 characters.';return;}
+   addMessage('user',message);
+   history.push({role:'user',content:message});
+   input.value='';
+   button.disabled=true;
+   status.textContent='Scout is preparing research guidance…';
+   try{
+     const response=await fetch('https://fybf-orb-chat.skwirlynuts-nutteros.workers.dev/chat',{
+       method:'POST',
+       headers:{'Content-Type':'application/json'},
+       body:JSON.stringify({persona:'scout',message,history:history.slice(-8)})
+     });
+     const data=await response.json();
+     if(!response.ok)throw new Error(data.error||'Scout service unavailable');
+     const reply=data.reply||data.response||'Scout could not prepare a response. Please try again.';
+     addMessage('assistant',reply);
+     history.push({role:'assistant',content:reply});
+     status.textContent='Research guidance only. Verify important facts against original records.';
+   }catch(error){
+     status.textContent='Scout is temporarily unavailable. Please try again shortly.';
+   }finally{
+     button.disabled=false;
+     input.focus();
+   }
+ });
+})();
+</script>
+<script src="../assets/orbs.js" defer></script>
+</body></html>
