@@ -31,3 +31,9 @@ Two references in the legacy package are missing from all 12 inspected R2 bucket
 - `full_genealogy_pipeline.py`, named in the archived pipeline README.
 
 The archived server also depends on a shared LLM module and local ports that are not available in Wix static hosting. Those services have not been enabled or represented as live.
+
+## FYBF site routes
+
+Published as a separate FYBF destination at `/nationalarchives/index.html`, with the FindMeAncestry copy at `/findmeancestry/index.html`. The Scout orb on the main FYBF site links directly to this directory. The existing Scout and Assettie assistants remain the only two orbs.
+
+The public directory does not include private surname JSON records from the R2 archive. The legacy FastAPI sources are reference-only: both use wildcard CORS with credentials enabled and require a security redesign before deployment.
