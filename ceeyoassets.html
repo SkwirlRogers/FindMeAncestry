@@ -812,7 +812,7 @@
     NJ:{n:'New Jersey',url:'https://www.unclaimedproperty.nj.gov/',r:'northeast'},
     NM:{n:'New Mexico',url:'http://www.tax.newmexico.gov/Individuals/search-unclaimed-property.aspx',r:'west'},
     NY:{n:'New York',url:'https://www.osc.ny.gov/unclaimed-funds',r:'northeast'},
-    NC:{n:'North Carolina',url:'https://www.nccash.com/',r:'southeast'},
+    NC:{n:'North Carolina',url:'https://www.nccash.gov/',r:'southeast'},
     ND:{n:'North Dakota',url:'https://www.land.nd.gov/UnclaimedProperty/',r:'midwest'},
     OH:{n:'Ohio',url:'https://www.com.ohio.gov/unfd/',r:'midwest'},
     OK:{n:'Oklahoma',url:'https://www.oktreasure.com/',r:'midwest'},
@@ -951,7 +951,7 @@
     if (!last) { alert('Please enter at least a last name.'); return; }
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.style.display = 'block';
-    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔍 Searching 50 states + federal databases + local/county records...</p>';
+    resultsDiv.innerHTML = '<p style="color:var(--clr-text-muted);">🔎 Preparing official public-record search links...</p>';
     try {
       let url = `/api/ceeyoassets/search-enhanced?last=${encodeURIComponent(last)}`;
       if (first) url += `&first=${encodeURIComponent(first)}`;
@@ -963,7 +963,7 @@
       const data = await resp.json();
       if (!data.results || data.results.length === 0) {
         resultsDiv.innerHTML = `
-          <p style="color:var(--clr-text-muted);">No matches found in our database. <strong>Don't stop here — search these official portals directly:</strong></p>
+          <p style="color:var(--clr-text-muted);">No centralized property database is connected yet, so this page cannot confirm matches. <strong>Continue with these official search portals:</strong></p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;">
             <a href="https://unclaimed.org" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>🏠 Unclaimed.org</strong><br><span class="source">Search all 50 states directly</span></a>
             <a href="https://missingmoney.com" target="_blank" class="result-item" style="text-decoration:none;cursor:pointer;"><strong>💰 MissingMoney.com</strong><br><span class="source">NAUPA multi-state search</span></a>
