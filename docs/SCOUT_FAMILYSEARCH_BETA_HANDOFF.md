@@ -50,7 +50,7 @@ The current repository does not yet contain a FamilySearch OAuth callback or tok
 - `functions/api/findme/search.js` returns HTTP 503 when `FINDME_BRIDGE_URL` is not configured.
 - `functions/api/findme/trees.js` returns HTTP 503 when the bridge is not configured.
 - No FamilySearch OAuth route was found by code search.
-- The source atlas contains a FamilySearch public-site capture, but that is not an API integration.
+- The source atlas contains a FamilySearch public-site capture, but that is not an API integration. A separate archived FindMeAncestry genealogy resource hub is also present in R2: it includes a SQLite seed database, a normalized schema for states, current/historical jurisdictions, boundary changes, and resource links, plus FastAPI starter endpoints such as `/states`, `/jurisdictions`, `/timeline`, and `/resource-links`. Its country subdivision selector includes Australia, Brazil, Canada, France, Germany, Spain, India, Italy, the Netherlands, New Zealand, the United Kingdom, the United States, and Kosovo. This is a promising Scout jurisdiction/resource-discovery foundation, but it is an archived prototype: its database freshness, completeness, hosting, and current deployment are not verified, and it is not an Assettie unclaimed-property engine.
 
 Do not label Scout as FamilySearch API-connected until a real authenticated Beta session has been tested.
 
@@ -74,3 +74,13 @@ Do not label Scout as FamilySearch API-connected until a real authenticated Beta
 - Other messages were book-promotion outreach, not API approvals.
 
 FamilySearch is the only direct genealogy developer API access confirmed in the searched mailboxes. Other services can be linked as user-directed research portals or support authorized GEDCOM/data imports where allowed; do not scrape their private member records or infer API access from a subscription.
+
+## 7. Legacy Scout resource hub in R2
+
+The R2 archive also contains the older `nationalarchives/data` resource-hub prototype:
+- `genealogy_api.py` and `backend_app_main_py.py`: FastAPI starter service;
+- `genealogy_schema.sql`: tables for states, jurisdictions, jurisdiction changes, and resource links;
+- `genealogy_seed.sqlite`: a 1.4 MB SQLite seed database;
+- `StatesDropdown.js`: country-to-subdivision selector with multiple national subdivision systems.
+
+The API design includes current and historical jurisdictions, renamed/former jurisdictions, and links to state archives, libraries, county histories, FamilySearch, USGenWeb, cemeteries, and historical atlases. This appears to be the global-to-local genealogy backend you may have been remembering. It is distinct from the CeeYoAssets source atlas and from the FamilySearch API. Treat it as an archived candidate to recover and validate for Scout, not as an already-running service.
