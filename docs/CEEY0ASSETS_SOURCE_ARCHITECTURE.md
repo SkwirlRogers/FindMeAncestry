@@ -1,7 +1,7 @@
 # CeeYoAssets Source Architecture and Expansion Plan
 
 **Status:** research architecture; not a live search integration  
-**Evidence snapshot:** CeeYo Source Atlas generated 2026-10-24; official-source checks refreshed 2026-11-21  
+**Evidence snapshot:** CeeYo Source Atlas generated 2026-10-24; official-source checks refreshed 2026-11-21; R2 archive audit 2026-11-21  
 **Product boundary:** Assettie / CeeYoAssets only. This document does not authorize access to Kayla's private genealogy archive or Scout's FamilySearch account.
 
 ## 1. Operating model
@@ -36,7 +36,7 @@ The private `ceeyo-source-atlas` snapshot in `rnb-intelligence-inbox` contains 9
 
 The historical capture statuses were 70 full captures, 2 partial, 10 external, 9 evidence-only, and 2 retired. These are capture statuses as of 2026-10-24, not current source-health checks. Several URLs have since changed; for example, North Carolina's official portal is now `https://www.nccash.gov/`, not the old `nccash.com` domain. Revalidate every URL before publishing it as a verified source.
 
-The R2 handoffs describe three rounds of source capture and atlas work. The proposed site-integration patch was staged but the handoff explicitly says it was not applied to the live `fma_repo` surface. The atlas is a private research catalogue, not a live lookup backend.
+The R2 handoffs describe three rounds of source capture and atlas work. The proposed site-integration patch was staged but the handoff explicitly says it was not applied to the live `fma_repo` surface. The atlas is a private research catalogue, not a live lookup backend. The separate `NEXUS_SURPRISE_HANDOFF.md` makes broad claims about 191 cloned engines and 60+ state asset portals, but those claims are not substantiated by a live connector or a verified source registry; they are not treated as deployed capabilities.
 
 ## 3. Asset taxonomy to support
 
@@ -125,7 +125,7 @@ North Carolina's current N.C.G.S. §§ 116B-78 and 116B-78.1 impose specific req
 - a statutory time restriction on when covered agreements may be entered;
 - no initiating a claim before registration, licensure, and a valid agreement.
 
-The North Carolina Treasurer also says the public state search is free and advises consumers to contact the office before signing a finder agreement. This means a 25% fee must not be offered for covered North Carolina state-held unclaimed property. A 10% figure is not automatically permissible either: all registration, licensing, agreement, timing, and fee-cap requirements still apply. Estate/heir agreements can involve additional statutory provisions. Obtain North Carolina legal review before marketing, quoting, or accepting paid recovery work. Other jurisdictions have different rules; never apply the NC cap globally.
+The covered agreement is also void if entered during the statutory period beginning when the property is distributable and extending through 24 months after it is paid or delivered to the Treasurer. The North Carolina Treasurer says the public state search is free and advises consumers to contact the office before signing a finder agreement. This means a 25% fee must not be offered for covered North Carolina state-held unclaimed property. A 10% figure is not automatically permissible either: all registration, licensing, agreement, timing, and fee-cap requirements still apply. Estate/heir agreements can involve additional statutory provisions. Obtain North Carolina legal review before marketing, quoting, or accepting paid recovery work. Other jurisdictions have different rules; never apply the NC cap globally.
 
 ## 8. Current product status and next engineering gates
 
@@ -137,3 +137,14 @@ The North Carolina Treasurer also says the public state search is free and advis
 - Add specialist routes for pensions, insurance, tax/property-tax refunds, court funds, wages, and state/provincial unclaimed property.
 - Start with read-only source metadata and official portal handoffs. Add API-backed search only after each provider's terms, authentication, and data contract are verified.
 - Keep paid claim assistance disabled until applicable licensing, registration, contracts, privacy, and legal review are complete.
+
+## 9. Historical MyAssets / Estate Research prototype — pricing not approved
+
+The R2 archive contains an older `MyAssets` page and an `estate_research.html` prototype. They contain inconsistent draft offers:
+- 15–25% success commission;
+- Basic Research: $497 flat or 10% of recovered amount;
+- Full Claim Service: 20%;
+- Large estates: 15–25%;
+- Estate Research: $497 flat; Claim Preparation: 20%.
+
+These are archived prototype strings, not an approved or current price list. The same prototype claims 50-state searches, claim filing, and an agent network, but its front end calls `/api/asset-scan` and `/api/kayla/intake`, while checkout merely displays a reminder to connect a Stripe secret. No matching live backend was established by this audit. Do not reuse the prices, performance claims, or claim-filing language without owner approval and jurisdiction-specific legal review.
