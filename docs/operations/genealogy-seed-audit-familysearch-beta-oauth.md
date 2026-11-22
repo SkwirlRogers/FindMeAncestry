@@ -48,7 +48,7 @@ The U.S. Census Bureau's 2026 County Adjacency File was used to import distinct 
 
 The state-level subdivision counts were updated from this source. Examples checked against the import include North Carolina (100 counties), Connecticut (9 planning regions), Alaska (30 county equivalents), Virginia (133 county equivalents), DC (1), and Puerto Rico (78 municipios). Person County, North Carolina is present as GEOID `37145`.
 
-The primary county names and GEOIDs are imported; the neighbor-to-neighbor adjacency relationships and boundary lengths have **not** yet been imported. Historical jurisdiction changes are also not loaded.
+Five directed adjacency rows are imported and name/GEOID-validated for Person County, North Carolina (GEOID `37145`). This is complete for Person County only; statewide adjacency coverage is partial. Historical jurisdiction changes are not loaded.
 
 ## Official geography sources recorded
 
@@ -58,7 +58,7 @@ The primary county names and GEOIDs are imported; the neighbor-to-neighbor adjac
 - [U.S. Census Bureau Gazetteer Files](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html)
 - [2026 County Adjacency File documentation](https://www.census.gov/geographies/reference-files/time-series/geo/county-adjacency.html)
 
-The two Gazetteer ZIP files are recorded as source leads but have not been imported. The 2026 adjacency file is the source for the 3,222 imported names and GEOIDs.
+The two Gazetteer ZIP files are recorded as source leads but have not been imported. The 2026 adjacency file is the source for the 3,222 imported names and GEOIDs, plus the five validated Person County neighbor records.
 
 ## Staging database
 
@@ -70,6 +70,7 @@ Tables include:
 - `resource_links`
 - `jurisdictions`
 - `jurisdiction_changes`
+- `jurisdiction_adjacency`
 - `import_manifest`
 - `geography_import_manifest`
 - `seed_quarantine_jurisdictions`
@@ -93,9 +94,19 @@ The custom domain is attached to the Worker and the health endpoint has been smo
 - `GET /api/jurisdictions?state_abbr=NC`
 - `GET /api/jurisdictions?state_abbr=VA`
 - `GET /api/jurisdictions?state_abbr=PR`
+- `GET /api/adjacency?geoid=37145`
+- `GET /api/adjacency?state_abbr=NC`
 - `GET /api/timeline`
 
-The NC jurisdiction endpoint returned 100 current county records, and the search endpoint returned Person County with GEOID 37145. Public reference endpoints are read-only. Resource-link leads remain marked unverified. The API does not search or expose private surname files, private family records, or quarantined placeholders.
+The NC jurisdiction endpoint returns 100 current county records, and the search endpoint returns Person County with GEOID 37145. The Person County adjacency endpoint returns five validated neighbors. State-level adjacency responses explicitly report partial coverage until all counties in a state are imported. Public genealogy reference endpoints are read-only. Resource-link leads remain marked unverified. The API does not search or expose private surname files, private family records, or quarantined placeholders.
+
+## Public County Explorer
+
+Published page: [FindMeAncestry County & Boundary Explorer](https://www.findyourbabyfamily.com/findmeancestry/county-explorer.html)
+
+The page is linked from the FindMeAncestry homepage and Resource Hub. It uses the live staging API to browse county names and GEOIDs by state, search across jurisdictions, and display neighboring jurisdictions where the adjacency source has been imported. It uses the existing FYBF assistant script and does not add a third assistant or modify the Central Library or FRU Legacy Library.
+
+The page clearly states that only Person County currently has complete adjacency coverage and that historical boundary changes are not yet loaded.
 
 ## FamilySearch Beta OAuth preparation
 
