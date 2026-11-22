@@ -1,6 +1,6 @@
 # FindMeAncestry genealogy seed audit and FamilySearch Beta OAuth
 
-**Status date:** 2026-11-21  
+**Status date:** 2026-11-22  
 **Environment:** Cloudflare D1 + Worker staging  
 **Scope:** FindMeAncestry / National Archives only. The FRU Legacy Library and Central Library were not modified.
 
