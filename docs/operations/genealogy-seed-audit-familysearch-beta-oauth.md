@@ -48,7 +48,7 @@ The U.S. Census Bureau's 2026 County Adjacency File was used to import distinct 
 
 The state-level subdivision counts were updated from this source. Examples checked against the import include North Carolina (100 counties), Connecticut (9 planning regions), Alaska (30 county equivalents), Virginia (133 county equivalents), DC (1), and Puerto Rico (78 municipios). Person County, North Carolina is present as GEOID `37145`.
 
-Five directed adjacency rows are imported and name/GEOID-validated for Person County, North Carolina (GEOID `37145`). This is complete for Person County only; statewide adjacency coverage is partial. Historical jurisdiction changes are not loaded.
+Five adjacency rows are currently imported and name/GEOID-validated for Person County, North Carolina (GEOID `37145`). This is complete for Person County only; statewide adjacency coverage remains partial. The national 2026 source has been audited but has **not** been imported. Historical jurisdiction changes are not loaded.
 
 ## Official geography sources recorded
 
@@ -59,6 +59,34 @@ Five directed adjacency rows are imported and name/GEOID-validated for Person Co
 - [2026 County Adjacency File documentation](https://www.census.gov/geographies/reference-files/time-series/geo/county-adjacency.html)
 
 The two Gazetteer ZIP files are recorded as source leads but have not been imported. The 2026 adjacency file is the source for the 3,222 imported names and GEOIDs, plus the five validated Person County neighbor records.
+
+## 2026 national adjacency source audit (import pending)
+
+The live 2026 Census County Adjacency File was retrieved and parsed on 2026-11-22.
+
+- Source file: [2026 County Adjacency TXT](https://www2.census.gov/geo/docs/reference/county_adjacency/county_adjacency2026.txt)
+- 18,969 lines including the header
+- 18,958 directed relationship rows
+- 9,479 unique undirected county/county-equivalent pairs after sorting GEOIDs and deduplicating reverse-direction rows
+- 3,235 unique GEOIDs in the national file, including 13 Island Areas GEOIDs
+- 10 records have a county GEOID but blank neighbor fields; these represent jurisdictions with no listed adjacency in this source
+- Reverse-direction records were checked; no conflicting shared-boundary lengths were found
+- The Length field is in meters. Point-touch neighbors are valid and have a zero-length boundary; the Census file also includes certain water-separated neighbors
+
+The existing current-jurisdiction registry contains 3,222 records for the 50 states, DC, and Puerto Rico. The 13 Island Areas GEOIDs are outside that registry and must not be silently added as adjacency endpoints without first adding and validating their jurisdiction records. The planned national import is therefore scoped to pairs whose two endpoints are in the existing current registry, with a coverage row for each of those 3,222 GEOIDs.
+
+**Import status:** no national adjacency batch has been committed. Cloudflare D1 returned free-tier daily row-read-limit error 7500 during the write attempt, before any batch was accepted. The existing five Person County adjacency rows remain the only imported adjacency records until the D1 allowance resets and the national import can be run and verified. Do not update the County Explorer's Person-County-only coverage notice until a read-back confirms the import.
+
+## Historical boundary source roadmap
+
+The next historical-jurisdiction build should use separate source types rather than treating current Gazetteer files as historical records:
+
+1. **Geographic Boundary Change Notes (through December 31, 2025):** Census records selected new/deleted entities, name changes/corrections, and FIPS/code changes across counties and equivalent areas, states, DC, Puerto Rico, and the Island Areas. These are event records, not a complete map of every historical county boundary. [Census Boundary Change Notes](https://www.census.gov/programs-surveys/geography/technical-documentation/boundary-change-notes.2011-2020.html)
+2. **Substantial County Changes, 1970–present:** Census summarizes substantial county/county-equivalent changes using population/area thresholds; it explicitly does not provide before-and-after maps. Use as a curated event index, not a complete boundary geometry source. [Census County Changes](https://www.census.gov/programs-surveys/geography/technical-documentation/county-changes.html)
+3. **Boundary and Annexation Survey (BAS) reference files:** legal boundary changes, annexations, incorporations, mergers, consolidations, and disincorporations reported by governments. These are useful for event provenance but do not include every non-legal boundary correction. [BAS Reference Files](https://www.census.gov/programs-surveys/bas/geographies/reference-files.html)
+4. **Annual Gazetteer files:** authoritative current-year names, GEOIDs, area measurements, and representative points for current geography. Use for year-by-year current snapshots, not as a substitute for dated historical events. [2026 Gazetteer Files](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html)
+
+Every future historical record should retain its source, effective date (when available), processing/reference date, event type, old and new GEOIDs/names, and confidence/coverage notes. Do not infer a county's exact historical boundary or effective date from a name-only change note.
 
 ## Staging database
 
