@@ -31,7 +31,7 @@ The 3,141 and 50 rows are retained in `seed_quarantine_jurisdictions` and `seed_
 
 ### Duplicate reconciliation
 
-The earlier workbook import duplicated the 250 SQLite resource links. The duplicate rows were removed by grouping on state, resource type, title, and URL. Current counts are 50 states and 250 unique state-level resource links. Two national Census Gazetteer source references were added, bringing the resource-link directory to 252 unique rows.
+The earlier workbook import duplicated the 250 SQLite resource links. The duplicate rows were removed by grouping on state, resource type, title, and URL. Current counts are 50 states and 250 unique state-level resource links. Three national Census geography source references were added, bringing the resource-link directory to 253 unique rows.
 
 ## Official current geography sources identified
 
@@ -39,9 +39,11 @@ The U.S. Census Bureau's 2026 Gazetteer page identifies national county and coun
 
 - [2026 National Counties Gazetteer ZIP](https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_counties_national.zip)
 - [2026 National County Subdivisions Gazetteer ZIP](https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_cousubs_national.zip)
+- [2026 National County Adjacency File (TXT)](https://www2.census.gov/geo/docs/reference/county_adjacency/county_adjacency2026.txt)
 - [U.S. Census Bureau Gazetteer Files](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html)
+- [2026 County Adjacency File documentation](https://www.census.gov/geographies/reference-files/time-series/geo/county-adjacency.html)
 
-These source references are recorded in D1 under `state_abbr='US'`. The files have not yet been imported or validated row-by-row. Do not describe county or county-subdivision coverage as live until that import and QA are complete.
+The adjacency file supplies county/county-equivalent GEOIDs and neighboring GEOIDs, including shared-boundary lengths. These sources are recorded in D1 under `state_abbr='US'`. The Gazetteer ZIP files have not yet been imported or validated row-by-row. Do not describe county or county-subdivision coverage as live until that import and QA are complete.
 
 ## Staging database
 
@@ -72,7 +74,7 @@ Worker: `findmeancestry-genealogy-api`
 - `GET /api/jurisdictions`
 - `GET /api/timeline`
 
-The API returns source-link leads as unverified. It does not search or expose private surname files, private family records, or the quarantined placeholder rows.
+The genealogy reference endpoints are read-only. The API returns source-link leads as unverified. It does not search or expose private surname files, private family records, or the quarantined placeholder rows.
 
 ## FamilySearch Beta OAuth preparation
 
@@ -83,7 +85,7 @@ Proposed registration:
 - **Beta callback URI:** `https://findmeancestry-genealogy-api.skwirlynuts-nutteros.workers.dev/familysearch/callback`
 - **Realm:** `https://www.findyourbabyfamily.com`
 
-A reply draft requesting these registrations is saved in the FamiliesR Us Superhuman mailbox thread. It has **not** been sent. Authentication must remain pending until FamilySearch confirms the registration.
+A reply draft requesting these registrations is saved in the Families R Us Superhuman mailbox thread. It has **not** been sent. Authentication must remain pending until FamilySearch confirms the registration.
 
 The Worker now contains a PKCE S256 authorization-code flow with state validation, one-time exchange codes, AES-GCM token encryption, and opaque server-side sessions. The token-encryption secret is configured in Cloudflare. The FamilySearch AppKey must be added to the Worker secret store as `FS_APP_KEY`; never place it in source control, static site files, query strings, logs, or documentation.
 
