@@ -10,3 +10,22 @@
 
 /api/*
   Cache-Control: no-store
+
+# Allow only the Scout and Assettie assistant pages to be embedded by FYBF.
+# Include both extension and extensionless routes because the site redirects
+# the .html URLs to their canonical extensionless paths.
+/scout_chat.html
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
+
+/scout_chat
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
+
+/assetie_chat.html
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
+
+/assetie_chat
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://findyourbabyfamily.com https://www.findyourbabyfamily.com
