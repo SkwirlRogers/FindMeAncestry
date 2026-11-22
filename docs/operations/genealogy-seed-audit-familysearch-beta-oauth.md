@@ -68,8 +68,9 @@ The live 2026 Census County Adjacency File was retrieved and parsed on 2026-11-2
 - 18,969 lines including the header
 - 18,958 directed relationship rows
 - 9,479 unique undirected county/county-equivalent pairs after sorting GEOIDs and deduplicating reverse-direction rows
+- 9,476 unique pairs remain when scoped to the existing 3,222 current registry GEOIDs (50 states, DC, and Puerto Rico); the 13 Island Areas GEOIDs are excluded until those jurisdictions are explicitly added
 - 3,235 unique GEOIDs in the national file, including 13 Island Areas GEOIDs
-- 10 records have a county GEOID but blank neighbor fields; these represent jurisdictions with no listed adjacency in this source
+- 10 records have a county GEOID but blank neighbor fields; three are current Hawaii county GEOIDs (`15001`, `15003`, `15007`) and seven belong to Island Areas. The three current Hawaii records should receive `no_adjacency_rows_in_source` coverage rather than being treated as missing data
 - Reverse-direction records were checked; no conflicting shared-boundary lengths were found
 - The Length field is in meters. Point-touch neighbors are valid and have a zero-length boundary; the Census file also includes certain water-separated neighbors
 
