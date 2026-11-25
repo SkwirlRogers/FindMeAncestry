@@ -1,17 +1,16 @@
-export const onRequestPost = async ({request}) => {
-  try {
-    const {token, tier, amount} = await request.json();
-    // In a real implementation you would send the token to your payment gateway.
-    // Here we just simulate success for testing purposes.
-    console.log('Received Google Pay token for', tier, amount);
-    return new Response(JSON.stringify({success:true, message:`Payment simulated for ${tier} ($${amount})`} ), {
-      headers:{'Content-Type':'application/json'}
-    });
-  } catch (e) {
-    console.error('Error in checkout handler', e);
-    return new Response(JSON.stringify({success:false, message:e.message}), {
-      status:500,
-      headers:{'Content-Type':'application/json'}
-    });
-  }
+// Legacy endpoint disabled: it previously returned simulated payment success.
+// Never treat a received wallet token as proof that a payment was captured.
+
+export const onRequestPost = async () => {
+  return new Response(JSON.stringify({
+    success: false,
+    code: 'PAYMENT_PROVIDER_NOT_CONFIGURED',
+    message: 'Google Pay checkout is not configured. No payment was taken.',
+  }), {
+    status: 410,
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-store',
+    },
+  });
 };
